@@ -1,0 +1,77 @@
+@import "tailwindcss";
+
+
+/* @theme {
+    --container-8xl: 96rem;
+    --bg-color: #f5f5f5;
+} */
+
+.current_page_item{
+    background-color: #C3D7FF;
+    border-radius: 50px;
+    font-weight: 500;
+}
+
+.menu-item{
+    padding: 9px 14px;
+    border-radius: 50px;
+    font-size: 12px;
+}
+
+@media (max-width:768px){
+    .menu-item{
+        padding: 12px 14px;
+        margin: 12px 0;
+        text-align: center;
+        border-radius: 50px;
+        background-color: #F0F5FF;
+        font-size: 24px;
+        color: #2d2d2d;
+        font-weight: 400;
+    }
+    .current_page_item{
+        background-color: #F0F5FF;
+        border-radius: none;
+    }
+}
+
+.page-numbers{
+    display: flex;
+    background-color: transparent;
+    align-items: center;
+}
+.page-numbers li a{
+ margin: 0px 9px;
+ border: 2px solid #C3D7FF;
+ padding: 7px 14px;
+ font-size: 16px;
+ border-radius: 100%;
+}
+.page-numbers li:nth-child(1) a{
+    margin: 0px 9px;
+    border: none;
+    padding: 0;
+    font-size: 0;
+    border-radius: 0;
+   }
+
+.page-numbers li span{
+    margin: 0px 9px;
+ border: 2px solid #C3D7FF;
+ padding: 7px 14px;
+ font-size: 16px;
+ border-radius: 100%;
+   }
+
+.contactform{
+    background-color: #2b37dc;
+    width: 100% !important;
+    text-align: center;
+    color: white;
+    border-radius: 100px;
+    border: 1px solid #2b37dc;
+    padding: 9px 14px;
+    margin: 9px 14px;
+    font-size: 16px;
+    font-weight: 500;
+}
