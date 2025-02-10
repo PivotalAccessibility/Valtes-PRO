@@ -28,7 +28,7 @@ if (!defined('ABSPATH')) {
     <div class="container items-center justify-between hidden max-w-4xl py-2 mx-auto md:flex 2xl:max-w-5xl">
         <div class="flex items-center ">
             <a href="<?php echo home_url(); ?>" class="">
-                <img src="<?php echo valtes_assets('images/valtes_logo_dark.svg') ?>" alt="" class="w-auto h-6 ">
+                <img src="<?php echo valtes_assets('images/Valtespro_Logo.png') ?>" alt="" class="w-auto h-6 ">
             </a>
 
             <div class="ml-10 ">

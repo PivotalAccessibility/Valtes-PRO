@@ -8,13 +8,28 @@ if ($args) {
   extract($args);
 }
 
-$hero = valtes_get_field('hero', []);
+$hero = valtes_get_field('hero', [
+    'title' => 'We delen de zorg',
+    'description' => 'Hier komen 3 à 4 zinnen te staan, en dat ziet er dan ongeveer zo uit. Er zal niet veel informatie komen, maar wel net genoeg. Dit is een voorbeeld van hoe dat er dan uit ziet.',
+    'cta' => [
+        'title' => 'Neem contact op met ons',
+        'url' => '#',
+    ],
+    'image' => [
+        'url' => valtes_assets('images/hero_image_1.png'),
+        'alt' => 'User Image',
+    ],
+    'floating_image' => [
+        'url' => valtes_assets('images/Zorginnovatieprijs_2024_RGB.png'),
+        'alt' => 'Company Logo',
+    ]
+]);
 
 ?>
 
-<section class="bg-[#f0f5ff]">
+<section class="bg-white">
     <div
-        class="container max-w-4xl 2xl:max-w-5xl mx-auto flex xl:flex-row flex-col-reverse sm:flex-wrap md:flex md:flex-wrap bg-[#f0f5ff] xl:flex px-5 sm:px-0">
+        class="container max-w-4xl 2xl:max-w-5xl mx-auto flex xl:flex-row flex-col-reverse sm:flex-wrap md:flex md:flex-wrap bg-white xl:flex px-5 sm:px-0">
         <div class="flex items-center justify-start h-auto p-0 sm:mt-20 mt-5 xl:w-1/2 sm:w-full xl:mt-12 md:mt-20">
             <div class=" sm:pr-24" dir="ltr">
                 <h1 class="mb-6 text-3xl font-bold">
@@ -24,24 +39,9 @@ $hero = valtes_get_field('hero', []);
                     <?php echo $hero['description']; ?>
                 </div>
                 <div class="flex sm:flex-nowrap flex-wrap sm:space-x-6 mt-5">
-                    <button
-                        class="bg-[#2b37dc] border-2 text-xs border-[#2b37dc] px-3 py-3 text-white font-semibold rounded-full w-full sm:w-auto">
+                    <a href="<?php echo $hero['cta']['url']; ?>" class="bg-[#2b37dc] border-2 text-xs border-[#2b37dc] px-3 py-3 text-white font-semibold rounded-full w-full sm:w-auto">
                         <?php echo $hero['cta']['title']; ?>
-                    </button>
-                    <button
-                        class="border-[#2b37dc] border-2 text-xs px-5 py-3 text-[#2b37dc] bg-white font-medium rounded-full flex items-center mt-5 sm:mt-0 w-full sm:w-auto justify-center">
-                        <span>
-                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
-                                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-                                class="h-4 w-4 mr-1">
-                                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-                                <path d="M12 6h-6a2 2 0 0 0 -2 2v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-6" />
-                                <path d="M11 13l9 -9" />
-                                <path d="M15 4h5v5" />
-                            </svg>
-                        </span>
-                        <?php echo $hero['cta2']['title']; ?>
-                    </button>
+                    </a>
                 </div>
             </div>
         </div>
@@ -53,15 +53,15 @@ $hero = valtes_get_field('hero', []);
                         alt="<?php echo $hero['image']['alt']; ?>">
                 </div>
                 <div class="absolute md:-bottom-12 md:-left-8 -bottom-6 -left-4 xl:-left-11">
-                    <img src="<?php echo valtes_assets('images/goals-images/Ellipse-2.svg') ?>" class="object-cover"
+                    <img src="<?php echo valtes_assets('images/Ellipse 2.svg') ?>" class="object-cover"
                         alt="">
                 </div>
                 <div class="absolute md:-bottom-10 md:-left-24 -bottom-8 -left-10">
-                    <img src="<?php echo valtes_assets('images/goals-images/Ellipse-3.svg') ?>" class="object-cover"
+                    <img src="<?php echo valtes_assets('images/Ellipse 3.png') ?>" class="object-cover"
                         alt="">
                 </div>
                 <div class="absolute bg-white px-10 sm:left-6 left-2 py-7 rounded-full border-5 border-[#f3f6ff] bottom-1">
-                  <img src="<?php echo valtes_assets('images/Zorginnovatieprijs_2024_RGB.png') ?>" class="object-cover h-12" alt="">
+                  <img src="<?php echo $hero['floating_image']['url']; ?>" class="object-cover h-12" alt="">
                 </div>
             </div>
         </div>
