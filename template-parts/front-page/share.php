@@ -13,12 +13,16 @@ $share = valtes_get_field('share', []);
 ?>
 
 <section class=" container py-20 flex flex-col items-center">
+    <?php if(!empty($share['title'])): ?>
     <h2 class="text-3xl font-bold text-gray-800 ">
         <?php echo $share['title']; ?>
     </h2>
+    <?php endif; ?>
+    <?php if(!empty($share['description'])): ?>
     <p class=" mt-font-normal mt-5 text-center text-sm">
         <?php echo $share['description']; ?>
     </p>
+    <?php endif; ?>
     <div class=" mt-10 grid lg:grid-cols-2 grid-cols-1 gap-4">
         <?php foreach($share['cards'] as $card): ?>
         <a href="<?php echo $card['link']['url']; ?>"

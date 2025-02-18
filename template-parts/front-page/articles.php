@@ -22,9 +22,11 @@ $query = new WP_Query($args);
 
 <section class="bg-[#f0f5ff] py-16">
     <div class="container flex flex-col items-center px-5 sm:px-0">
+        <?php if(!empty($articles['heading'])): ?>
         <h2 class="section-heading">
             <?php echo esc_html($articles['heading']); ?>
         </h2>
+        <?php endif; ?>
         <div class="relative">
             <div class="relative z-10 grid sm:grid-cols-2 lg:grid-cols-3 grid-cols-1 gap-5 mt-10">
                 <?php if ($query->have_posts()) : ?>
@@ -97,7 +99,8 @@ $query = new WP_Query($args);
             <div class="absolute h-14 w-14 bg-[#6997ff] rounded-full top-5 -right-6"></div>
         </div>
         <div class=" mt-10">
-        <a href="<?php echo $articles['cta']['url']; ?>"
+            <?php if(!empty($articles['cta']['url'])): ?>
+            <a href="<?php echo $articles['cta']['url']; ?>"
                 class="flex items-center rounded-full py-2 px-4 text-xs font-bold border bg-blue-700 text-white sm:ml-5  w-full sm:w-auto mt-5 sm:mt-0 justify-center">
                 <?php echo $articles['cta']['title']; ?>
                 <span>
@@ -108,8 +111,9 @@ $query = new WP_Query($args);
                         <path d="M15 16l4 -4" />
                         <path d="M15 8l4 4" />
                     </svg>
-                </span> 
+                </span>
             </a>
+            <?php endif; ?>
         </div>
     </div>
 </section>

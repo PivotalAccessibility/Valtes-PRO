@@ -17,19 +17,26 @@ $hero = valtes_get_field('hero', []);
         class="container flex xl:flex-row flex-col-reverse sm:flex-wrap md:flex md:flex-wrap bg-white xl:flex px-5 sm:px-0">
         <div class="flex items-center justify-start h-auto p-0 sm:mt-20 mt-5 xl:w-1/2 sm:w-full xl:mt-12 md:mt-20">
             <div class=" sm:pr-24" dir="ltr">
+                <?php if(!empty($hero['title'])): ?>
                 <h1 class="mb-6 text-3xl font-bold">
                     <?php echo $hero['title']; ?>
                 </h1>
+                <?php endif; ?>
+                <?php if(!empty($hero['description'])): ?>
                 <div class="text-xs mt-5 font-normal leading-5">
                     <?php echo $hero['description']; ?>
                 </div>
+                <?php endif; ?>
+                <?php if(!empty($hero['cta']['url'])): ?>
                 <div class="flex sm:flex-nowrap flex-wrap sm:space-x-6 mt-5">
                     <a href="<?php echo $hero['cta']['url']; ?>" class="bg-[#2b37dc] border-2 text-xs border-[#2b37dc] px-3 py-3 text-white font-semibold rounded-full w-full sm:w-auto">
                         <?php echo $hero['cta']['title']; ?>
                     </a>
                 </div>
+                <?php endif; ?>
             </div>
         </div>
+        <?php if(!empty($hero['image']['url'])): ?>
         <div class="flex justify-center h-auto xl:w-1/2 sm:w-full xl:justify-start mt-32 sm:mt-0">
             <div class="relative 2xl:left-16 left-5 -top-7 lg:-top-16">
                 <div
@@ -50,6 +57,7 @@ $hero = valtes_get_field('hero', []);
                 </div>
             </div>
         </div>
+        <?php endif; ?>
     </div>
     </div>
 </section>
