@@ -75,3 +75,45 @@
     font-size: 16px;
     font-weight: 500;
 }
+
+.container {
+    max-width: 1233px;
+    background-color: sandybrown;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.forminator-field input,
+.forminator-textarea {
+    border: 2px solid #a6a6a6 !important;
+    border-radius: 5px !important;
+}
+
+.forminator-field {
+    position: relative;
+}
+
+.forminator-label {
+    position: absolute;
+    background-color: white;
+    left: 10px;
+    top: -15px;
+    padding: 5px;
+}
+
+.section-heading {
+    @apply font-bold text-3xl text-[#1c233e];
+}
+
+.section-description {
+    @apply font-normal sm:text-sm text-lg text-[#1c233e];
+}
+
+.article-description{
+    @apply text-sm leading-5 font-normal text-[#1C233E];
+}
+
+.article-heading{
+    @apply text-lg font-bold text-[#1C233E];
+}
+

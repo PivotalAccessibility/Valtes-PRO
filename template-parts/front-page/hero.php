@@ -29,7 +29,7 @@ $hero = valtes_get_field('hero', [
 
 <section class="bg-white">
     <div
-        class="container max-w-4xl 2xl:max-w-5xl mx-auto flex xl:flex-row flex-col-reverse sm:flex-wrap md:flex md:flex-wrap bg-white xl:flex px-5 sm:px-0">
+        class="container flex xl:flex-row flex-col-reverse sm:flex-wrap md:flex md:flex-wrap bg-white xl:flex px-5 sm:px-0">
         <div class="flex items-center justify-start h-auto p-0 sm:mt-20 mt-5 xl:w-1/2 sm:w-full xl:mt-12 md:mt-20">
             <div class=" sm:pr-24" dir="ltr">
                 <h1 class="mb-6 text-3xl font-bold">
