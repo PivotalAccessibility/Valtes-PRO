@@ -88,7 +88,7 @@ if (!defined('ABSPATH')) {
 
         <!-- </header> -->
         <!-- Mobile Menu -->
-        <div id="mobileMenu" class="z-40 flex flex-col h-[100%] sm:hidden p-6 bg-white">
+        <div id="mobileMenu" class="z-40 flex flex-col h-[100%] hidden p-6 bg-white">
             <div class="h-screen flex flex-col justify-center">
                 <h2 class="text-xl font-bold text-center mb-4 text-[#1C233E]">Menu</h2>
                 <!-- <ul class="space-y-4">

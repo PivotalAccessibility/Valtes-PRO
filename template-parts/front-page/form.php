@@ -8,25 +8,8 @@ if ($args) {
   extract($args);
 }
 
-$form = valtes_get_field('form', [
-    'section_heading' => 'Deel jij de zorg ook met ons?',
-    'title' => 'Die horen wij natuurlijk graag!',
-    'description' => 'We zijn altijd op zoek naar samenwerkingspartners, ... en ...  Vul het contactformulier hiernaast in, of neem contact op met ons.',
-    'email' => [
-        'title' => 'info@valtes.nl',
-        'url' => '#',
-    ],
-    'phone_number' => [
-        'title' => '+31 6 18 23 96 74',
-        'url' => '#',
-    ],
-    'linkedin' => [
-        'title' => '/company/valtes',
-        'url' => '#',
-    ],
-    'form_shortcode' => '[forminator_form id="12"]',
-]);
-  
+$form = valtes_get_field('form', []);
+
 ?>
 
 <section class="container sm:mt-0 mt-5 px-5 sm:px-5 xl:px-0 py-20">

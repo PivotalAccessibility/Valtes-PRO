@@ -8,13 +8,7 @@ if ($args) {
     extract($args);
 }
 
-$articles = valtes_get_field('articles', [
-    'heading' => 'Bekijk onze artikelen',
-    'cta' => [
-        'title' => 'Ontdek onze kennis',
-        'url' => '#'
-    ]
-]);
+$articles = valtes_get_field('articles', []);
 
 // Query to fetch latest 3 posts
 $args = array(

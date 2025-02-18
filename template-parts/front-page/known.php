@@ -8,41 +8,7 @@ if ($args) {
   extract($args);
 }
 
-$known = valtes_get_field('known', [
-    'title' => 'Bekend van:',
-    'images' => [
-        [
-            'image' => [
-                'url' => valtes_assets('images/know_section_images/image1.svg'),
-                'alt' => 'Dagblad van het Noorden',
-            ]
-        ],
-        [
-            'image' => [
-                'url' => valtes_assets('images/know_section_images/image2.svg'),
-                'alt' => 'De Stentor',
-            ]
-        ],
-        [
-            'image' => [
-                'url' => valtes_assets('images/know_section_images/image3.svg'),
-                'alt' => 'NPO Radio 1',
-            ]
-        ],
-        [
-            'image' => [
-                'url' => valtes_assets('images/know_section_images/image4.svg'),
-                'alt' => 'RTV Drenthe',
-            ]
-        ],
-        [
-            'image' => [
-                'url' => valtes_assets('images/know_section_images/image5.svg'),
-                'alt' => 'Reformatorisch Dagblad',
-            ]
-        ],
-    ]
-]);
+$known = valtes_get_field('known', []);
 
 ?>
 

@@ -8,22 +8,7 @@ if ($args) {
   extract($args);
 }
 
-$hero = valtes_get_field('hero', [
-    'title' => 'We delen de zorg',
-    'description' => 'Hier komen 3 à 4 zinnen te staan, en dat ziet er dan ongeveer zo uit. Er zal niet veel informatie komen, maar wel net genoeg. Dit is een voorbeeld van hoe dat er dan uit ziet.',
-    'cta' => [
-        'title' => 'Neem contact op met ons',
-        'url' => '#',
-    ],
-    'image' => [
-        'url' => valtes_assets('images/hero_image_1.png'),
-        'alt' => 'User Image',
-    ],
-    'floating_image' => [
-        'url' => valtes_assets('images/Zorginnovatieprijs_2024_RGB.png'),
-        'alt' => 'Company Logo',
-    ]
-]);
+$hero = valtes_get_field('hero', []);
 
 ?>
 

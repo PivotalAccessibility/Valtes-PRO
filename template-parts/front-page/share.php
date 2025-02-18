@@ -8,57 +8,7 @@ if ($args) {
   extract($args);
 }
 
-
-$share = valtes_get_field('share', [
-    'title' => 'Hoe kan Valtes de zorg met jou delen?',
-    'description' => 'Klik op een doelgroep om meer te weten te komen.',
-    'cards' => [
-        [
-            'link' => [
-                'url' => '#',
-                'title' => 'Gemeenten en welzijnsorganisaties'
-            ],
-            'image' => [
-                'url' => valtes_assets('images/image-1.png'),
-                'alt' => 'User Image',
-            ],
-            'para' => 'No para'
-        ],
-        [
-            'link' => [
-                'url' => '#',
-                'title' => 'Zorgaanbieders'
-            ],
-            'image' => [
-                'url' => valtes_assets('images/image-2.png'),
-                'alt' => 'User Image',
-            ],
-            'para' => 'zoals ouderenzorg, beschermd wonen en zorgcoöperaties'
-        ],
-        [
-            'link' => [
-                'url' => '#',
-                'title' => 'Contentpartners'
-            ],
-            'image' => [
-                'url' => valtes_assets('images/image-3.png'),
-                'alt' => 'User Image',
-            ],
-            'para' => 'zoals patiëntenverenigingen en ervaringsdeskundigen'
-        ],
-        [
-            'link' => [
-                'url' => '#',
-                'title' => 'Communicatiepartners'
-            ],
-            'image' => [
-                'url' => valtes_assets('images/image-4.png'),
-                'alt' => 'User Image',
-            ],
-            'para' => 'zoals casemanagers, maatschappelijke organisaties en kappers'
-        ],
-    ]
-]);
+$share = valtes_get_field('share', []);
 
 ?>
 
