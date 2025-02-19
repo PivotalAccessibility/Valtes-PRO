@@ -6,20 +6,20 @@
     --bg-color: #f5f5f5;
 } */
 
-.current_page_item{
+.current_page_item {
     background-color: #C3D7FF;
     border-radius: 50px;
     font-weight: 500;
 }
 
-.menu-item{
+.menu-item {
     padding: 9px 14px;
     border-radius: 50px;
     font-size: 12px;
 }
 
-@media (max-width:768px){
-    .menu-item{
+@media (max-width:768px) {
+    .menu-item {
         padding: 12px 14px;
         margin: 12px 0;
         text-align: center;
@@ -29,41 +29,44 @@
         color: #2d2d2d;
         font-weight: 400;
     }
-    .current_page_item{
+
+    .current_page_item {
         background-color: #F0F5FF;
         border-radius: none;
     }
 }
 
-.page-numbers{
+.page-numbers {
     display: flex;
     background-color: transparent;
     align-items: center;
 }
-.page-numbers li a{
- margin: 0px 9px;
- border: 2px solid #C3D7FF;
- padding: 7px 14px;
- font-size: 16px;
- border-radius: 100%;
+
+.page-numbers li a {
+    margin: 0px 9px;
+    border: 2px solid #C3D7FF;
+    padding: 7px 14px;
+    font-size: 16px;
+    border-radius: 100%;
 }
-.page-numbers li:nth-child(1) a{
+
+.page-numbers li:nth-child(1) a {
     margin: 0px 9px;
     border: none;
     padding: 0;
     font-size: 0;
     border-radius: 0;
-   }
+}
 
-.page-numbers li span{
+.page-numbers li span {
     margin: 0px 9px;
- border: 2px solid #C3D7FF;
- padding: 7px 14px;
- font-size: 16px;
- border-radius: 100%;
-   }
+    border: 2px solid #C3D7FF;
+    padding: 7px 14px;
+    font-size: 16px;
+    border-radius: 100%;
+}
 
-.contactform{
+.contactform {
     background-color: #2b37dc;
     width: 100% !important;
     text-align: center;
@@ -78,7 +81,6 @@
 
 .container {
     max-width: 1233px;
-    background-color: sandybrown;
     margin-left: auto;
     margin-right: auto;
 }
@@ -109,11 +111,10 @@
     @apply font-normal sm:text-sm text-lg text-[#1c233e];
 }
 
-.article-description{
+.article-description {
     @apply text-sm leading-5 font-normal text-[#1C233E];
 }
 
-.article-heading{
+.article-heading {
     @apply text-lg font-bold text-[#1C233E];
 }
-
