@@ -14,7 +14,7 @@ if ($args) {
 ?>
 
 <section class="bg-[#f0f5ff] py-20 container flex flex-col items-center">
-    <h2 class=" section-heading mt-32">
+    <h2 class="section-heading mt-32">
         De uitdaging
     </h2>
     <div class=" grid grid-cols-3 gap-4 mt-5">
