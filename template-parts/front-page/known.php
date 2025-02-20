@@ -12,10 +12,10 @@ $known = valtes_get_field('known', []);
 
 ?>
 
-<section class="bg-[#f0f5ff]">
-    <div class="flex flex-col items-center justify-center mt-8 container">
+<section class="bg-[#f0f5ff] py-10">
+    <div class="flex flex-col items-center justify-center container">
         <?php if(!empty($known['title'])): ?>
-        <h2 class="text-3xl font-bold text-gray-800">
+        <h2 class="section-sec-heading text-center">
             <?php echo $known['title']; ?>
         </h2>
         <?php endif; ?>

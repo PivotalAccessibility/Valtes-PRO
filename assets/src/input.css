@@ -66,6 +66,19 @@
     .section-description {
         @apply md:text-xl font-normal text-base;
     }
+
+    .form-title{
+        @apply font-bold text-2xl;
+    }
+
+    .form-description{
+        @apply text-xl font-normal text-black;
+    }
+
+    .form-ctas{
+        @apply text-primary text-2xl underline font-bold;
+    }
+
 }
 
 

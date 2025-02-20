@@ -15,7 +15,7 @@ $challenge = valtes_get_field('challenge', []);
 
 <section class="bg-[#f0f5ff] py-20">
     <div class="container flex flex-col items-center">
-        <h2 class="section-heading mt-32">
+        <h2 class="section-heading">
             <?php echo $challenge['heading'] ?>
         </h2>
         <div class=" grid grid-cols-3 gap-4 mt-10">

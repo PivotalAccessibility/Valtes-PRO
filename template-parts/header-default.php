@@ -6,7 +6,7 @@ if (!defined('ABSPATH')) {
 
 ?>
 
-<header id="header" x-data="header" role="banner" class=" bg-transparent fixed top-7 w-full !z-50">
+<header id="header" x-data="header" role="banner" class=" bg-transparent fixed w-full !z-50">
     <?php get_template_part('template-parts/skip-link'); ?>
     <section class="bg-[#1c233e] text-white">
         <div class="container flex items-center justify-between max-w-4xl py-2 mx-auto 2xl:max-w-5xl">
@@ -66,13 +66,13 @@ if (!defined('ABSPATH')) {
     </div>
 
     <!-- <header class="flex items-center justify-between p-4 bg-white shadow-md"> -->
-    <div id="mobile-header" class="flex items-center text-lg font-bold justify-evenly md:hidden bg-white">
+    <div id="mobile-header" class="flex items-center text-lg font-bold justify-evenly md:hidden bg-white py-3">
         <a href="<?php echo home_url(); ?>" class="">
-            <img src="<?php echo valtes_assets('images/valtes_logo_dark.svg') ?>" alt="" class="w-28 ">
+            <img src="<?php echo valtes_assets('images/Valtespro_Logo.png') ?>" alt="" class="w-28 ">
         </a>
             <div>
                 <a href=""
-                    class="flex items-center px-3 py-2 text-xl font-semibold text-[#2b37dc] bg-white border-2 border-[#2b37dc] rounded-full ">
+                    class="items-center px-3 py-2 text-xl font-semibold text-[#2b37dc] bg-white border-2 border-[#2b37dc] rounded-full hidden sm:flex">
                     Voor professionals
                 </a>
             </div>
