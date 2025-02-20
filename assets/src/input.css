@@ -1,10 +1,81 @@
+@font-face {
+    font-family: "TT Norms Pro";
+    src: url("../fonts/WOFF2/TT_Norms_Pro_Regular.woff2") format("woff2");
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "TT Norms Pro";
+    src: url("../fonts/WOFF2/TT_Norms_Pro_Medium.woff2") format("woff2");
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "TT Norms Pro";
+    src: url("../fonts/WOFF2/TT_Norms_Pro_Bold.woff2") format("woff2");
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+}
+
+:root {
+    font-family: "TT Norms Pro", sans-serif;
+    font-size: 16px;
+    @apply text-black;
+}
+
 @import "tailwindcss";
 
+@theme {
 
-/* @theme {
-    --container-8xl: 96rem;
-    --bg-color: #f5f5f5;
-} */
+    --color-black: #1C233E;
+
+    --color-primary: #2b37dc;
+    --color-primaryLight: #f0f5ff;
+
+    --text-4_1xl: 2.625rem;
+    --text-3_5xl: 2.375rem;
+
+}
+
+@layer components {
+    .btn {
+        @apply text-base px-6 py-4 rounded-full w-full sm:w-auto font-bold hover:scale-105 content-center text-center;
+    }
+
+    .btn-primary {
+        @apply bg-primary text-white hover:opacity-90;
+    }
+
+    .btn-outline {
+        @apply text-primary bg-white border-2 border-primary justify-center gap-2;
+    }
+
+    .section-heading {
+        @apply font-bold md:text-4_1xl leading-11 text-[2rem];
+    }
+
+    .section-sec-heading {
+        @apply font-bold md:text-3_5xl leading-normal text-2xl md:w-full w-9/10 ;
+    }
+
+    .section-description {
+        @apply md:text-xl font-normal text-base;
+    }
+}
+
+
+.article-description {
+    @apply text-sm leading-5 font-normal;
+}
+
+.article-heading {
+    @apply text-lg font-bold;
+}
 
 .current_page_item {
     background-color: #C3D7FF;
@@ -26,7 +97,6 @@
         border-radius: 50px;
         background-color: #F0F5FF;
         font-size: 24px;
-        color: #2d2d2d;
         font-weight: 400;
     }
 
@@ -66,12 +136,18 @@
     border-radius: 100%;
 }
 
-.contactform {
+.next.page-numbers {
+    margin: 0;
+    border: none;
+    padding: 0px 9px;
+}
+
+.forminator-button {
     background-color: #2b37dc;
     width: 100% !important;
     text-align: center;
     color: white;
-    border-radius: 100px;
+    border-radius: 50px !important;
     border: 1px solid #2b37dc;
     padding: 9px 14px;
     margin: 9px 14px;
@@ -79,11 +155,6 @@
     font-weight: 500;
 }
 
-.container {
-    max-width: 1233px;
-    margin-left: auto;
-    margin-right: auto;
-}
 
 .forminator-field input,
 .forminator-textarea {
@@ -103,18 +174,67 @@
     padding: 5px;
 }
 
-.section-heading {
-    @apply font-bold text-3xl text-[#1c233e];
+.container {
+    max-width: 1233px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
-.section-description {
-    @apply font-normal sm:text-sm text-lg text-[#1c233e];
+.slick-dots {
+    display: flex;
+    align-items: center;
 }
 
-.article-description {
-    @apply text-sm leading-5 font-normal text-[#1C233E];
+.slick-dots li button {
+    font-size: 0;
+    line-height: 0;
+    display: block;
+    width: 20px;
+    height: 20px;
+    padding: 5px;
+    cursor: pointer;
+    color: transparent;
+    border: 0;
+    outline: none;
+    background: transparent;
+    position: relative;
 }
 
-.article-heading {
-    @apply text-lg font-bold text-[#1C233E];
+.slick-dots li button:before {
+    content: " ";
+    width: 8px;
+    height: 8px;
+    border-radius: 100%;
+    background-color: #C3D7FF;
+    position: absolute;
+}
+
+.slick-dots li.slick-active button:before {
+    content: " ";
+    width: 8px;
+    height: 8px;
+    border-radius: 100%;
+    background-color: #2B37DC;
+    position: absolute;
+}
+
+.slick-track {
+    display: flex !important;
+}
+
+.slick-slide {
+    height: inherit !important;
+}
+
+.slick-slide {
+    margin: 3px 6px;
+}
+
+.slick-slider {
+    display: flex !important;
+}
+
+button.slick-arrow {
+    margin: 5px;
+    width: 150px;
 }
