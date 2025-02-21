@@ -43,30 +43,37 @@
 }
 
 @layer components {
+
     .btn {
         @apply text-base px-6 py-4 rounded-full w-full sm:w-auto font-bold hover:scale-105 content-center text-center;
     }
 
+    /* For Blue Appering button */
     .btn-primary {
         @apply bg-primary text-white hover:opacity-90;
     }
 
+    /* For Outline button */
     .btn-outline {
         @apply text-primary bg-white border-2 border-primary justify-center gap-2;
     }
 
+    /* For Main heading for hero section */
     .section-heading {
         @apply font-bold md:text-4_1xl leading-11 text-[2rem];
     }
 
+    /* For Headings below main heading */
     .section-sec-heading {
         @apply font-bold md:text-3_5xl leading-normal text-2xl md:w-full w-9/10 ;
     }
 
+    /* Description below heading */
     .section-description {
         @apply md:text-xl font-normal text-base text-black;
     }
 
+    /* Heading inside form section */
     .form-title{
         @apply font-bold text-2xl;
     }
