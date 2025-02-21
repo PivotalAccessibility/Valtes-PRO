@@ -12,14 +12,14 @@ $share = valtes_get_field('share', []);
 
 ?>
 
-<section class=" container py-20 flex flex-col items-center px-5 sm:px-0">
+<section class=" container md:py-20 py-10 flex flex-col items-center px-5 sm:px-0">
     <?php if(!empty($share['title'])): ?>
     <h2 class="section-sec-heading text-center">
         <?php echo $share['title']; ?>
     </h2>
     <?php endif; ?>
     <?php if(!empty($share['description'])): ?>
-    <p class=" section-description mt-5">
+    <p class=" section-description mt-5 text-center">
         <?php echo $share['description']; ?>
     </p>
     <?php endif; ?>

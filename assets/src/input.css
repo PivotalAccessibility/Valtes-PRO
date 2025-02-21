@@ -64,7 +64,7 @@
     }
 
     .section-description {
-        @apply md:text-xl font-normal text-base;
+        @apply md:text-xl font-normal text-base text-black;
     }
 
     .form-title{
@@ -81,6 +81,14 @@
 
     .section-sec-description {
         @apply text-base;
+    }
+
+    .counter{
+        @apply text-primary font-medium text-6xl;
+    }
+
+    .counter-description{
+        @apply text-xl font-normal text-black text-center;
     }
 
 }

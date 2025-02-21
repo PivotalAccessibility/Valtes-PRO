@@ -13,21 +13,24 @@ $municipalities = valtes_get_field('municipalities', []);
 ?>
 
 <section class="bg-[#f0f5ff] py-10">
-    <div class="flex flex-col items-center justify-center mt-8">
-        <?php if(!empty($municipalities['heading'])): ?>
-        <h2 class="text-3xl font-bold text-gray-800">
-            <?php echo $municipalities['heading']; ?>
-        </h2>
+    <div class="flex flex-col items-center justify-center">
+        <?php if (!empty($municipalities['heading'])): ?>
+            <h2 class="section-sec-heading text-center">
+                <?php echo $municipalities['heading']; ?>
+            </h2>
         <?php endif; ?>
-        <div class=" grid lg:grid-cols-9 md:grid-cols-6 sm:grid-cols-3 grid-cols-1 gap-8 mt-10 px-5">
-            <?php foreach($municipalities['clients'] as $index => $municipalitie): ?>
-            <?php if(!empty($municipalitie['image']['url'])): ?>
-            <div class="w-auto flex items-center justify-center">
-                <img src="<?php echo $municipalitie['image']['url']; ?>"
-                    alt="<?php echo $municipalitie['image']['alt']; ?>" class=" w-auto h-16">
+        <div class="mt-10 w-full overflow-x-auto px-5">
+            <div class="flex sm:grid lg:grid-cols-9 md:grid-cols-6 sm:grid-cols-3 grid-cols-1 gap-4 space-x-5 md:space-x-0 pb-5 md:pb-0">
+                <?php foreach ($municipalities['clients'] as $index => $image): ?>
+                    <?php if (!empty($image['image']['url'])): ?>
+                        <div class="w-auto flex items-center justify-center flex-shrink-0 sm:flex-shrink">
+                            <img src="<?php echo $image['image']['url']; ?>" 
+                                 alt="<?php echo $image['image']['alt']; ?>" 
+                                 class="w-auto h-16">
+                        </div>
+                    <?php endif; ?>
+                <?php endforeach; ?>
             </div>
-            <?php endif; ?>
-            <?php endforeach; ?>
         </div>
     </div>
 </section>

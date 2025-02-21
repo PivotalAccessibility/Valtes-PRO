@@ -12,9 +12,9 @@ $form = valtes_get_field('form', []);
 
 ?>
 
-<section class="container sm:mt-0 mt-5 px-5 sm:px-5 xl:px-0 py-20">
+<section class="container sm:mt-0 mt-5 px-5 sm:px-5 xl:px-0 md:pb-20 pb-10">
     <?php if(!empty($form['section_heading'])): ?>
-    <h1 class="text-2xl font-bold text-center">
+    <h1 class="section-sec-heading text-center">
         <?php echo $form['section_heading']; ?>
     </h1>
     <?php endif; ?>
@@ -22,12 +22,12 @@ $form = valtes_get_field('form', []);
         <div class="w-full pt-5 sm:pt-0 md:w-1/2 flex flex-col items-start">
             <div class="w-full bg-[#f0f5ff] flex flex-col items-start p-5 rounded-2xl">
                 <?php if(!empty($form['form_title'])): ?>
-                <h2 class="font-bold text-lg">
+                <h2 class="form-title">
                     <?php echo $form['form_title']; ?>
                 </h2>
                 <?php endif; ?>
                 <?php if(!empty($form['form_description'])): ?>
-                <p class="section-description mt-5">
+                <p class="form-description mt-5">
                     <?php echo $form['form_description']; ?>
                 </p>
                 <?php endif; ?>
@@ -35,7 +35,7 @@ $form = valtes_get_field('form', []);
                 <?php if(!empty($form['email']['url'])): ?>
                 <div class=" w-full mt-5">
                     <a href="<?php echo $form['email']['url']; ?>"
-                        class="flex items-center text-base font-bold text-blue-700 w-full underline">
+                        class="form-ctas flex items-center">
                         <img src="<?php echo valtes_assets('images/message.svg') ?>" alt="" class="h-5 w-5 mr-4">
                         <?php echo $form['email']['title']; ?>
                     </a>
@@ -45,7 +45,7 @@ $form = valtes_get_field('form', []);
                 <?php if(!empty($form['phone_number']['url'])): ?>
                 <div class=" w-full mt-3">
                     <a href="<?php echo $form['phone_number']['url']; ?>"
-                        class="flex items-center text--base font-bold text-blue-700 w-full underline">
+                        class="form-ctas flex items-center">
                         <img src="<?php echo valtes_assets('images/phone.svg') ?>" alt="" class=" h-5 w-5 mr-4">
                         <?php echo $form['phone_number']['title']; ?>
                     </a>
@@ -55,7 +55,7 @@ $form = valtes_get_field('form', []);
                 <?php if(!empty($form['linkedin']['url'])): ?>
                 <div class=" w-full mt-3">
                     <a href="<?php echo $form['linkedin']['url']; ?>"
-                        class="flex items-center text-base font-bold text-blue-700 w-full underline">
+                        class="form-ctas flex items-center">
                         <img src="<?php echo valtes_assets('images/linkedin.svg') ?>" alt="" class=" h-5 w-5 mr-4">
                         <?php echo $form['linkedin']['title']; ?>
                     </a>

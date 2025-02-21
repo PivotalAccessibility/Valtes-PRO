@@ -12,16 +12,16 @@ $brochure = valtes_get_field('brochure', []);
 
 ?>
 
-<section class=" container py-20 px-5 sm:px-5 xl:px-0">
+<section class=" container md:py-20 px-5 sm:px-5 xl:px-0 py-10">
     <div class=" flex flex-wrap-reverse sm:flex-nowrap ">
         <div class=" sm:w-1/2 w-full flex flex-col items-start justify-center sm:mt-0 mt-10">
             <?php if(!empty($brochure['title'])): ?>
-            <h2 class=" section-heading">
+            <h2 class=" section-sec-heading">
                 <?php echo $brochure['title']; ?>
             </h2>
             <?php endif; ?>
             <?php if(!empty($brochure['description'])): ?>
-            <div class=" font-normal mt-5 text-xs space-y-3 sm:pr-28 leading-5">
+            <div class=" mt-5 section-description">
                 <?php echo $brochure['description']; ?>
             </div>
             <?php endif; ?>
