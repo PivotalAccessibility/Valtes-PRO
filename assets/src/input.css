@@ -79,6 +79,10 @@
         @apply text-primary text-2xl underline font-bold;
     }
 
+    .section-sec-description {
+        @apply text-base;
+    }
+
 }
 
 
