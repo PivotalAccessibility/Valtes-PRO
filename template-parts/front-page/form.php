@@ -67,7 +67,7 @@ $form = valtes_get_field('form', []);
         </div>
 
         <?php if(!empty($form['form_shortcode'])): ?>
-        <div class="w-full sm:w-1/2 sm:ml-10 mt-2">
+        <div class="w-full sm:w-1/2 lg:px-28 mt-2">
             <?php echo do_shortcode($form['form_shortcode']); ?>
         </div>
         <?php endif; ?>

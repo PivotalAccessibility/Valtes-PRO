@@ -37,6 +37,9 @@
     --color-primary: #2b37dc;
     --color-primaryLight: #f0f5ff;
 
+    --color-jobborder: #6997ff;
+    --color-jobactions: #6B7082;
+
     --text-4_1xl: 2.625rem;
     --text-3_5xl: 2.375rem;
 
@@ -83,7 +86,7 @@
     }
 
     .form-ctas{
-        @apply text-primary text-2xl underline font-bold;
+        @apply text-primary md:text-2xl text-base underline font-bold;
     }
 
     .section-sec-description {
@@ -101,6 +104,15 @@
     /* This is for Contact page social media */
     .form-ctas-snd{
         @apply text-primary text-xl underline font-bold;
+    }
+
+    /* For Jobs */
+    .jobs{
+        @apply md:h-14 h-auto !w-full flex flex-wrap md:flex-nowrap justify-between items-center md:p-10 p-6 border-2 border-jobborder md:rounded-full rounded-3xl bg-white;
+    }
+
+    .jobactions{
+        @apply text-jobactions text-xl font-medium;
     }
 
 }
