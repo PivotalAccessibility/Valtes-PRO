@@ -17,23 +17,44 @@ $hero = valtes_get_field('hero', []);
         class="container flex xl:flex-row flex-col-reverse sm:flex-wrap md:flex md:flex-wrap bg-white xl:flex px-5 sm:px-0">
         <div class="flex items-center justify-start h-auto p-0 sm:mt-20 mt-5 xl:w-1/2 sm:w-full xl:mt-12 md:mt-20">
             <div class=" sm:pr-24" dir="ltr">
-                <?php if(!empty($hero['title'])): ?>
+                <?php if(!empty($hero['heading'])): ?>
                 <h1 class="mb-6 section-heading">
-                    <?php echo $hero['title']; ?>
+                    <?php echo $hero['heading']; ?>
                 </h1>
                 <?php endif; ?>
                 <?php if(!empty($hero['description'])): ?>
-                <div class="mt-5 section-description">
+                <div class="mt-5 section-description space-y-5">
                     <?php echo $hero['description']; ?>
                 </div>
                 <?php endif; ?>
-                <?php if(!empty($hero['cta']['url'])): ?>
-                <div class="flex sm:flex-nowrap flex-wrap sm:space-x-6 mt-5">
-                    <a href="<?php echo $hero['cta']['url']; ?>" class="btn btn-primary">
-                        <?php echo $hero['cta']['title']; ?>
+
+                <?php if(!empty($hero['email']['url'])): ?>
+                <div class=" w-full mt-5">
+                    <a href="<?php echo $hero['email']['url']; ?>" class="form-ctas-snd flex items-center">
+                        <img src="<?php echo valtes_assets('images/message.svg') ?>" alt="" class="h-5 w-5 mr-4">
+                        <?php echo $hero['email']['title']; ?>
                     </a>
                 </div>
                 <?php endif; ?>
+
+                <?php if(!empty($hero['phone_number']['url'])): ?>
+                <div class=" w-full mt-3">
+                    <a href="<?php echo $hero['phone_number']['url']; ?>" class="form-ctas-snd flex items-center">
+                        <img src="<?php echo valtes_assets('images/phone.svg') ?>" alt="" class=" h-5 w-5 mr-4">
+                        <?php echo $hero['phone_number']['title']; ?>
+                    </a>
+                </div>
+                <?php endif; ?>
+
+                <?php if(!empty($hero['linkedin']['url'])): ?>
+                <div class=" w-full mt-3">
+                    <a href="<?php echo $hero['linkedin']['url']; ?>" class="form-ctas-snd flex items-center">
+                        <img src="<?php echo valtes_assets('images/linkedin.svg') ?>" alt="" class=" h-5 w-5 mr-4">
+                        <?php echo $hero['linkedin']['title']; ?>
+                    </a>
+                </div>
+                <?php endif; ?>
+
             </div>
         </div>
         <?php if(!empty($hero['image']['url'])): ?>
@@ -45,19 +66,13 @@ $hero = valtes_get_field('hero', []);
                         alt="<?php echo $hero['image']['alt']; ?>">
                 </div>
                 <div class="absolute md:-bottom-12 md:-left-8 -bottom-6 -left-4 xl:-left-11">
-                    <img src="<?php echo valtes_assets('images/Ellipse 2.svg') ?>" class="object-cover"
-                        alt="">
+                    <img src="<?php echo valtes_assets('images/Ellipse 2.svg') ?>" class="object-cover" alt="">
                 </div>
                 <div class="absolute md:-bottom-10 md:-left-24 -bottom-8 -left-10">
-                    <img src="<?php echo valtes_assets('images/Ellipse 3.png') ?>" class="object-cover"
-                        alt="">
-                </div>
-                <div class="absolute bg-white px-10 sm:left-6 left-2 py-7 rounded-full border-5 border-[#f3f6ff] bottom-1">
-                  <img src="<?php echo $hero['floating_image']['url']; ?>" class="object-cover h-12" alt="">
+                    <img src="<?php echo valtes_assets('images/Ellipse 3.png') ?>" class="object-cover" alt="">
                 </div>
             </div>
         </div>
         <?php endif; ?>
-    </div>
     </div>
 </section>

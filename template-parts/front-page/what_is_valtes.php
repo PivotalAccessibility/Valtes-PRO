@@ -16,7 +16,7 @@ if (!defined('ABSPATH')) {
                 </h2>
             <?php endif; ?>
             <?php if (!empty($args['description'])): ?>
-                <div class=" font-normal mt-5 text-base space-y-3 sm:pr-28 leading-5">
+                <div class="section-sec-description mt-5">
                     <?php echo $args['description']; ?>
                 </div>
             <?php endif; ?>

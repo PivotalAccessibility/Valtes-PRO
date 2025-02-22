@@ -87,7 +87,7 @@
     }
 
     .section-sec-description {
-        @apply text-base;
+        @apply text-base text-black font-normal leading-6;
     }
 
     .counter{
@@ -96,6 +96,11 @@
 
     .counter-description{
         @apply text-xl font-normal text-black text-center;
+    }
+
+    /* This is for Contact page social media */
+    .form-ctas-snd{
+        @apply text-primary text-xl underline font-bold;
     }
 
 }

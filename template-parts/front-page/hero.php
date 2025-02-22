@@ -59,5 +59,4 @@ $hero = valtes_get_field('hero', []);
         </div>
         <?php endif; ?>
     </div>
-    </div>
 </section>
