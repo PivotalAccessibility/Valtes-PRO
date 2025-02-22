@@ -33,8 +33,10 @@
     --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono",
       "Courier New", monospace;
     --color-red-500: oklch(0.637 0.237 25.331);
+    --color-red-700: oklch(0.505 0.213 27.518);
     --color-green-200: oklch(0.925 0.084 155.995);
     --color-green-700: oklch(0.527 0.154 150.069);
+    --color-green-800: oklch(0.448 0.119 151.328);
     --color-blue-50: oklch(0.97 0.014 254.604);
     --color-blue-400: oklch(0.707 0.165 254.624);
     --color-blue-500: oklch(0.623 0.214 259.815);
@@ -481,6 +483,9 @@
   .mx-1 {
     margin-inline: calc(var(--spacing) * 1);
   }
+  .mx-2 {
+    margin-inline: calc(var(--spacing) * 2);
+  }
   .mx-auto {
     margin-inline: auto;
   }
@@ -588,6 +593,9 @@
   }
   .ml-2 {
     margin-left: calc(var(--spacing) * 2);
+  }
+  .ml-2\.5 {
+    margin-left: calc(var(--spacing) * 2.5);
   }
   .ml-3 {
     margin-left: calc(var(--spacing) * 3);
@@ -1192,11 +1200,17 @@
   .bg-green-200 {
     background-color: var(--color-green-200);
   }
+  .bg-green-800 {
+    background-color: var(--color-green-800);
+  }
   .bg-primary {
     background-color: var(--color-primary);
   }
   .bg-primaryLight {
     background-color: var(--color-primaryLight);
+  }
+  .bg-red-700 {
+    background-color: var(--color-red-700);
   }
   .bg-transparent {
     background-color: transparent;
@@ -1453,6 +1467,9 @@
   }
   .text-\[\#6997ff\] {
     color: #6997ff;
+  }
+  .text-\[\#A6A6A6\] {
+    color: #A6A6A6;
   }
   .text-\[\#C3D7FF\] {
     color: #C3D7FF;
@@ -2014,6 +2031,11 @@
   .md\:mt-36 {
     @media (width >= 48rem) {
       margin-top: calc(var(--spacing) * 36);
+    }
+  }
+  .md\:ml-1 {
+    @media (width >= 48rem) {
+      margin-left: calc(var(--spacing) * 1);
     }
   }
   .md\:ml-5 {
