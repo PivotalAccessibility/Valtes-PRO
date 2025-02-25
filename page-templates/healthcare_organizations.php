@@ -19,7 +19,7 @@ get_header();
 
 <?php get_template_part('template-parts/healthcare_organizations/form'); ?>
 <?php get_template_part('template-parts/healthcare_organizations/articles'); ?>
-<?php get_template_part('template-parts/healthcare_organizations/over-valtes', null, $explain); ?>
+<?php get_template_part('template-parts/valtesfor/over-valtes', null, $explain); ?>
 
 <?php
 

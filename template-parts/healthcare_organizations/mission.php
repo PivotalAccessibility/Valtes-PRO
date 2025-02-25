@@ -9,14 +9,7 @@ if ($args) {
 }
 
 
-$mission = valtes_get_field('mission', [
-    'title' => 'Onze missie',
-    'description' => 'Onze missie is om zorgtechnologie te ontwikkelen die mantelzorgers en zorgbehoevenden op een effectieve en gebruiksvriendelijke manier ondersteunt. We streven naar oplossingen die niet alleen de druk op mantelzorgers en zorgmedewerkers verlichten, maar ook de kwaliteit van leven van zorgbehoevenden verbeteren. Door innovatie en samenwerking met zorgorganisaties en kennisinstellingen creëren we technologie die proactief werkt en toekomstbestendig is. We werken actief samen met eindgebruikers zoals mantelzorgers en zorgmedewerkers. Zo bouwen we aan een zorgsysteem waarin iedereen langer zelfstandig en met vertrouwen kan leven.',
-    'image' => [
-        'url' => 'https://img.freepik.com/free-photo/abstract-autumn-beauty-multi-colored-leaf-vein-pattern-generated-by-ai_188544-9871.jpg',
-        'alt' => '',
-    ],
-]);
+$mission = valtes_get_field('mission', []);
 
 ?>
 

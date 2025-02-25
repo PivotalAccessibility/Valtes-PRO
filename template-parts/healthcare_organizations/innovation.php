@@ -9,22 +9,7 @@ if ($args) {
 }
 
 
-$innovation = valtes_get_field('innovation', [
-    'title' => 'Innovatietrajecten',
-    'description' => 'Samen met onze opdrachtgevers en kennisinstellingen werken we samen aan de zorg van morgen. Want met een groot tekort aan zorgmedewerkers en een toename van het aantal chronische ziekten per persoon zal de uitdaging in de zorg alleen maar groter worden. We werken daarbij in co-creatie met zorgmedewerkers, mantelzorgers en zorgbehoevenden.',
-    'first_image' => [
-        'url' => 'https://img.freepik.com/free-photo/lifestyle-people-emotions-casual-concept-confident-nice-smiling-asian-woman-cross-arms-chest-confident-ready-help-listening-coworkers-taking-part-conversation_1258-59335.jpg',
-        'alt' => '',
-    ],
-    'second_image' => [
-        'url' => 'https://img.freepik.com/free-photo/lifestyle-people-emotions-casual-concept-confident-nice-smiling-asian-woman-cross-arms-chest-confident-ready-help-listening-coworkers-taking-part-conversation_1258-59335.jpg',
-        'alt' => '',
-    ],
-    'third_image' => [
-        'url' => 'https://img.freepik.com/free-photo/lifestyle-people-emotions-casual-concept-confident-nice-smiling-asian-woman-cross-arms-chest-confident-ready-help-listening-coworkers-taking-part-conversation_1258-59335.jpg',
-        'alt' => '',
-    ]
-]);
+$innovation = valtes_get_field('innovation', []);
 
 ?>
 
@@ -37,7 +22,7 @@ $innovation = valtes_get_field('innovation', [
                 <div class="absolute top-1 -left-16 sm:top-3 sm:-left-20">
                     <?php if (!empty($innovation['first_image']['url'])): ?>
                         <div class="size-[8.58906rem] sm:h-[13.0625rem] sm:w-[13.0625rem] rounded-full">
-                        <img src="<?php echo $innovation['first_image']['url']; ?>" alt="<?php echo $hero['first_image']['alt']; ?>" class="object-cover rounded-full size-full">
+                            <img src="<?php echo $innovation['first_image']['url']; ?>" alt="<?php echo $hero['first_image']['alt']; ?>" class="object-cover rounded-full size-full">
                         </div>
                     <?php endif; ?>
                 </div>

@@ -9,23 +9,7 @@ if ($args) {
 }
 
 
-$challenge = valtes_get_field('challenge', [
-    'heading' => 'De uitdaging',
-    'challenges' => [
-        [
-            'counter' => '170.000',
-            'description' => 'mensen tekort in de zorg in 2030'
-        ],
-        [
-            'counter' => '2.600.000',
-            'description' => '80-plussers in 2050'
-        ],
-        [
-            'counter' => '620.000',
-            'description' => 'mensen met dementie in 2050'
-        ]
-    ]
-]);
+$challenge = valtes_get_field('challenge', []);
 
 ?>
 

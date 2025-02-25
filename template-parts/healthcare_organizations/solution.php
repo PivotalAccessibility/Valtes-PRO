@@ -9,51 +9,9 @@ if ($args) {
 }
 
 
-$solution = valtes_get_field('solution', [
-    'title' => 'de Valtes -oplossing',
-    'description' => 'We hebben een eigen innovatieve sensor ontwikkelt. We detecteren onraad, onveilige situaties en afwijkend gedrag, zodat zorgprofessionals en mantelzorgers met vertrouwen de zorg kunnen dragen.',
-    'solutions' => [
-        [
-            'image' => [
-                'url' => 'https://img.freepik.com/free-photo/abstract-autumn-beauty-multi-colored-leaf-vein-pattern-generated-by-ai_188544-9871.jpg',
-                'alt' => '',
-            ],
-            'title' => 'Onveilige situaties',
-            'description' => 'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolores recusandae repellat adipisci accusamus totam voluptatibus voluptate incidunt. Non, reprehenderit id.',
-        ],
-        [
-            'image' => [
-                'url' => 'https://img.freepik.com/free-photo/abstract-autumn-beauty-multi-colored-leaf-vein-pattern-generated-by-ai_188544-9871.jpg',
-                'alt' => '',
-            ],
-            'title' => 'Onveilige situaties',
-            'description' => 'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolores recusandae repellat adipisci accusamus totam voluptatibus voluptate incidunt. Non, reprehenderit id.',
-        ],
-        [
-            'image' => [
-                'url' => 'https://img.freepik.com/free-photo/abstract-autumn-beauty-multi-colored-leaf-vein-pattern-generated-by-ai_188544-9871.jpg',
-                'alt' => '',
-            ],
-            'title' => 'Onveilige situaties',
-            'description' => 'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolores recusandae repellat adipisci accusamus totam voluptatibus voluptate incidunt. Non, reprehenderit id.',
-        ],
-        [
-            'image' => [
-                'url' => 'https://img.freepik.com/free-photo/abstract-autumn-beauty-multi-colored-leaf-vein-pattern-generated-by-ai_188544-9871.jpg',
-                'alt' => '',
-            ],
-            'title' => 'Onveilige situaties',
-            'description' => 'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolores recusandae repellat adipisci accusamus totam voluptatibus voluptate incidunt. Non, reprehenderit id.',
-        ]
-    ],
-    'footer_image' => [
-        'url' => valtes_assets("/images/Europese_unie.png"),
-        'alt' => ''
-    ]
-]);
+$solution = valtes_get_field('solution', []);
 
 ?>
-
 
 
 <section class="bg-[#F0F5FF]" name="valtes-solution">
@@ -80,7 +38,7 @@ $solution = valtes_get_field('solution', [
                 <?php endif; ?>
             </div>
             <div class="flex flex-col md:py-20 py-10 gap-[1.88rem] md:gap-20">
-                <?php foreach ($solution['solutions'] as $index => $item): ?>
+                <?php foreach ($solution['solution_cards'] as $index => $item): ?>
                     <?php if ($index % 2 == 0): ?>
                         <div class="flex flex-col px-3 md:gap-0 gap-[1.88rem] lg:flex-row lg:px-0">
                             <div class="flex flex-row w-full lg:w-1/2">
