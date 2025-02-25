@@ -45,11 +45,11 @@ $solution = valtes_get_field('solution', [
             'title' => 'Onveilige situaties',
             'description' => 'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolores recusandae repellat adipisci accusamus totam voluptatibus voluptate incidunt. Non, reprehenderit id.',
         ]
-        ],
-        'footer_image' => [
-            'url' => valtes_assets("/images/Europese_unie.png"),
-            'alt' => ''
-        ]
+    ],
+    'footer_image' => [
+        'url' => valtes_assets("/images/Europese_unie.png"),
+        'alt' => ''
+    ]
 ]);
 
 ?>
@@ -57,15 +57,15 @@ $solution = valtes_get_field('solution', [
 
 
 <section class="bg-[#F0F5FF]" name="valtes-solution">
-    <div class="container">
-        <div class="flex flex-col justify-center items-center gap-20">
-            <div class="flex flex-col flex-wrap justify-center items-center py-10 gap-[1.875rem]">
+    <div class="container py-10 md:py-20">
+        <div class="flex flex-col items-center justify-center">
+            <div class="flex flex-col flex-wrap justify-center items-center gap-[1.88rem]">
                 <?php if (!empty($solution['title'])): ?>
-                    <h2 class="section-sec-heading text-center z-10 relative">
+                    <h2 class="relative z-10 text-center section-sec-heading">
                         <?php echo $solution['title']; ?>
                         <!-- <div class="relative w-full">
                         <svg
-                            class="absolute  h-2 -z-9 text-blue-400" width="302" height="11"
+                            class="absolute h-2 text-blue-400 -z-9" width="302" height="11"
                             viewBox="0 0 302 11" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path d="M4.875 7C100.434 2.92834 197.398 3.07231 297.875 7" stroke="#6997FF"
                                 stroke-width="8" stroke-linecap="round" />
@@ -79,22 +79,22 @@ $solution = valtes_get_field('solution', [
                     </p>
                 <?php endif; ?>
             </div>
-            <div class="">
+            <div class="flex flex-col md:py-20 py-10 gap-[1.88rem] md:gap-20">
                 <?php foreach ($solution['solutions'] as $index => $item): ?>
                     <?php if ($index % 2 == 0): ?>
-                        <div class="flex lg:flex-row flex-col px-3 lg:px-0 gap-4 lg:gap-0">
-                            <div class="w-full lg:w-1/2 flex flex-row">
+                        <div class="flex flex-col px-3 md:gap-0 gap-[1.88rem] lg:flex-row lg:px-0">
+                            <div class="flex flex-row w-full lg:w-1/2">
                                 <div class="relative card-image">
                                     <?php if (!empty($item['image']['url'])): ?>
-                                        <img src="<?php echo $item['image']['url']; ?>"
-                                            alt="<?php echo $item['image']['alt']; ?>"
-                                            class=" rounded-full object-cover z-10 relative size-full">
+                                        <img src="<?php echo $item['image']['url']; ?>" alt="<?php echo $item['image']['alt']; ?>"
+                                            class="relative z-10 object-cover rounded-full size-full">
                                     <?php endif; ?>
-                                    <div class="absolute h-[7.43425rem] w-[7.43425rem] rounded-full hidden lg:block bg-[#6997FF] top-1 right-1">
+                                    <div
+                                        class="absolute h-[7.43425rem] w-[7.43425rem] rounded-full hidden lg:block bg-[#6997FF] top-1 right-1">
                                     </div>
                                 </div>
                             </div>
-                            <div class="w-full lg:w-1/2 flex flex-col justify-center gap-10 items-start">
+                            <div class="flex flex-col items-start justify-center w-full gap-4 md:gap-10 lg:w-1/2">
                                 <?php if (!empty($item['title'])): ?>
                                     <h2 class="section-sec-heading">
                                         <?php echo $item['title']; ?>
@@ -108,8 +108,8 @@ $solution = valtes_get_field('solution', [
                             </div>
                         </div>
                     <?php else: ?>
-                        <div class="flex lg:flex-row flex-col-reverse px-3 lg:px-0">
-                            <div class="w-full lg:w-1/2 flex flex-col justify-center items-start gap-10">
+                        <div class="flex flex-col-reverse px-3 md:gap-0 gap-[1.88rem] lg:flex-row lg:px-0">
+                            <div class="flex flex-col items-start justify-center w-full gap-4 md:gap-10 lg:w-1/2">
                                 <?php if (!empty($item['title'])): ?>
                                     <h2 class="section-sec-heading">
                                         <?php echo $item['title']; ?>
@@ -121,11 +121,11 @@ $solution = valtes_get_field('solution', [
                                     </p>
                                 <?php endif; ?>
                             </div>
-                            <div class="w-full lg:w-1/2 flex flex-row justify-center lg:justify-end lg:items-end">
+                            <div class="flex flex-row justify-center w-full lg:w-1/2 lg:justify-end lg:items-end">
                                 <div class="relative card-image">
                                     <?php if (!empty($item['image']['url'])): ?>
                                         <img src="<?php echo $item['image']['url']; ?>" alt="<?php echo $item['image']['alt']; ?>"
-                                            class="rounded-full object-cover size-full relative z-10">
+                                            class="relative z-10 object-cover rounded-full size-full">
                                     <?php endif; ?>
                                     <div
                                         class="absolute h-[8.75rem] w-[8.75rem] rounded-full hidden lg:block bg-[#E5E8F3] bottom-1 right-1">
@@ -137,7 +137,8 @@ $solution = valtes_get_field('solution', [
                 <?php endforeach; ?>
             </div>
             <div class="h-[4.6875rem] w-[23.375rem]">
-                <img src="<?php echo $solution['footer_image']['url']; ?>" alt="<?php echo $solution['footer_image']['alt']; ?>" class="h-full w-full">
+                <img src="<?php echo $solution['footer_image']['url']; ?>"
+                    alt="<?php echo $solution['footer_image']['alt']; ?>" class="w-full h-full">
             </div>
         </div>
     </div>

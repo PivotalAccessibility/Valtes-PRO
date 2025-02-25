@@ -21,9 +21,9 @@ $mission = valtes_get_field('mission', [
 ?>
 
 
-<section class=" container md:py-20 py-10 md:px-5 px-4">
-    <div class=" flex flex-wrap-reverse sm:flex-nowrap ">
-        <div class=" sm:w-1/2 w-full flex flex-col items-start justify-center sm:mt-0 mt-10">
+<section class=" container py-[3.75rem] md:py-[7.5rem] md:px-5 px-4">
+    <div class="flex flex-wrap-reverse sm:flex-nowrap">
+        <div class="flex flex-col items-start justify-center w-full mt-[1.88rem] sm:w-1/2 sm:mt-0">
             <div class="sm:pr-24">
                 <?php if (!empty($mission['title'])): ?>
                     <h2 class="section-sec-heading">
@@ -31,13 +31,13 @@ $mission = valtes_get_field('mission', [
                     </h2>
                 <?php endif; ?>
                 <?php if (!empty($mission['description'])): ?>
-                    <div class=" section-sec-description mt-5">
+                    <p class="mt-5 md:mt-10 section-sec-description">
                         <?php echo $mission['description']; ?>
-                    </div>
+                    </p>
                 <?php endif; ?>
             </div>
         </div>
-        <div class=" sm:w-1/2 w-full flex items-center justify-end">
+        <div class="flex items-center justify-end w-full sm:w-1/2">
             <?php if (!empty($mission['image']['url'])): ?>
                 <div class="relative">
                     <img src="<?php echo $mission['image']['url']; ?> " alt="" class=" sm:h-[21rem] h-auto w-auto relative rounded-full object-cover">
