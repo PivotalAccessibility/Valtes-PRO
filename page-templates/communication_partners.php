@@ -13,7 +13,7 @@ get_header();
 <?php get_template_part('template-parts/communication_partners/hairdresser'); ?>
 <?php get_template_part('template-parts/communication_partners/valtes-app'); ?>
 <?php get_template_part('template-parts/communication_partners/form'); ?>
-<!-- article section are left here -->
+<?php get_template_part('template-parts/communication_partners/articles'); ?>
 <?php get_template_part('template-parts/communication_partners/what_is_valtes'); ?>
 
 

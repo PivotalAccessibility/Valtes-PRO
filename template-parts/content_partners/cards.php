@@ -44,24 +44,24 @@ $card = valtes_get_field('card', [
 
 
 <section class="" name="valtes-card">
-    <div class="container">
-        <div>
+    <div class="container md:py-[7.5rem] py-14">
+        <div class="flex flex-col md:gap-[7.5rem] gap-[1.88rem]">
             <?php foreach ($card['cards'] as $index => $item): ?>
                 <div class="">
                     <?php if ($index % 2 == 0): ?>
-                        <div class="flex lg:flex-row flex-col py-10 px-3 lg:px-0 gap-4 lg:gap-0">
-                            <div class="w-full lg:w-1/2 flex flex-row">
+                        <div class="flex flex-col gap-[1.88rem] px-3 lg:flex-row lg:px-0 lg:gap-0">
+                            <div class="flex flex-row w-full lg:w-1/2">
                                 <div class="relative card-image">
                                     <?php if (!empty($item['image']['url'])): ?>
                                         <img src="<?php echo $item['image']['url']; ?>"
                                             alt="<?php echo $item['image']['alt']; ?>"
-                                            class=" rounded-full object-cover z-10 relative size-full">
+                                            class="relative z-10 object-cover rounded-full size-full">
                                     <?php endif; ?>
                                     <div class="absolute h-[7.43425rem] w-[7.43425rem] rounded-full hidden lg:block bg-jobborder top-1 right-1">
                                     </div>
                                 </div>
                             </div>
-                            <div class="w-full lg:w-1/2 flex flex-col justify-center gap-4 items-start">
+                            <div class="flex flex-col items-start justify-center w-full gap-4 md:gap-10 lg:w-1/2">
                                 <?php if (!empty($item['title'])): ?>
                                     <h2 class="section-sec-heading">
                                         <?php echo $item['title']; ?>
@@ -75,8 +75,8 @@ $card = valtes_get_field('card', [
                             </div>
                         </div>
                     <?php else: ?>
-                        <div class="flex lg:flex-row flex-col-reverse px-3 py-10 lg:px-0">
-                            <div class="w-full lg:w-1/2 flex flex-col justify-center items-start gap-4 mt-5 lg:mt-0">
+                        <div class="flex flex-col-reverse px-3 gap-[1.88rem] md:gap-0 lg:flex-row lg:px-0">
+                            <div class="flex flex-col items-start justify-center w-full gap-4 mt-5 md:gap-10 lg:w-1/2 lg:mt-0">
                                 <?php if (!empty($item['title'])): ?>
                                     <h2 class="section-sec-heading">
                                         <?php echo $item['title']; ?>
@@ -88,11 +88,11 @@ $card = valtes_get_field('card', [
                                     </p>
                                 <?php endif; ?>
                             </div>
-                            <div class="w-full lg:w-1/2 flex flex-row justify-center lg:justify-end lg:items-end">
+                            <div class="flex flex-row justify-center w-full lg:w-1/2 lg:justify-end lg:items-end">
                                 <div class="relative card-image">
                                     <?php if (!empty($item['image']['url'])): ?>
                                         <img src="<?php echo $item['image']['url']; ?>" alt="<?php echo $item['image']['alt']; ?>"
-                                            class="rounded-full object-cover size-full relative z-10">
+                                            class="relative z-10 object-cover rounded-full size-full">
                                     <?php endif; ?>
                                     <div
                                         class="absolute h-[8.75rem] w-[8.75rem] rounded-full hidden lg:block bg-[#E0E3ED] bottom-1 right-1">

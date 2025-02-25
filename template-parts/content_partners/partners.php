@@ -62,35 +62,35 @@ $partners = valtes_get_field('partners', [
 
 <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
 
-<section class="my-10">
-    <div class="container flex flex-col">
+<section class="">
+    <div class="container flex flex-col mb-[3.75rem]">
         <?php if (!empty($partners['title'])): ?>
-            <h2 class="text-3xl font-bold text-[#1C233E] text-center mb-4">
+            <h2 class="text-center section-sec-heading">
                 <?php echo $partners['title']; ?>
             </h2>
         <?php endif; ?>
-        <div class="grid lg:grid-cols-3 grid-cols-1 mySlider">
+        <div class="grid grid-cols-1 md:mt-10 mt-[1.19rem] lg:grid-cols-3 mySlider">
 
             <?php foreach ($partners['partners'] as $index => $item): ?>
-                <div class="flex flex-col justify-center items-center w-60 space-y-2 mx-auto">
-                    <div class="w-[180px] h-[180px] bg-red-100 rounded-full my-4 mx-auto">
+                <div class="flex flex-col items-center justify-center mx-auto w-60">
+                    <div class="w-[180px] h-[180px] bg-red-100 rounded-full mx-auto">
                         <img src="<?php echo $item['image']['url']; ?>" alt="<?php echo $item['image']['url']; ?>" class="rounded-full">
                     </div>
                     <?php if (!empty($item['name'])): ?>
-                        <h2 class="text-lg font-bold text-[#1C233E] text-center">
+                        <h2 class="section-description mt-[1.5rem] font-bold text-center">
                             <?php echo $item['name']; ?>
                         </h2>
                     <?php endif; ?>
-                    <img src="<?php echo $item['company_image']['url']; ?>" alt="<?php echo $item['company_image']['alt']; ?>" class="w-auto h-10 mb-4">
+                    <img src="<?php echo $item['company_image']['url']; ?>" alt="<?php echo $item['company_image']['alt']; ?>" class="w-auto mx-auto h-10 my-[0.75rem]">
                     <?php if (!empty($item['bio'])): ?>
-                        <p class="text-xs text-center mb-4">
+                        <p class="md:text-[1rem] text-sm text-center">
                             <?php echo $item['bio']; ?>
                         </p>
                     <?php endif; ?>
                     <button
-                        class="border-2 border-[#2B37DC] text-[#2B37DC] rounded-full px-3 py-2 flex items-center w-full justify-center">
+                        class="border-2 border-[#2B37DC] text-[#2B37DC] mt-[1.88rem] rounded-full px-3 py-2 flex items-center w-full justify-center">
                         <span class="mr-2">
-                            <img src="" alt="">
+                            <img src="<?php echo valtes_assets('images/up-right-from-squares.png')?>" alt="">
                         </span>MantelzorgNL
                     </button>
                 </div>

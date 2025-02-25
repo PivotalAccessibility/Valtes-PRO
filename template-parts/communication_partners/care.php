@@ -8,14 +8,7 @@ if ($args) {
     extract($args);
 }
 
-$care = valtes_get_field('care', [
-    'image' => [
-        'url' => valtes_assets('/images/care.png'),
-        'alt' => ''
-    ],
-    'title' => 'Wat kun jij betekenen voor mantelzorgers?',
-    'description' => 'Als communicatiepartner van Valtes kun jij een belangrijke rol spelen in het bereiken van mantelzorgers in hun dagelijkse omgeving. Of het nu gaat om een huisartsenpraktijk, supermarkt, sportvereniging, kapper of regionaal ziekenhuis, jouw locatie biedt een unieke kans om mantelzorgers te informeren over de Valtes-app. Samen zorgen we ervoor dat zij op het juiste moment toegang krijgen tot relevante ondersteuning, door zichtbare en gerichte communicatie op plekken waar zij zich vaak bevinden.',
-]);
+$care = valtes_get_field('care', []);
 
 ?>
 

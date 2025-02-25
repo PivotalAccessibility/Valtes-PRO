@@ -9,38 +9,6 @@ if ($args) {
 }
 
 $form = valtes_get_field('form', [
-    'heading' => 'Deel jij de zorg ook met ons?',
-    'title' => 'Die horen wij natuurlijk graag!',
-    'description' => 'We zijn altijd op zoek naar samenwerkingspartners, ... en ... Vul het contactformulier hiernaast in,
-                    of neem contact op met ons.',
-
-    'social' => [
-        [
-            'url' => '#',
-            'title' => 'info@valtes.nl',
-            'icon' => [
-                'url' => valtes_assets('/images/message.svg'),
-                'alt' => ''
-            ]
-        ],
-        [
-            'url' => '#',
-            'title' => '+31 6 18 23 96 74',
-            'icon' => [
-                'url' => valtes_assets('/images/phone.svg'),
-                'alt' => ''
-            ]
-        ],
-
-        [
-            'url' => '#',
-            'title' => '/company/valtes',
-            'icon' => [
-                'url' => valtes_assets('/images/linkedin.svg'),
-                'alt' => ''
-            ]
-        ]
-    ],
 ]);
 
 ?>
@@ -65,24 +33,40 @@ $form = valtes_get_field('form', [
                     </p>
                 <?php endif ?>
                 <ul class="grid gap-4 lg:gap-8">
-                    <?php foreach ($form['social'] as $key => $form): ?>
-                        <?php if (!empty($form['url'])): ?>
+                <?php if (!empty($form['email']['url'])): ?>
                             <li>
-                                <a href="<?php echo $form['url'] ?>" class="flex items-center form-social">
+                                <a href="<?php echo $form['email']['url'] ?>" class="flex items-center form-social">
                                     <div class="mr-5">
-                                        <?php if (!empty($form['icon']['url'])): ?>
-                                            <img src="<?php echo $form['icon']['url'] ?>" alt="<?php echo $form['icon']['alt'] ?>">
-                                        <?php endif ?>
+                                            <img src="<?php echo valtes_assets('images/message.svg') ?>" alt="<?php echo $form['icon']['alt'] ?>">
                                     </div>
-                                    <?php echo $form['title'] ?>
+                                    <?php echo $form['email']['title']; ?>
                                 </a>
 
                             </li>
                         <?php endif ?>
-                    <?php endforeach ?>
 
+                        <?php if (!empty($form['phone_number']['url'])): ?>
+                            <li>
+                                <a href="<?php echo $form['phone_number']['url'] ?>" class="flex items-center form-social">
+                                    <div class="mr-5">
+                                            <img src="<?php echo valtes_assets('images/phone.svg') ?>" alt="<?php echo $form['icon']['alt'] ?>">
+                                    </div>
+                                    <?php echo $form['phone_number']['title']; ?>
+                                </a>
 
+                            </li>
+                        <?php endif ?>
+                        <?php if (!empty($form['linkedin']['url'])): ?>
+                            <li>
+                                <a href="<?php echo $form['linkedin']['url'] ?>" class="flex items-center form-social">
+                                    <div class="mr-5">
+                                            <img src="<?php echo valtes_assets('images/linkedin.svg') ?>" alt="<?php echo $form['icon']['alt'] ?>">
+                                    </div>
+                                    <?php echo $form['linkedin']['title']; ?>
+                                </a>
 
+                            </li>
+                        <?php endif ?>
                 </ul>
             </div>
 

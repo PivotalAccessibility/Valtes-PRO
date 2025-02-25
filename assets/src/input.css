@@ -310,6 +310,9 @@ button.slick-arrow {
     flex-direction: column;
 }
 
+.mySlider .slick-dots{
+    margin-top: 1.88rem;
+}
 
 .navbar-menu ul {
     display: flex;

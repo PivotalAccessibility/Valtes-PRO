@@ -6,7 +6,7 @@ if ($args) {
     extract($args);
 }
 
-$explain = valtes_get_field('explanation', [
+$Explain = valtes_get_field('explanation', [
     'title' => 'De Valtes app',
     'description' => 'De Valtes-app biedt mantelzorgers gepersonaliseerde ondersteuning en relevante informatie, afgestemd op hun unieke situatie. Met een gebruiksvriendelijke interface en op maat gemaakte tips helpt de app mantelzorgers om grip te krijgen op hun zorgtaken.',
     'image' => [
@@ -24,7 +24,7 @@ $explain = valtes_get_field('explanation', [
         'url' => 'https://w7.pngwing.com/pngs/859/487/png-transparent-google-play-computer-icons-android-google-text-label-logo.png',
         'alt' => '',
     ],
-    'scanner_image' => [
+    'qr_image' => [
         'url' => 'https://upload.wikimedia.org/wikipedia/commons/thumb/d/d0/QR_code_for_mobile_English_Wikipedia.svg/1200px-QR_code_for_mobile_English_Wikipedia.svg.png',
         'alt' => '',
     ],
@@ -32,47 +32,42 @@ $explain = valtes_get_field('explanation', [
 
 ?>
 
-<section class="bg-primaryLight md:py-16 py-10">
-    <div class="container flex flex-col items-center justify-center px-5 sm:px-5 xl:px-0">
-        <?php if (!empty($explain['title'])): ?>
-            <h2 class="section-sec-heading text-center">
-                <?php echo $explain['title']; ?>
-            </h2>
-        <?php endif; ?>
-        <?php if (!empty($explain['description'])): ?>
-            <p class="mt-5 text-center sm:w-[80%] section-description">
-                <?php echo $explain['description']; ?>
-            </p>
-        <?php endif; ?>
-        <?php if (!empty($explain['image']['url'])): ?>
-            <div class="mt-5 sm:mt-10">
-                <img src="<?php echo $explain['image']['url']; ?>" alt="<?php echo $explain['image']['alt']; ?>" class=" md:h-96 h-auto md:w-auto w-full">
+<section class="bg-primaryLight">
+    <div class="container px-5 lg:pt-20 py-10 lg:pb-[3.13rem] lg:px-0">
+        <div class="flex flex-wrap justify-center">
+            <?php if (!empty($Explain['title'])): ?>
+                <h2 class="w-full text-center section-sec-heading">
+                    <?php echo $Explain['title']; ?>
+                </h2>
+            <?php endif; ?>
+            <?php if (!empty($Explain['description'])): ?>
+                <p class="text-center sm:w-1/2 lg:mt-[1.87rem] mt-5 section-description text-[#1c233e]">
+                    <?php echo $Explain['description']; ?>
+                </p>
+            <?php endif; ?>
+        </div>
+        <?php if (!empty($Explain['image']['url'])): ?>
+            <div class="flex justify-center w-auto lg:w-[51rem] mx-auto lg:pt-10 px-[1.9rem] lg:pb-5">
+                <img src="<?php echo $Explain['image']['url']; ?>" class="" alt="<?php echo $Explain['image']['alt']; ?>">
             </div>
         <?php endif; ?>
-        <div class="w-full">
-            <div class="flex mt-10 gap-6 md:justify-center items-center">
-                <?php if (!empty($explain['scanner_link'])): ?>
-                    <div>
-                        <a href="<?php echo $explain['scanner_link']; ?>">
-                            <img src="<?php echo $explain['scanner_image']['url']; ?>" alt="<?php echo $explain['scanner_image']['alt']; ?>" class="w-[120px]">
-                        </a>
-                    </div>
-                <?php endif; ?>
-                <?php if (!empty($explain['appstore_link'])): ?>
-                    <div>
-                        <a href="<?php echo $explain['appstore_link']; ?>">
-                            <img src="<?php echo $explain['appstore_image']['url']; ?>" alt="<?php echo $explain['appstore_image']['alt']; ?>" class="w-[120px]">
-                        </a>
-                    </div>
-                <?php endif; ?>
-                <?php if (!empty($explain['googleplay_link'])): ?>
-                    <div>
-                        <a href="<?php echo $explain['googleplay_link']; ?>">
-                            <img src="<?php echo $explain['googleplay_image']['url']; ?>" alt="<?php echo $explain['googleplay_image']['alt']; ?>" class="w-[120px]">
-                        </a>
-                    </div>
-                <?php endif; ?>
-            </div>
+        <div class="flex items-center justify-center gap-10 mx-auto">
+            <?php if (!empty($Explain['qr_image']['url'])): ?>
+                <img src="<?php echo $Explain['qr_image']['url']; ?>" class="hidden w-8 md:w-24 sm:block"
+                    alt="<?php echo $Explain['qr_image']['alt']; ?>">
+            <?php endif; ?>
+            <?php if (!empty($Explain['appstore_link'])): ?>
+                <a href="<?php echo $Explain['appstore_link']; ?>">
+                    <img src="<?php echo $Explain['appstore_image']['url']; ?>" class="w-28 md:w-36"
+                        alt="<?php echo $Explain['appstore_image']['alt']; ?>">
+                </a>
+            <?php endif; ?>
+            <?php if (!empty($Explain['googleplay_link'])): ?>
+                <a href="<?php echo $Explain['googleplay_link']; ?>">
+                    <img src="<?php echo $Explain['googleplay_image']['url']; ?>" class="w-28 md:w-36"
+                        alt="<?php echo $Explain['googleplay_image']['alt']; ?>">
+                </a>
+            <?php endif; ?>
         </div>
     </div>
 </section>

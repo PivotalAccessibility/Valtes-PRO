@@ -8,14 +8,7 @@ if ($args) {
     extract($args);
 }
 
-$challenge = valtes_get_field('challenge', [
-    'image' => [
-        'url' => valtes_assets('/images/deUitedaging.png'),
-        'alt' => ''
-    ],
-    'title' => 'De uitdaging',
-    'description' => 'De meeste mantelzorgers worden niet bereikt en blijven buiten bFeeld. Bijvoorbeeld omdat zowel de ondersteuning en communicatie veelal gericht is op ouderen van 65+. Daardoor ontvangen zij vaak niet de juiste informatie en ondersteuning. Bovendien noemen de meeste mantelzorgers zich geen mantelzorger. ',
-]);
+$challenge = valtes_get_field('challenge', []);
 
 ?>
 

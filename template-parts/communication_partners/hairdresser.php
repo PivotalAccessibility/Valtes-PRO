@@ -8,27 +8,7 @@ if ($args) {
     extract($args);
 }
 
-$dresser = valtes_get_field('cards', [
-    'cards' => [
-        [
-            'image' => [
-                'url' => valtes_assets('/images/deKapper.png'),
-                'alt' => ''
-            ],
-            'heading' => 'De kapper',
-            'description' => '“Hoe gaat het met je?” Veel mensen openen hun hart bij de kapper. Valtes voorziet kappers van stickers op hun spiegels, zodat mensen gelijk van een waardevolle informatie kunnen worden voorzien! '
-        ],
-        [
-            'image' => [
-                'url' => valtes_assets('/images/deHusariat.png'),
-                'alt' => ''
-            ],
-            'heading' => 'De huisarts',
-            'description' => 'De huisarts speelt een belangrijke rol in het signaleren en ondersteunen van mantelzorgers. Door samen te werken met huisartsenpraktijken kunnen we mantelzorgers direct informeren over de Valtes-app, waardoor ze sneller toegang krijgen tot relevante zorg en ondersteuning. Dit helpt zowel de mantelzorger als de huisarts bij het verlichten van de zorglast.'
-        ],
-
-    ]
-]);
+$dresser = valtes_get_field('cards', []);
 ?>
 
 <section class="" name="valtes-solution">
@@ -49,9 +29,9 @@ $dresser = valtes_get_field('cards', [
                     </div>
                     <div class="flex flex-col justify-center w-full lg:w-1/2">
                         <div class="flex flex-col justify-center">
-                            <?php if (!empty($dresser['heading'])): ?>
+                            <?php if (!empty($dresser['title'])): ?>
                                 <h2 class="section-sec-heading">
-                                    <?php echo $dresser['heading']; ?>
+                                    <?php echo $dresser['title']; ?>
                                 </h2>
                             <?php endif; ?>
                             <?php if (!empty($dresser['description'])): ?>
@@ -80,8 +60,8 @@ $dresser = valtes_get_field('cards', [
                     </div>
                     <div class="flex flex-col items-end justify-center w-full lg:w-1/2">
                         <div class="flex flex-col justify-center">
-                            <?php if (!empty($dresser['heading'])): ?>
-                                <h2 class="section-sec-heading"><?php echo $dresser['heading'] ?></h2>
+                            <?php if (!empty($dresser['title'])): ?>
+                                <h2 class="section-sec-heading"><?php echo $dresser['title'] ?></h2>
                             <?php endif; ?>
                             <?php if (!empty($dresser['description'])): ?>
                                 <p class="mt-4 lg:mt-10 section-sec-description">

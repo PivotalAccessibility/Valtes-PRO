@@ -8,18 +8,7 @@ if ($args) {
     extract($args);
 }
 
-$hero = valtes_get_field('hero', [
-    'title' => 'We delen de zorg met communicatiepartners',
-    'description' => 'Bij Valtes geloven we dat sterke communicatie essentieel is om mantelzorgers de juiste informatie en ondersteuning te bieden. Als communicatiepartner speel je een cruciale rol in het bereiken van mantelzorgers die vaak buiten beeld blijven. En het kost bijna geen tijd. Wij voorzien je van communicatie-materiaal.',
-    'image' => [
-        'url' => valtes_assets('/images/hero.png'),
-        'alt' => ''
-    ],
-    'cta' => [
-        'url' => '#',
-        'title' => 'Neem contact op met ons'
-    ],
-]);
+$hero = valtes_get_field('hero', []);
 
 
 ?>
@@ -34,7 +23,7 @@ $hero = valtes_get_field('hero', [
                     </h1>
                 <?php endif; ?>
                 <?php if (!empty($hero['description'])): ?>
-                    <p class="mt-6 text-base font-normal">
+                    <p class="mt-6 font-normal section-description">
                         <?php echo $hero['description']; ?>
                     </p>
                 <?php endif; ?>

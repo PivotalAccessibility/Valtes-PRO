@@ -8,71 +8,10 @@ if ($args) {
     extract($args);
 }
 
-$logo = valtes_get_field('logo', [
-
-    'title' => 'Dit vinden andere contentpartners',
-
-    'images' => [
-        [
-            'image' => [
-                'url' => valtes_assets("/images/partners/biblionet drenthe.png"),
-                'alt' => ''
-            ],
-        ],
-        [
-            'image' => [
-                'url' => valtes_assets("/images/partners/dkn-logo-assen-bioscoop-400x169 1.png"),
-                'alt' => ''
-            ],
-        ],
-        [
-            'image' => [
-                'url' => valtes_assets("/images/partners/dokter drenthe.png"),
-                'alt' => ''
-            ],
-        ],
-        [
-            'image' => [
-                'url' => valtes_assets("/images/partners/IcareLogo 1.png"),
-                'alt' => ''
-            ],
-        ],
-        [
-            'image' => [
-                'url' => valtes_assets("/images/partners/interzorg-logo-landscape-removebg-preview 1.png"),
-                'alt' => ''
-            ],
-        ],
-        [
-            'image' => [
-                'url' => valtes_assets("/images/partners/JMZ+Pro_logo_bw-removebg-preview 1.png"),
-                'alt' => ''
-            ],
-        ],
-        [
-            'image' => [
-                'url' => valtes_assets("/images/partners/b.png"),
-                'alt' => ''
-            ],
-        ],
-        [
-            'image' => [
-                'url' => valtes_assets("/images/partners/stichtingervaringskenniscentrumschouders1-removebg-preview 1.png"),
-                'alt' => ''
-            ],
-        ],
-        [
-            'image' => [
-                'url' => valtes_assets("/images/partners/wza.png"),
-                'alt' => ''
-            ],
-        ]
-    ]
-
-
-]);
+$logo = valtes_get_field('logo', []);
 
 ?>
+
 <section class="bg-[#F0F5FF] lg:py-20 py-[3.75rem]">
     <div class="flex flex-col items-center lg:px-[1.8rem] gap-7.5 justify-center">
         <?php if (!empty($logo['title'])): ?>
