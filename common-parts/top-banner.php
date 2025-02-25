@@ -10,6 +10,7 @@ $heroCta = !empty($args['cta']) ? $args['cta'] : false;
 $heroCta2 = !empty($args['cta2']) ? $args['cta2'] : false;
 $heroImage = !empty($args['image']) ? $args['image'] : false;
 $social = !empty($args['social']) ? $args['social'] : false;
+$floating_image = !empty($args['floating_image']) ? $args['floating_image'] : false;
 
 
 ?>
@@ -85,15 +86,16 @@ $social = !empty($args['social']) ? $args['social'] : false;
                 absolute h-full w-full
                 -bottom-1/6 -left-1/7
                 " alt="">
-        <div class="absolute bg-white rounded-full border-5 border-[#f3f6ff] 
+        <?php if (!empty($floating_image['url'])): ?>
+          <div class="absolute bg-white rounded-full border-5 border-[#f3f6ff] 
                 md:px-8 md:py-10 md:-bottom-1/60 md:-left-1/20
                 px-5 py-6 -bottom-1/12 -left-1/30
                 ">
-          <img src="<?php echo valtes_assets('images/Zorginnovatieprijs_2024_RGB.png') ?>" class="object-cover 
+            <img src="<?= $floating_image['url'] ?>" class="object-cover 
                     md:w-40
-                    w-24
-                    " alt="">
-        </div>
+                    w-24" alt="">
+          </div>
+        <?php endif; ?>
       </div>
     </div>
   </div>

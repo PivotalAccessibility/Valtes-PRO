@@ -18,4 +18,5 @@ $hero = valtes_get_field('hero', []);
     'cta' => $hero['cta'],
     'cta2' => !empty($hero['cta2']) ? $hero['cta2'] : array(),
     'image' => $hero['image'],
+    'floating_image' => $hero['floating_image'],
 )); ?>
