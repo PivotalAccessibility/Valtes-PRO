@@ -29,7 +29,7 @@ $challenge = valtes_get_field('challenge', [
                     <div class="relative card-image">
                         <img src="<?php echo $challenge['image']['url']; ?>" alt="<?php echo $challenge['image']['alt']; ?>"
                             class="relative z-10 object-cover rounded-full size-full">
-                        <div class="absolute size-16 md:size-[7.43425rem] rounded-full bg-[#6997ff] top-1 -right-1"></div>
+                        <div class="absolute size-16 md:size-[7.43425rem] rounded-full bg-jobborder top-1 -right-1"></div>
                     </div>
                 <?php endif; ?>
             </div>

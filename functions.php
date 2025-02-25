@@ -65,11 +65,11 @@ function custom_breadcrumbs() {
             if ($categories) {
                 $breadcrumb .= '<a href="' . get_category_link($categories[0]->term_id) . '" class="mb-1 hover:underline">' . $categories[0]->name . '</a>';
             }
-            $breadcrumb .= ' > <span class="font-bold hover:underline text-[#6997ff] mx-1">' . get_the_title() . '</span>';
+            $breadcrumb .= ' > <span class="font-bold hover:underline text-jobborder mx-1">' . get_the_title() . '</span>';
         } elseif (is_author()) {
             // For Author Profile Page
             $breadcrumb .= ' > ';
-            $breadcrumb .= '<span class="font-bold text-[#6997ff] hover:underline ml-1">' . get_the_author() . '</span>';
+            $breadcrumb .= '<span class="font-bold text-jobborder hover:underline ml-1">' . get_the_author() . '</span>';
         }
 
         $breadcrumb .= '</nav>';

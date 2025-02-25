@@ -34,7 +34,7 @@ $mission = valtes_get_field('mission', []);
             <?php if (!empty($mission['image']['url'])): ?>
                 <div class="relative">
                     <img src="<?php echo $mission['image']['url']; ?> " alt="" class=" sm:h-[21rem] h-auto w-auto relative rounded-full object-cover">
-                    <div class=" sm:h-28 sm:w-28 h-10 w-10 bg-[#6997FF] rounded-full absolute sm:top-0 -top-1 sm:left-5 left-0 -z-50"></div>
+                    <div class=" sm:h-28 sm:w-28 h-10 w-10 bg-jobborder rounded-full absolute sm:top-0 -top-1 sm:left-5 left-0 -z-50"></div>
                 </div>
             <?php endif; ?>
         </div>

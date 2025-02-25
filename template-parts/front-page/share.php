@@ -26,14 +26,14 @@ $share = valtes_get_field('share', []);
     <div class=" mt-10 grid lg:grid-cols-2 grid-cols-1 gap-4">
         <?php foreach($share['cards'] as $card): ?>
         <a href="<?php echo $card['link']['url']; ?>"
-            class=" md:w-auto w-full md:rounded-full rounded-t-[60px] rounded-b-3xl border-2 border-[#6997ff] p-2 flex md:flex-row flex-col items-center hover:bg-[#f0f5ff] group">
+            class=" md:w-auto w-full md:rounded-full rounded-t-[60px] rounded-b-3xl border-2 border-jobborder p-2 flex md:flex-row flex-col items-center hover:bg-[#f0f5ff] group">
             <img src="<?php echo $card['image']['url']; ?>" alt="<?php echo $card['image']['alt']; ?>"
                 class=" h-40 md:w-48 w-full rounded-full">
             <div class="px-5 md:w-96 mt-4 md:mt-0">
-                <h3 class=" font-bold md:text-xl text-base text-primary group-hover:underline group-hover:text-[#6997ff]">
+                <h3 class=" font-bold md:text-xl text-base text-primary group-hover:underline group-hover:text-jobborder">
                     <?php echo $card['link']['title']; ?>
                 </h3>
-                <p class=" font-normal mt-2 group-hover:text-[#6997ff] text-base">
+                <p class=" font-normal mt-2 group-hover:text-jobborder text-base">
                     <?php echo $card['para']; ?>
                 </p>
             </div>

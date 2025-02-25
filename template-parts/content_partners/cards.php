@@ -57,7 +57,7 @@ $card = valtes_get_field('card', [
                                             alt="<?php echo $item['image']['alt']; ?>"
                                             class=" rounded-full object-cover z-10 relative size-full">
                                     <?php endif; ?>
-                                    <div class="absolute h-[7.43425rem] w-[7.43425rem] rounded-full hidden lg:block bg-[#6997FF] top-1 right-1">
+                                    <div class="absolute h-[7.43425rem] w-[7.43425rem] rounded-full hidden lg:block bg-jobborder top-1 right-1">
                                     </div>
                                 </div>
                             </div>

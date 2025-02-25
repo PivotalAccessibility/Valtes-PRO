@@ -43,7 +43,7 @@ $dresser = valtes_get_field('cards', [
                             <div class="relative card-image">
                                 <img src="<?php echo $dresser['image']['url']; ?>" alt="<?php echo $dresser['image']['alt']; ?>"
                                     class="relative z-10 object-cover rounded-full size-full">
-                                <div class="absolute size-16 md:size-[7.43425rem] rounded-full bg-[#6997ff] -top-2 left-2"></div>
+                                <div class="absolute size-16 md:size-[7.43425rem] rounded-full bg-jobborder -top-2 left-2"></div>
                             </div>
                         <?php endif; ?>
                     </div>

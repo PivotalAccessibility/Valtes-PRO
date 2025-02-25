@@ -99,7 +99,7 @@ $query = new WP_Query($args);
                 <?php endif; ?>
             </div>
             <div class="absolute md:block hidden h-32 w-32 bg-[#babdf3] rounded-full -bottom-7 -left-10"></div>
-            <div class="absolute md:block hidden h-14 w-14 bg-[#6997ff] rounded-full top-5 -right-6"></div>
+            <div class="absolute md:block hidden h-14 w-14 bg-jobborder rounded-full top-5 -right-6"></div>
         </div>
         <div class="flex sm:flex-nowrap flex-wrap items-center justify-center mt-10 gap-6 w-full">
             <a href="<?php echo $articles['cta']['url']; ?>" class="btn btn-primary flex justify-center items-center gap-2">
