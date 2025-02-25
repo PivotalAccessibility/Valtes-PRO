@@ -68,7 +68,7 @@
 
     /* For Headings below main heading */
     .section-sec-heading {
-        @apply text-2xl font-bold leading-normal md:text-3_5xl md:w-full w-9/10 ;
+        @apply text-2xl font-bold leading-normal md:text-3_5xl md:w-full w-9/10;
     }
 
     /* Description below heading */
@@ -77,18 +77,19 @@
     }
 
     /* Heading inside form section */
-    .form-title{
+    .form-title {
         @apply text-2xl font-bold;
     }
 
-    .form-description{
+    .form-description {
         @apply text-xl font-normal text-black;
     }
 
-    .form-social{
+    .form-social {
         @apply text-2xl text-[#2b37dc] underline font-bold
     }
-    .form-ctas{
+
+    .form-ctas {
         @apply text-base font-bold underline text-primary md:text-2xl;
     }
 
@@ -96,36 +97,37 @@
         @apply text-base font-normal leading-6 text-black;
     }
 
-    .counter{
+    .counter {
         @apply text-6xl font-medium text-primary;
     }
 
-    .counter-description{
+    .counter-description {
         @apply text-xl font-normal text-center text-black;
     }
 
     /* This is for Contact page social media */
-    .form-ctas-snd{
+    .form-ctas-snd {
         @apply text-xl font-bold underline text-primary;
     }
 
     /* For Jobs */
-    .jobs{
+    .jobs {
         @apply md:h-14 h-auto !w-full flex flex-wrap md:flex-nowrap justify-between items-center md:p-10 p-6 border-2 border-jobborder md:rounded-full rounded-3xl bg-white;
     }
 
-    .jobactions{
+    .jobactions {
         @apply text-xl font-medium text-jobactions;
     }
 
-    .card-image{
+    .card-image {
         @apply md:w-[31.1875rem] md:h-[21.125rem] w-full h-[9.375rem];
     }
 
-    .card-image-full{
+    .card-image-full {
         @apply flex justify-center
     }
-    .card-image-full img{
+
+    .card-image-full img {
         @apply w-auto
     }
 
@@ -149,7 +151,7 @@
 .menu-item {
     padding: 9px 14px;
     border-radius: 50px;
-    font-size: 12px;
+    @apply text-base;
 }
 
 @media (max-width:768px) {
@@ -303,15 +305,16 @@ button.slick-arrow {
     width: 150px;
 }
 
-.mySlider{
-  flex-direction: column;
+.mySlider {
+    flex-direction: column;
 }
 
 
-.navbar-menu ul{
+.navbar-menu ul {
     display: flex;
 }
-.navbar-menu ul li{
+
+.navbar-menu ul li {
     margin: 0 12px;
     padding: 6px 12px;
 }
