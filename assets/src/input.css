@@ -48,17 +48,17 @@
 @layer components {
 
     .btn {
-        @apply text-base px-6 py-4 rounded-full w-full sm:w-auto font-bold hover:scale-105 content-center text-center;
+        @apply content-center w-full px-6 py-4 text-base font-bold text-center rounded-full sm:w-auto hover:scale-105;
     }
 
     /* For Blue Appering button */
     .btn-primary {
-        @apply bg-primary text-white hover:opacity-90;
+        @apply text-white bg-primary hover:opacity-90;
     }
 
     /* For Outline button */
     .btn-outline {
-        @apply text-primary bg-white border-2 border-primary justify-center gap-2;
+        @apply justify-center gap-2 bg-white border-2 text-primary border-primary;
     }
 
     /* For Main heading for hero section */
@@ -68,42 +68,45 @@
 
     /* For Headings below main heading */
     .section-sec-heading {
-        @apply font-bold md:text-3_5xl leading-normal text-2xl md:w-full w-9/10 ;
+        @apply text-2xl font-bold leading-normal md:text-3_5xl md:w-full w-9/10 ;
     }
 
     /* Description below heading */
     .section-description {
-        @apply md:text-xl font-normal text-base text-black;
+        @apply text-base font-normal text-black md:text-xl;
     }
 
     /* Heading inside form section */
     .form-title{
-        @apply font-bold text-2xl;
+        @apply text-2xl font-bold;
     }
 
     .form-description{
         @apply text-xl font-normal text-black;
     }
 
+    .form-social{
+        @apply text-2xl text-[#2b37dc] underline font-bold
+    }
     .form-ctas{
-        @apply text-primary md:text-2xl text-base underline font-bold;
+        @apply text-base font-bold underline text-primary md:text-2xl;
     }
 
     .section-sec-description {
-        @apply text-base text-black font-normal leading-6;
+        @apply text-base font-normal leading-6 text-black;
     }
 
     .counter{
-        @apply text-primary font-medium text-6xl;
+        @apply text-6xl font-medium text-primary;
     }
 
     .counter-description{
-        @apply text-xl font-normal text-black text-center;
+        @apply text-xl font-normal text-center text-black;
     }
 
     /* This is for Contact page social media */
     .form-ctas-snd{
-        @apply text-primary text-xl underline font-bold;
+        @apply text-xl font-bold underline text-primary;
     }
 
     /* For Jobs */
@@ -112,18 +115,25 @@
     }
 
     .jobactions{
-        @apply text-jobactions text-xl font-medium;
+        @apply text-xl font-medium text-jobactions;
     }
 
-    /* .card-image{
+    .card-image{
         @apply md:w-[31.1875rem] md:h-[21.125rem] w-full h-[9.375rem];
-    } */
+    }
+
+    .card-image-full{
+        @apply flex justify-center
+    }
+    .card-image-full img{
+        @apply w-auto
+    }
 
 }
 
 
 .article-description {
-    @apply text-sm leading-5 font-normal;
+    @apply text-sm font-normal leading-5;
 }
 
 .article-heading {
@@ -295,4 +305,13 @@ button.slick-arrow {
 
 .mySlider{
   flex-direction: column;
+}
+
+
+.navbar-menu ul{
+    display: flex;
+}
+.navbar-menu ul li{
+    margin: 0 12px;
+    padding: 6px 12px;
 }

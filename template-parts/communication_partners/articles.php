@@ -8,9 +8,7 @@ if ($args) {
     extract($args);
 }
 
-$articles = valtes_get_field('articles', [
-    'heading' => 'Hello'
-]);
+$articles = valtes_get_field('articles', []);
 
 // Query to fetch latest 3 posts
 $args = array(
@@ -22,17 +20,20 @@ $query = new WP_Query($args);
 
 ?>
 
-<section class="bg-primaryLight md:py-20 py-10 md:px-5 px-4">
+ <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+
+
+<section class="px-4 py-10 bg-primaryLight md:py-20 md:px-5">
     <div class="container flex flex-col items-center">
-        <h2 class="section-sec-heading md:text-left text-center">
+        <h2 class="text-center section-sec-heading md:text-left">
             <?php echo esc_html($articles['heading']); ?>
         </h2>
-        <div class="relative">
-            <div class="relative z-10 grid sm:grid-cols-2 lg:grid-cols-3 grid-cols-1 gap-6 md:mt-10 mt-8">
+        <div class="relative w-full">
+            <div class="relative z-10 grid flex-col grid-cols-1 gap-6 mt-8 sm:grid-cols-2 lg:grid-cols-3 md:mt-10 mySlider">
                 <?php if ($query->have_posts()): ?>
                     <?php while ($query->have_posts()):
                         $query->the_post(); ?>
-                        <a href="<?php echo get_permalink(get_the_ID()); ?>" class="flex flex-col transition duration-300 bg-white shadow-lg rounded-2xl h-auto hover:shadow-xl">
+                        <a href="<?php echo get_permalink(get_the_ID()); ?>" class="flex flex-col h-auto transition duration-300 bg-white shadow-lg rounded-2xl hover:shadow-xl">
                             <div class="relative">
                                 <?php
                                 $categories = get_the_category();
@@ -51,13 +52,13 @@ $query = new WP_Query($args);
                                     <img src="<?php echo get_the_post_thumbnail_url(get_the_ID(), 'medium'); ?>" alt="<?php the_title(); ?>" class="object-cover w-full h-52 rounded-t-2xl">
 
                                     <?php if ($category_icon): ?>
-                                        <div class="absolute bg-primary rounded-full p-3 -bottom-5 left-4">
+                                        <div class="absolute p-3 rounded-full bg-primary -bottom-5 left-4">
                                             <img src="<?php echo esc_url($category_icon['url']); ?>" class="w-5" alt="<?php echo esc_attr($category->name); ?>">
                                         </div>
                                     <?php endif; ?>
                                 </div>
                             </div>
-                            <div class="flex flex-col justify-between p-4 mt-4 grow gap-4">
+                            <div class="flex flex-col justify-between gap-4 p-4 mt-4 grow">
                                 <div>
                                     <h2 class="mb-3 text-xl font-bold">
                                         <?php
@@ -103,8 +104,8 @@ $query = new WP_Query($args);
             <div class="absolute md:block hidden h-32 w-32 bg-[#babdf3] rounded-full -bottom-7 -left-10"></div>
             <div class="absolute md:block hidden h-14 w-14 bg-[#6997ff] rounded-full top-5 -right-6"></div>
         </div>
-        <div class="flex sm:flex-nowrap flex-wrap items-center justify-center mt-10 gap-6">
-            <a href="<?php echo $articles['cta1']['url']; ?>" class="btn btn-primary flex justify-center items-center gap-2">
+        <div class="flex flex-wrap items-center justify-center gap-6 mt-10 sm:flex-nowrap">
+            <a href="<?php echo $articles['cta1']['url']; ?>" class="flex items-center justify-center gap-2 btn btn-primary">
                 <?php echo $articles['cta1']['title']; ?>
                 <span>
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-5 h-5">
@@ -115,6 +116,48 @@ $query = new WP_Query($args);
                     </svg>
                 </span>
             </a>
+            <a href="<?php echo $articles['cta2']['url']; ?>" class="flex items-center justify-center gap-2 btn btn-outline">
+                <span>
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-5 h-5">
+                        <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                        <path d="M12 6h-6a2 2 0 0 0 -2 2v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-6" />
+                        <path d="M11 13l9 -9" />
+                        <path d="M15 4h5v5" />
+                    </svg>
+                </span>
+                <?php echo $articles['cta2']['title']; ?>
+            </a>
         </div>
     </div>
 </section>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+<script>
+     $(document).ready(function () {
+    function checkSlider() {
+        if ($(window).width() <= 767) {
+            if (!$(".mySlider").hasClass("slick-initialized")) {
+                $(".mySlider").slick({
+                    dots: true,
+                    arrows: false,
+                    infinite: true,
+                    slidesToShow: 1,
+                    slidesToScroll: 1,
+                    mobileFirst: true
+                });
+            }
+        } else {
+            if ($(".mySlider").hasClass("slick-initialized")) {
+                $(".mySlider").slick("unslick");
+            }
+        }
+    }
+
+    checkSlider();
+    $(window).on("resize", checkSlider);
+});
+
+
+
+    </script>
