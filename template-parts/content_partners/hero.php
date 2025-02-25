@@ -32,7 +32,7 @@ $hero = valtes_get_field('hero', [
                     </h1>
                 <?php endif; ?>
                 <?php if (!empty($hero['description'])): ?>
-                    <div class="section-description leading-5">
+                    <div class="section-description">
                         <?php echo $hero['description']; ?>
                     </div>
                 <?php endif; ?>

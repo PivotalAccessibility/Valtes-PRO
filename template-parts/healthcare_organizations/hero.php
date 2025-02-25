@@ -33,11 +33,11 @@ $hero = valtes_get_field('hero', [
                     </h1>
                 <?php endif; ?>
                 <?php if (!empty($hero['description'])): ?>
-                    <div class="section-description">
+                    <div class="section-description leading-6">
                         <?php echo $hero['description']; ?>
                     </div>
                 <?php endif; ?>
-                <div class="flex flex-wrap mt-5 gap-5">
+                <div class="flex flex-wrap mt-8 gap-5">
                     <?php if (!empty($hero['cta']['url'])): ?>
                         <a href="<?php echo $hero['cta']['url']; ?>" class="btn btn-primary">
                             <?php echo $hero['cta']['title']; ?>
