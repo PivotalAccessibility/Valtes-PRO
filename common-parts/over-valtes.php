@@ -52,8 +52,8 @@ $about_valtes = valtes_get_field('about_valtes', [], 'option');
         </div>
         <div class="flex items-center justify-end w-full sm:w-1/2">
             <?php if (!empty($about_valtes['image']['url'])): ?>
-                <div class="relative">
-                    <img src="<?php echo $about_valtes['image']['url']; ?> " alt="" class="sm:h-[28rem] sm:w-[32rem] h-auto w-auto relative rounded-full object-cover">
+                <div class="relative w-full">
+                    <img src="<?php echo $about_valtes['image']['url']; ?> " alt="" class="sm:h-[21rem] h-52 w-full relative rounded-full object-cover">
                     <div class=" sm:h-18 sm:w-18 h-10 w-10 bg-[#bbbef4] rounded-full absolute sm:top-0 top-2 sm:right-5 right-3 -z-50"></div>
                     <div class="absolute bottom-0 w-20 h-20 rounded-full sm:h-28 sm:w-28 bg-primaryLight sm:left-0 -left-3 -z-50"></div>
                 </div>

@@ -12,7 +12,7 @@ $cards = valtes_get_field('cards', []);
 
 ?>
 
-<section class="md:py-28 py-14 container flex flex-col items-center px-5 sm:px-0">
+<section class="md:py-28 py-14 container flex flex-col items-center px-4 sm:px-0">
     <div class=" grid lg:grid-cols-3 sm:grid-cols-2 grid-cols-1 gap-6">
         <?php foreach ($cards['cards'] as $card): ?>
             <div class=" flex flex-col items-start">

@@ -99,7 +99,7 @@
     }
 
     .counter {
-        @apply font-medium text-[4rem] md:leading-0 leading-6 text-primary;
+        @apply font-medium text-6xl text-primary;
     }
 
     .counter-description {
@@ -252,9 +252,9 @@
 }
 
 .slick-dots li button {
+    display: flex;
     font-size: 0;
     line-height: 0;
-    display: block;
     width: 20px;
     height: 20px;
     padding: 5px;
@@ -310,7 +310,7 @@ button.slick-arrow {
 }
 
 .mySlider .slick-dots {
-    margin: 1.88rem 0;
+    @apply mb-3.5
 }
 
 .navbar-menu ul {

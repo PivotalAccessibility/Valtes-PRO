@@ -17,7 +17,7 @@ $floating_image = !empty($args['floating_image']) ? $args['floating_image'] : fa
 
 ?>
 
-<section class="<?= $isDarkBg ? 'bg-primaryLight' : '' ?> pb-5 sm:pb-0">
+<section class="<?= $isDarkBg ? 'bg-primaryLight' : '' ?> pb-16 md:pb-32">
   <div class="container flex flex-col-reverse px-4 md:flex md:flex-wrap md:flex-row md:px-5">
     <div class="flex items-center justify-start h-auto p-0 mt-5 sm:mt-20 xl:w-1/2 sm:w-full xl:mt-12 md:mt-20">
       <div class=" sm:pr-24" dir="ltr">

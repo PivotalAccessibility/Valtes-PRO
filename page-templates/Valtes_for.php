@@ -4,10 +4,6 @@
  *
  */
 
- $explain = valtes_get_field('about_valtes', []);
-
-// var_dump($explain);
-
 get_header();
 ?>
 
@@ -19,9 +15,10 @@ get_header();
 <?php get_template_part('template-parts/valtesfor/services'); ?>
 <?php get_template_part('template-parts/valtesfor/brochure'); ?>
 
-<?php get_template_part('template-parts/valtesfor/form'); ?>
-<?php get_template_part('template-parts/valtesfor/articles'); ?>
-<?php get_template_part('common-parts/over-valtes', null, $explain); ?>
+
+<?php get_template_part('common-parts/global-form'); ?>
+<?php get_template_part('common-parts/global-bottom-articles', null, array('isDarkBg' => true)); ?>
+<?php get_template_part('common-parts/over-valtes'); ?>
 
 <?php
 

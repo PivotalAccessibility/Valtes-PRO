@@ -26,7 +26,7 @@ $municipalities = valtes_get_field('municipalities', []);
                         <div class="w-auto flex items-center justify-center flex-shrink-0 sm:flex-shrink">
                             <img src="<?php echo $image['image']['url']; ?>" 
                                  alt="<?php echo $image['image']['alt']; ?>" 
-                                 class="w-auto h-16">
+                                 class="w-auto h-16 object-contain">
                         </div>
                     <?php endif; ?>
                 <?php endforeach; ?>

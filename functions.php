@@ -156,23 +156,15 @@ function valtes_add_defer_to_alpine_script($tag, $handle, $src)
 function valtes_enqueue_scripts()
 {
     // Scripts
-    wp_enqueue_script('pivotalaccessibility-alpine-focus', valtes_assets('js/alpine-focus.min.js'), array(), valtes_get_version(), false);
-    wp_enqueue_script('pivotalaccessibility-alpine-collapse', valtes_assets('js/alpine-collapse.min.js'), array(), valtes_get_version(), false);
-    wp_enqueue_script('pivotalaccessibility-alpine-intersect', valtes_assets('js/alpine-intersect.min.js'), array(), valtes_get_version(), false);
-    wp_enqueue_script('pivotalaccessibility-alpine', valtes_assets('js/alpine.min.js'), array(), valtes_get_version(), false);
+    wp_enqueue_style('slick-style-cdn', 'https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css', array(), valtes_get_version(), 'all');
+    wp_enqueue_script('jquery');
+    wp_enqueue_script('slick-js-cdn', 'https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js', array('jquery'), null, true);
+    
+    wp_enqueue_script('only-mobile-slider', valtes_assets('js/OnlyMobileSlider.js'), array('jquery', 'slick-js-cdn'), valtes_get_version(), true);
 
-    // wp_enqueue_script('pivotalaccessibility-twind', valtes_assets('js/twind.min.js'), array(), valtes_get_version(), false);
     wp_enqueue_style('pivotalaccessibility-twind', valtes_assets('src/output.css'), array(), valtes_get_version(), 'all');
-
-    wp_add_inline_script('pivotalaccessibility-twind', file_get_contents(get_template_directory() . "/assets/js/head.js"), "after");
-
-    wp_enqueue_script('embla-autoplay', valtes_assets('js/embla-carousel-autoplay.umd.js'), array(), "8.0.0", true);
-    wp_enqueue_script('embla', valtes_assets('js/embla-carousel.umd.js'), array(), "8.0.0", true);
-    wp_enqueue_script('toastify', valtes_assets('js/toastify.js'), array(), "5.3.0", true);
-
     wp_enqueue_script('pivotalaccessibility-main', valtes_assets('js/main.js'), array('jquery'), valtes_get_version(), true);
-    wp_enqueue_style('animxyz', valtes_assets('css/animxyz.min.css'), array(), "0.6.7", 'all');
-    // wp_enqueue_style('pivotalaccessibility-style', valtes_assets('css/style.css'), array(), valtes_get_version(), 'all');
+
     wp_enqueue_style('pivotalaccessibility-style', valtes_assets('../valtes_theme/assets/src/output.css'), array(), valtes_get_version(), 'all');
 
     // Localize

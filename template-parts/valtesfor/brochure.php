@@ -12,7 +12,7 @@ $brochure = valtes_get_field('brochure', []);
 
 ?>
 
-<section class=" container md:py-20 px-5 sm:px-5 xl:px-0 py-10">
+<section class="container md:py-20 px-4 sm:px-5 xl:px-0 py-10">
     <div class=" flex flex-wrap-reverse sm:flex-nowrap ">
         <div class=" sm:w-1/2 w-full flex flex-col items-start justify-center sm:mt-0 mt-10">
             <?php if(!empty($brochure['title'])): ?>
@@ -33,11 +33,11 @@ $brochure = valtes_get_field('brochure', []);
             <?php endif; ?>
 
         </div>
-        <div class=" sm:w-1/2 w-full flex items-center justify-end">
+        <div class="sm:w-1/2 w-full flex items-center justify-end">
             <?php if(!empty($brochure['image']['url'])): ?>
-            <div class="relative">
+            <div class="relative w-full">
                 <img src="<?php echo $brochure['image']['url']; ?> " alt=""
-                    class=" sm:h-[21rem] h-auto w-auto relative rounded-full object-cover">
+                    class=" sm:h-[21rem] h-52 w-full relative rounded-full object-cover">
                 <div
                     class=" sm:h-18 sm:w-18 h-10 w-10 bg-[#bbbef4] rounded-full absolute sm:top-0 -top-1 sm:right-5 right-0 -z-50">
                 </div>
