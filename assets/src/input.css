@@ -52,6 +52,10 @@
         @apply content-center w-full px-6 py-5 text-base font-bold text-center rounded-full sm:w-auto hover:scale-105;
     }
 
+    .btn-footer{
+        @apply flex justify-center items-center w-full p-[1.125rem] text-base font-bold text-center rounded-full sm:w-auto hover:scale-105 h-[3.125rem];
+    }
+
     /* For Blue Appering button */
     .btn-primary {
         @apply text-white bg-primary hover:opacity-90;
@@ -79,11 +83,11 @@
 
     /* Heading inside form section */
     .form-title {
-        @apply text-xl md:text-2xl font-bold;
+        @apply text-xl font-bold md:text-2xl;
     }
 
     .form-description {
-        @apply text-base md:text-xl font-normal text-black;
+        @apply text-base font-normal text-black md:text-xl;
     }
 
     .form-social {
@@ -103,7 +107,7 @@
     }
 
     .counter-description {
-        @apply text-base md:text-xl font-normal text-center text-black;
+        @apply text-base font-normal text-center text-black md:text-xl;
     }
 
     /* This is for Contact page social media */
