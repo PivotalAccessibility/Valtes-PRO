@@ -1215,6 +1215,15 @@
   .min-h-\[var\(--hero-height\)\] {
     min-height: var(--hero-height);
   }
+  .w-1\/2 {
+    width: calc(1/2 * 100%);
+  }
+  .w-2\/3 {
+    width: calc(2/3 * 100%);
+  }
+  .w-2\/4 {
+    width: calc(2/4 * 100%);
+  }
   .w-3\/4 {
     width: calc(3/4 * 100%);
   }

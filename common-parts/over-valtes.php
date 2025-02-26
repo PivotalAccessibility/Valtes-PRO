@@ -17,7 +17,7 @@ $about_valtes = valtes_get_field('about_valtes', [], 'option');
                 </h2>
             <?php endif; ?>
             <?php if (!empty($about_valtes['description'])): ?>
-                <div class="md:mt-[1.87rem] mt-5 section-sec-description">
+                <div class="md:mt-[1.87rem] mt-5 section-sec-description w-3/4">
                     <?php echo $about_valtes['description']; ?>
                 </div>
             <?php endif; ?>

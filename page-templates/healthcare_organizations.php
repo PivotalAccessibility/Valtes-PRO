@@ -17,8 +17,10 @@ get_header();
 <?php get_template_part('template-parts/healthcare_organizations/solution'); ?>
 <?php get_template_part('template-parts/healthcare_organizations/mission'); ?>
 
-<?php get_template_part('template-parts/healthcare_organizations/form'); ?>
-<?php get_template_part('template-parts/healthcare_organizations/articles'); ?>
+<?php get_template_part('common-parts/global-form'); ?>
+<?php get_template_part('common-parts/global-bottom-articles', null, array(
+  'isDarkBg' => true
+)); ?>
 <?php get_template_part('common-parts/over-valtes', null, $explain); ?>
 
 <?php
