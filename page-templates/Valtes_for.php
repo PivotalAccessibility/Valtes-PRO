@@ -21,7 +21,7 @@ get_header();
 
 <?php get_template_part('template-parts/valtesfor/form'); ?>
 <?php get_template_part('template-parts/valtesfor/articles'); ?>
-<?php get_template_part('template-parts/valtesfor/over-valtes', null, $explain); ?>
+<?php get_template_part('common-parts/over-valtes', null, $explain); ?>
 
 <?php
 

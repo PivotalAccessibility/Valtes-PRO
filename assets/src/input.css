@@ -208,17 +208,13 @@
     padding: 0px 9px;
 }
 
+.forminator-ui {
+    width: 100%;
+}
+
 .forminator-button {
-    background-color: #2b37dc;
-    width: 100% !important;
-    text-align: center;
-    color: white;
-    border-radius: 50px !important;
-    border: 1px solid #2b37dc;
-    padding: 9px 14px;
-    margin: 9px 14px;
-    font-size: 16px;
-    font-weight: 500;
+    @apply text-base px-6 py-4 rounded-full !w-full sm:w-auto font-bold hover:scale-105 content-center text-center;
+    @apply text-white bg-primary hover:opacity-90;
 }
 
 
@@ -226,6 +222,8 @@
 .forminator-textarea {
     border: 2px solid #a6a6a6 !important;
     border-radius: 5px !important;
+    height: 3rem;
+    @apply p-6 text-base;
 }
 
 .forminator-field {
@@ -238,6 +236,7 @@
     left: 10px;
     top: -15px;
     padding: 5px;
+    @apply text-base;
 }
 
 .container {
@@ -310,7 +309,7 @@ button.slick-arrow {
     flex-direction: column;
 }
 
-.mySlider .slick-dots{
+.mySlider .slick-dots {
     margin: 1.88rem 0;
 }
 
