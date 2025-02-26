@@ -30,18 +30,22 @@ $challenge = valtes_get_field('challenge', []);
             <?php endforeach; ?>
         </div>
 
-        <div class="mt-10">
-            <video width="320" height="240" controls>
-                <source src="movie.mp4" type="video/mp4">
-                <source src="movie.ogg" type="video/ogg">
-                Your browser does not support the video tag.
-            </video>
-        </div>
+    <div class="mt-20 relative">
+      <video controls class="w-72 h-48 md:w-[50.8125rem] md:h-[27.4375rem] rounded-2xl relative z-20">
+        <source src="movie.mp4" type="video/mp4">
+        <source src="movie.ogg" type="video/ogg">
+        Your browser does not support the video tag.
+      </video>
+      <div class="h-20 w-20 bg-jobborder -top-8 -right-8 rounded-full absolute">
+      </div>
+      <div class="bg-[#BBBEF4] h-40 w-40 rounded-full absolute -bottom-8 -left-14">
+      </div>
     </div>
+  </div>
 </section>
 
 <script>
-  document.addEventListener("DOMContentLoaded", function () {
+  document.addEventListener("DOMContentLoaded", function() {
     const counters = document.querySelectorAll(".counter");
 
     const observerOptions = {
