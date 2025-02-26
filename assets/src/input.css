@@ -49,7 +49,7 @@
 @layer components {
 
     .btn {
-        @apply content-center w-full px-6 py-4 text-base font-bold text-center rounded-full sm:w-auto hover:scale-105;
+        @apply content-center w-full px-6 py-5 text-base font-bold text-center rounded-full sm:w-auto hover:scale-105;
     }
 
     /* For Blue Appering button */
@@ -87,7 +87,7 @@
     }
 
     .form-social {
-        @apply text-2xl text-[#2b37dc] underline font-bold
+        @apply md:text-2xl text-base text-[#2b37dc] underline font-bold;
     }
 
     .form-ctas {
@@ -311,7 +311,7 @@ button.slick-arrow {
 }
 
 .mySlider .slick-dots{
-    margin-top: 1.88rem;
+    margin: 1.88rem 0;
 }
 
 .navbar-menu ul {

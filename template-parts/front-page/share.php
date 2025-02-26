@@ -1,46 +1,49 @@
 <?php
 
 if (!defined('ABSPATH')) {
-  exit; // Exit if accessed directly.
+    exit; // Exit if accessed directly.
 }
 
 if ($args) {
-  extract($args);
+    extract($args);
 }
 
 $share = valtes_get_field('share', []);
 
 ?>
 
-<section class=" container md:py-20 py-10 flex flex-col items-center px-5 sm:px-0">
-    <?php if(!empty($share['title'])): ?>
-    <h2 class="section-sec-heading text-center">
-        <?php echo $share['title']; ?>
-    </h2>
+<section class="container flex flex-col items-center px-5 py-0 md:py-[7.5rem] sm:px-0">
+    <?php if (!empty($share['title'])): ?>
+        <h2 class="text-center section-sec-heading">
+            <?php echo $share['title']; ?>
+        </h2>
     <?php endif; ?>
-    <?php if(!empty($share['description'])): ?>
-    <p class=" section-description mt-5 text-center">
-        <?php echo $share['description']; ?>
-    </p>
+    <?php if (!empty($share['description'])): ?>
+        <p class="mt-2 text-center md:mt-10 section-description">
+            <?php echo $share['description']; ?>
+        </p>
     <?php endif; ?>
-    <div class=" mt-10 grid lg:grid-cols-2 grid-cols-1 gap-4">
-        <?php foreach($share['cards'] as $card): ?>
-        <a href="<?php echo $card['link']['url']; ?>"
-            class=" md:w-auto w-full md:rounded-full rounded-t-[60px] rounded-b-3xl border-2 border-jobborder p-2 flex md:flex-row flex-col items-center hover:bg-[#f0f5ff] group">
-            <img src="<?php echo $card['image']['url']; ?>" alt="<?php echo $card['image']['alt']; ?>"
-                class=" h-40 md:w-48 w-full rounded-full">
-            <div class="px-5 md:w-96 mt-4 md:mt-0">
-                <h3 class=" font-bold md:text-xl text-base text-primary group-hover:underline group-hover:text-jobborder">
-                    <?php echo $card['link']['title']; ?>
-                </h3>
-                <p class=" font-normal mt-2 group-hover:text-jobborder text-base">
-                    <?php echo $card['para']; ?>
-                </p>
-            </div>
-            <span class=" pr-10 hidden md:block">
-                <img src="<?php echo valtes_assets('images/top-right-arrow.svg') ?>" alt="">
-            </span>
-        </a>
+    <div class="grid grid-cols-1 gap-5 mt-10 md:gap-9 lg:grid-cols-2">
+        <?php foreach ($share['cards'] as $card): ?>
+            <a href="<?php echo $card['link']['url']; ?>"
+                class=" md:w-auto w-full md:rounded-full rounded-t-[60px] rounded-b-3xl border-2 border-jobborder p-2 flex md:flex-row flex-col items-center hover:bg-[#f0f5ff] group">
+                <img src="<?php echo $card['image']['url']; ?>" alt="<?php echo $card['image']['alt']; ?>"
+                    class="w-full h-40 rounded-full md:w-48">
+                    <div class="flex items-center justify-between gap-5">
+                <div class="px-5 mt-4 md:mt-0">
+                    <h3
+                        class="text-base font-bold md:text-xl text-primary group-hover:underline group-hover:text-jobborder">
+                        <?php echo $card['link']['title']; ?>
+                    </h3>
+                    <p class="mt-2 text-base font-normal md:mt-3 group-hover:underline group-hover:text-jobborder">
+                        <?php echo $card['para']; ?>
+                    </p>
+                </div>
+                <span class="w-10">
+                    <img src="<?php echo valtes_assets('images/top-right-arrow.svg') ?>" alt="" class="size-[1.12475rem] md:size-[1.125rem]">
+                </span>
+                </div>
+            </a>
         <?php endforeach; ?>
     </div>
 </section>

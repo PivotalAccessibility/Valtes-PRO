@@ -1,4 +1,4 @@
-<a href="<?php echo get_permalink(get_the_ID()); ?>" class="flex flex-col transition duration-300 bg-white shadow-lg rounded-2xl h-auto hover:shadow-xl">
+<a href="<?php echo get_permalink(get_the_ID()); ?>" class="flex flex-col h-auto transition duration-300 bg-white shadow-lg rounded-2xl hover:shadow-xl">
   <div class="relative">
     <?php
     $categories = get_the_category();
@@ -16,15 +16,15 @@
     <div class="relative">
       <img src="<?php echo get_the_post_thumbnail_url(get_the_ID(), 'medium'); ?>" alt="<?php the_title(); ?>" class="object-cover w-full h-52 rounded-t-2xl">
       <?php if ($category_icon): ?>
-        <div class="absolute bg-primary rounded-full p-3 -bottom-5 left-4">
+        <div class="absolute p-3 rounded-full bg-primary -bottom-5 left-4">
           <img src="<?php echo esc_url($category_icon['url']); ?>" class="w-5" alt="<?php echo esc_attr($category->name); ?>">
         </div>
       <?php endif; ?>
     </div>
   </div>
-  <div class="flex flex-col justify-between p-4 mt-4 grow gap-4">
-    <div>
-      <h2 class="mb-3 text-xl font-bold">
+  <div class="flex flex-col justify-between gap-4 p-4 mt-4 grow">
+    <div class="flex flex-col gap-4">
+      <h2 class="text-lg font-bold">
         <?php
         $title = get_the_title();
         echo $title;
