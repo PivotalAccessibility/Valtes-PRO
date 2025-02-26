@@ -12,7 +12,7 @@ $known = valtes_get_field('known', []);
 
 ?>
 
-<section class="bg-[#f0f5ff] md:py-20 py-10 md:my-0 my-[3.75rem]">
+<section class="bg-primaryLight md:py-20 py-10 md:my-0 my-[3.75rem]">
     <div class="container flex flex-col items-center justify-center">
         <?php if (!empty($known['title'])): ?>
             <h2 class="text-center section-sec-heading">
@@ -26,7 +26,7 @@ $known = valtes_get_field('known', []);
                         <div class="flex items-center justify-center flex-shrink-0 w-auto sm:flex-shrink">
                             <img src="<?php echo $image['image']['url']; ?>" 
                                  alt="<?php echo $image['image']['alt']; ?>" 
-                                 class="w-auto h-16">
+                                 class="w-auto h-16 object-contain">
                         </div>
                     <?php endif; ?>
                 <?php endforeach; ?>

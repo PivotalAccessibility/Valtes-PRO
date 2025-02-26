@@ -4,6 +4,8 @@ if (!defined('ABSPATH')) {
   exit; // Exit if accessed directly.
 }
 
+$isDarkBg = $args['isDarkBg'] ?? false;
+
 $heroTitle = !empty($args['title']) ? $args['title'] : false;
 $heroDescription = !empty($args['description']) ? $args['description'] : false;
 $heroCta = !empty($args['cta']) ? $args['cta'] : false;
@@ -15,7 +17,7 @@ $floating_image = !empty($args['floating_image']) ? $args['floating_image'] : fa
 
 ?>
 
-<section class="pb-5 sm:pb-0">
+<section class="<?= $isDarkBg ? 'bg-primaryLight' : '' ?> pb-5 sm:pb-0">
   <div class="container flex flex-col-reverse px-4 md:flex md:flex-wrap md:flex-row md:px-5">
     <div class="flex items-center justify-start h-auto p-0 mt-5 sm:mt-20 xl:w-1/2 sm:w-full xl:mt-12 md:mt-20">
       <div class=" sm:pr-24" dir="ltr">
@@ -25,7 +27,7 @@ $floating_image = !empty($args['floating_image']) ? $args['floating_image'] : fa
           </h1>
         <?php endif; ?>
         <?php if (!empty($heroDescription)): ?>
-          <div class="mt-5 md:mt-6 section-description">
+          <div class="mt-5 md:mt-6 section-description text-xl prose">
             <?php echo $heroDescription; ?>
           </div>
         <?php endif; ?>

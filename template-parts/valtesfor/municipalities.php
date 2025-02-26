@@ -12,7 +12,7 @@ $municipalities = valtes_get_field('municipalities', []);
 
 ?>
 
-<section class="bg-[#f0f5ff] py-10">
+<section class="bg-primaryLight py-10">
     <div class="flex flex-col items-center justify-center">
         <?php if (!empty($municipalities['heading'])): ?>
             <h2 class="section-sec-heading text-center">

@@ -42,7 +42,7 @@ $brochure = valtes_get_field('brochure', []);
                     class=" sm:h-18 sm:w-18 h-10 w-10 bg-[#bbbef4] rounded-full absolute sm:top-0 -top-1 sm:right-5 right-0 -z-50">
                 </div>
                 <div
-                    class=" sm:h-28 sm:w-28 h-20 w-20 bg-[#f0f5ff] rounded-full absolute bottom-0 sm:left-0 -left-3 -z-50">
+                    class=" sm:h-28 sm:w-28 h-20 w-20 bg-primaryLight rounded-full absolute bottom-0 sm:left-0 -left-3 -z-50">
                 </div>
             </div>
             <?php endif; ?>

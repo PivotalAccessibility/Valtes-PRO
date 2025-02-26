@@ -37,7 +37,7 @@ $user_bio = get_user_meta($current_user_id, 'description', true);
         <div class="sm:w-[60%] w-full">
 
             <!-- Author Hero Section -->
-            <div class="flex flex-col items-center p-2 mb-8 sm:rounded-full rounded-none lg:flex-row bg-[#f0f5ff] px-5 sm:px-0">
+            <div class="flex flex-col items-center p-2 mb-8 sm:rounded-full rounded-none lg:flex-row bg-primaryLight px-5 sm:px-0">
                 <div class="overflow-hidden rounded-full">
                     <?php echo $author_avatar; ?>
                 </div>

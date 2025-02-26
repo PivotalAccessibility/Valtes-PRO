@@ -20,7 +20,7 @@ $form = valtes_get_field('form', []);
     <?php endif; ?>
     <div class="flex flex-col md:flex-row gap-4 md:mt-10 mt-5">
         <div class="w-full pt-5 sm:pt-0 md:w-1/2 flex flex-col items-start">
-            <div class="w-full bg-[#f0f5ff] flex flex-col items-start p-5 rounded-2xl">
+            <div class="w-full bg-primaryLight flex flex-col items-start p-5 rounded-2xl">
                 <?php if(!empty($form['title'])): ?>
                 <h3 class="form-title">
                     <?php echo $form['title']; ?>

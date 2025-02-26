@@ -14,7 +14,7 @@ $args = array(
 $job_query = new WP_Query($args);
 ?>
 
-<section class="bg-[#F0F5FF] lg:py-20 py-10 px-5 md:px-0">
+<section class="bg-primaryLight lg:py-20 py-10 px-5 md:px-0">
     <div class="container space-y-8">
         <?php if ($job_query->have_posts()) : ?>
         <?php while ($job_query->have_posts()) : $job_query->the_post(); ?>

@@ -18,7 +18,7 @@ $milestones = $All_DATA['milestones'];
 
 ?>
 
-<?php get_template_part('common-parts/top-banner', null, $hero); ?>
+<?php get_template_part('common-parts/top-banner', null, array_merge(['isDarkBg' => true], $hero)); ?>
 <?php get_template_part('Cross-Site-Pages/goals-parts/our_goals', null, ['goals' => $goals]); ?>
 <?php get_template_part('Cross-Site-Pages/goals-parts/milestone', null, ['milestones' => $milestones]); ?>
 <?php get_template_part('common-parts/global-form'); ?>

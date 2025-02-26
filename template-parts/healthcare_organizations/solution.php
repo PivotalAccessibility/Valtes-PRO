@@ -14,7 +14,7 @@ $solution = valtes_get_field('solution', []);
 ?>
 
 
-<section class="bg-[#F0F5FF]" name="valtes-solution">
+<section class="bg-primaryLight" name="valtes-solution">
     <div class="container py-10 md:py-20">
         <div class="flex flex-col items-center justify-center">
             <div class="flex flex-col flex-wrap justify-center items-center gap-[1.88rem]">

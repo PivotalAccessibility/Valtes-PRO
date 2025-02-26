@@ -12,7 +12,7 @@ $challenge = valtes_get_field('challenge', []);
 
 ?>
 
-<section class="bg-[#f0f5ff] py-20">
+<section class="bg-primaryLight py-20">
     <div class="container flex flex-col items-center">
         <h2 class="section-sec-heading text-center">
             <?php echo $challenge['heading'] ?>

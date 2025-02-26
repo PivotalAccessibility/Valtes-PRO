@@ -12,7 +12,7 @@ $services = valtes_get_field('services', []);
 
 ?>
 
-<section class="bg-[#f0f5ff] py-10 md:py-20 px-5 sm:px-0">
+<section class="bg-primaryLight py-10 md:py-20 px-5 sm:px-0">
     <div class="flex flex-col items-center container">
         <h2 class="section-sec-heading text-center">
             <?php echo $services['heading'] ?>

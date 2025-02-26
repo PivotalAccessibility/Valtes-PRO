@@ -6,7 +6,7 @@ $milestones = $args['milestones'];
 
 ?>
 
-<section class="bg-[#f0f5ff] py-10">
+<section class="bg-primaryLight py-10">
     <div class="container relative px-5 my-4 sm:px-5 xl:px-0">
 
         <h2 class="w-full mb-10 text-3xl font-bold text-[#1c233e] text-center">

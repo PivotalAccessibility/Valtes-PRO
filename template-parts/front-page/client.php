@@ -1,18 +1,18 @@
 <?php
 
 if (!defined('ABSPATH')) {
-  exit; // Exit if accessed directly.
+    exit; // Exit if accessed directly.
 }
 
 if ($args) {
-  extract($args);
+    extract($args);
 }
 
 $clients = valtes_get_field('clients', []);
 
 ?>
 
-<section class="bg-[#f0f5ff] py-20 mt-[3.75rem]">
+<section class="bg-primaryLight py-20">
     <div class="flex flex-col items-center justify-center">
         <?php if (!empty($clients['title'])): ?>
             <h2 class="text-center section-sec-heading">
@@ -24,9 +24,7 @@ $clients = valtes_get_field('clients', []);
                 <?php foreach ($clients['images'] as $index => $image): ?>
                     <?php if (!empty($image['image']['url'])): ?>
                         <div class="flex items-center justify-center flex-shrink-0 w-auto sm:flex-shrink">
-                            <img src="<?php echo $image['image']['url']; ?>" 
-                                 alt="<?php echo $image['image']['alt']; ?>" 
-                                 class="w-auto h-16">
+                            <img src="<?php echo $image['image']['url']; ?>" alt="<?php echo $image['image']['alt']; ?>" class="w-auto h-16 object-contain">
                         </div>
                     <?php endif; ?>
                 <?php endforeach; ?>

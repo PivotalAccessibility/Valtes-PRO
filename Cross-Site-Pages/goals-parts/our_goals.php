@@ -19,7 +19,7 @@ $centerY = 50; // Center position in percentage
 ?>
 
 <section class="w-full">
-    <div class="container flex flex-col items-center justify-center sm:py-20 py-10 px-5 sm:px-5 xl:px-0 relative">
+    <div class="container flex flex-col items-center justify-center sm:py-28 py-10 px-5 sm:px-5 xl:px-0 relative">
         <?php if (!empty($goals['title'])): ?>
             <h2 class="section-sec-heading text-center w-full">
                 <?php echo esc_html($goals['title']); ?>
