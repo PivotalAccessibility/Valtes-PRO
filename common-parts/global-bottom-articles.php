@@ -16,13 +16,13 @@ $query = new WP_Query($args);
 
 ?>
 
-<section class="<?= $isDarkBg ? 'bg-primaryLight' : '' ?> md:py-20 py-10 md:px-5 px-4">
+<section class="<?= $isDarkBg ? 'bg-primaryLight' : '' ?> md:py-20 py-10 md:px-5 px-4 overflow-hidden">
   <div class="container flex flex-col items-center">
-    <h2 class="section-sec-heading text-center">
+    <h2 class="text-center section-sec-heading">
       <?php echo 'Bekijk onze artikelen'; ?>
     </h2>
     <div class="relative w-full">
-      <div class="relative z-10 grid sm:grid-cols-2 lg:grid-cols-3 grid-cols-1 gap-6 md:mt-10 mt-8 mySlider">
+      <div class="relative z-10 grid grid-cols-1 gap-6 mt-8 sm:grid-cols-2 lg:grid-cols-3 md:mt-10 mySlider">
         <?php if ($query->have_posts()): ?>
           <?php while ($query->have_posts()):
             $query->the_post(); ?>
@@ -34,10 +34,10 @@ $query = new WP_Query($args);
         <?php endif; ?>
       </div>
       <div class="absolute md:block hidden h-32 w-32 bg-[#babdf3] rounded-full -bottom-7 -left-10"></div>
-      <div class="absolute md:block hidden h-14 w-14 bg-jobborder rounded-full top-5 -right-6"></div>
+      <div class="absolute hidden rounded-full md:block h-14 w-14 bg-jobborder top-5 -right-6"></div>
     </div>
-    <div class="flex sm:flex-nowrap flex-wrap items-center justify-center gap-6 w-full md:mt-10">
-      <a href="<?php echo '/' ?>" class="btn btn-primary flex justify-center items-center gap-2">
+    <div class="flex flex-wrap items-center justify-center w-full gap-6 sm:flex-nowrap md:mt-10">
+      <a href="<?php echo '/' ?>" class="flex items-center justify-center gap-2 btn btn-primary">
         <?php echo 'Ontdek onze kennis' ?>
         <span>
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-5 h-5">
