@@ -3,7 +3,6 @@
 if (!defined('ABSPATH')) {
     exit; // Exit if accessed directly.
 }
-
 $about_valtes = valtes_get_field('about_valtes', [], 'option');
 
 ?>
