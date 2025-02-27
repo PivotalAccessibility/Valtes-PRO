@@ -243,7 +243,7 @@
     position: relative;
 }
 
-.forminator-label:not(.Uploadbtn label) {
+.forminator-label{
     position: absolute;
     background-color: white;
     left: 10px;
@@ -265,10 +265,12 @@ input[name="checkbox-1[]"]{
 }
 
 div.forminator-file-upload{
-    @apply !block;
+    @apply flex flex-col !items-center !justify-center py-5 md:px-24 border border-dashed border-[#c3d7ff] rounded-lg;
 }
 
-div.forminator-file-upload span{
+div.forminator-file-upload span,
+.Uploadbtn span.forminator-description
+{
     @apply text-[#a6a6a6] text-sm font-normal;
 }
 

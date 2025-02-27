@@ -38,7 +38,7 @@ get_header(); ?>
                 the_post(); ?>
                 <div class="">
                     <div class="flex flex-wrap sm:flex-nowrap items-start">
-                        <div class="sm:w-[70%] w-full h-auto">
+                        <div class="md:w-[70%] w-full h-auto">
                             <h1 class="section-sec-heading">
                                 <?php the_title(); ?>
                             </h1>
@@ -104,7 +104,7 @@ get_header(); ?>
                             </div>
 
                         </div>
-                        <div class="sm:w-[30%] w-full h-auto sm:px-5 mt-10 sm:mt-0">
+                        <div class="md:w-[30%] w-full h-auto sm:px-5 mt-10 sm:mt-0">
                             <h2 class="text-lg font-bold ">Reageer op deze functie</h2>
                             <div class="mt-8">
                                 <?php echo do_shortcode($form); ?>
