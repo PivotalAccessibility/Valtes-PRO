@@ -14,7 +14,7 @@ $brochure = valtes_get_field('brochure', []);
 
 <section class="container md:py-20 px-4 sm:px-5 xl:px-0 py-10">
     <div class=" flex flex-wrap-reverse sm:flex-nowrap ">
-        <div class=" sm:w-1/2 w-full flex flex-col items-start justify-center sm:mt-0 mt-10">
+        <div class=" sm:w-1/2 w-full flex flex-col items-start justify-center sm:mt-0 mt-10 md:pr-40">
             <?php if(!empty($brochure['title'])): ?>
             <h2 class=" section-sec-heading">
                 <?php echo $brochure['title']; ?>
@@ -27,7 +27,7 @@ $brochure = valtes_get_field('brochure', []);
             <?php endif; ?>
 
             <?php if(!empty($brochure['brochure_shortcode'])): ?>
-            <div class="w-full sm:w-1/2 mt-10">
+            <div class="mt-10 w-full">
                 <?php echo do_shortcode($brochure['brochure_shortcode']); ?>
             </div>
             <?php endif; ?>

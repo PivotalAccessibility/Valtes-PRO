@@ -218,11 +218,10 @@
     width: 100%;
 }
 
-.forminator-button {
+.forminator-button:not(.forminator-button-upload) {
     @apply text-base px-6 py-4 rounded-full !w-full sm:w-auto font-bold hover:scale-105 content-center text-center;
     @apply text-white bg-primary hover:opacity-90;
 }
-
 
 .forminator-field input,
 .forminator-textarea {
@@ -236,13 +235,33 @@
     position: relative;
 }
 
-.forminator-label {
+.forminator-label:not(.Uploadbtn label) {
     position: absolute;
     background-color: white;
     left: 10px;
     top: -15px;
     padding: 5px;
     @apply text-base;
+}
+
+.forminator-checkbox{
+    @apply flex !justify-between !items-start;
+}
+
+input[name="checkbox-1[]"]{
+    @apply !h-4;
+}
+
+.forminator-button-upload{
+    @apply text-primary px-6 py-2.5 rounded-full text-sm font-medium bg-primaryLight hover:opacity-90; 
+}
+
+div.forminator-file-upload{
+    @apply !block;
+}
+
+div.forminator-file-upload span{
+    @apply text-[#a6a6a6] text-sm font-normal;
 }
 
 .container {

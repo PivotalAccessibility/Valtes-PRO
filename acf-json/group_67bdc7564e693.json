@@ -262,6 +262,26 @@
                     "preview_size": "medium"
                 }
             ]
+        },
+        {
+            "key": "field_67c048361237f",
+            "label": "Job Form Shortcode",
+            "name": "job_form",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "maxlength": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": ""
         }
     ],
     "location": [
@@ -282,5 +302,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1740567487
+    "modified": 1740654711
 }

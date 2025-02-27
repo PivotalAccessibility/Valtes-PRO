@@ -25,6 +25,7 @@ $phone = get_field('contact_number', $post_id);
 $category = get_field('vacancy_category', $post_id);
 $vacancy_type = get_field('vacancy_type', $post_id);
 
+$form = valtes_get_field('job_form', [], 'option');
 
 get_header(); ?>
 <section class="py-16">
@@ -105,7 +106,9 @@ get_header(); ?>
                         </div>
                         <div class="sm:w-[30%] w-full h-auto sm:px-5 mt-10 sm:mt-0">
                             <h2 class="text-lg font-bold ">Reageer op deze functie</h2>
-                            <!-- Form here -->
+                            <div class="mt-8">
+                                <?php echo do_shortcode($form); ?>
+                            </div>
                         </div>
                     </div>
                 </div>
