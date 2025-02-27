@@ -52,7 +52,7 @@ $solution = valtes_get_field('solution', []);
                                     </div>
                                 </div>
                             </div>
-                            <div class="flex flex-col items-start justify-center w-full gap-4 md:gap-10 lg:w-1/2">
+                            <div class="flex flex-col items-start justify-center w-full gap-4 md:gap-10 lg:w-1/2 pr-32">
                                 <?php if (!empty($item['title'])): ?>
                                     <h2 class="section-sec-heading">
                                         <?php echo $item['title']; ?>
@@ -67,7 +67,7 @@ $solution = valtes_get_field('solution', []);
                         </div>
                     <?php else: ?>
                         <div class="flex flex-col-reverse px-3 md:gap-0 gap-7 lg:flex-row lg:px-0">
-                            <div class="flex flex-col items-start justify-center w-full gap-4 md:gap-10 lg:w-1/2">
+                            <div class="flex flex-col items-start justify-center w-full gap-4 md:gap-10 lg:w-1/2 pr-32">
                                 <?php if (!empty($item['title'])): ?>
                                     <h2 class="section-sec-heading">
                                         <?php echo $item['title']; ?>
