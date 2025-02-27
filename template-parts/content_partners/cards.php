@@ -21,13 +21,11 @@ $card = valtes_get_field('card', []);
             <?php foreach ($card['cards'] as $index => $item): ?>
                 <div class="">
                     <?php if ($index % 2 == 0): ?>
-                        <div class="flex flex-col gap-[1.88rem] px-3 lg:flex-row lg:px-0 lg:gap-0">
-                            <div class="flex flex-row justify-center w-full lg:w-1/2 lg:justify-start">
-                                <div class="relative <?php echo (isset($item['image_type']) && $item['image_type'] == "Rounded") ? 'card-image' : 'card-image-full'; ?>">
+                        <div class="flex flex-col md:gap-32 gap-[1.88rem] px-3 lg:flex-row lg:px-0">
+                            <div class="flex flex-row justify-center w-full md:w-1/2 md:justify-start">
+                                <div class="relative <?php echo (isset($item['image_type']) && $item['image_type'] == "Rounded") ? 'card-image' : 'card-image-full'; ?> w-full">
                                     <?php if (!empty($item['image']['url'])): ?>
-                                        <img src="<?php echo $item['image']['url']; ?>"
-                                            alt="<?php echo $item['image']['alt']; ?>"
-                                            class="">
+                                        <img src="<?php echo $item['image']['url']; ?>" alt="<?php echo $item['image']['alt']; ?>" class="w-full">
                                     <?php endif; ?>
                                     <div class="absolute h-[7.43425rem] w-[7.43425rem] rounded-full hidden lg:block bg-jobborder top-1 right-1">
                                     </div>
@@ -65,12 +63,12 @@ $card = valtes_get_field('card', []);
                             <div class="flex flex-row justify-center w-full lg:w-1/2 lg:justify-end lg:items-end">
                                 <div class="relative <?php echo (isset($item['image_type']) && $item['image_type'] == "Rounded") ? 'card-image' : 'card-image-full'; ?>">
                                     <?php if (!empty($item['image']['url'])): ?>
-                                        <img src="<?php echo $item['image']['url']; ?>" alt="<?php echo $item['image']['alt']; ?>"
-                                            class="">
+                                        <img src="<?php echo $item['image']['url']; ?>" alt="<?php echo $item['image']['alt']; ?>" class="">
                                     <?php endif; ?>
-                                    <div
-                                        class="absolute h-[8.75rem] w-[8.75rem] rounded-full hidden lg:block bg-[#E0E3ED] bottom-1 right-1">
-                                    </div>
+                                    <?php if ($item['image_type'] == "Rounded"): ?>
+                                        <div class="absolute h-[8.75rem] w-[8.75rem] rounded-full hidden lg:block bg-[#E0E3ED] bottom-1 right-1">
+                                        </div>
+                                    <?php endif; ?>
                                 </div>
                             </div>
                         </div>

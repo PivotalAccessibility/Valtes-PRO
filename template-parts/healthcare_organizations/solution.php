@@ -40,15 +40,13 @@ $solution = valtes_get_field('solution', []);
             <div class="flex flex-col md:py-20 py-10 gap-7 md:gap-20">
                 <?php foreach ($solution['solution_cards'] as $index => $item): ?>
                     <?php if ($index % 2 == 0): ?>
-                        <div class="flex flex-col px-3 lg:gap-0 gap-7 lg:flex-row max-md:justify-center max-md:items-center lg:px-0">
+                        <div class="flex flex-col lg:gap-0 gap-7 lg:flex-row max-md:justify-center max-md:items-center lg:px-0">
                             <div class="flex flex-row w-full lg:w-1/2">
                                 <div class="relative card-image">
                                     <?php if (!empty($item['image']['url'])): ?>
-                                        <img src="<?php echo $item['image']['url']; ?>" alt="<?php echo $item['image']['alt']; ?>"
-                                            class="relative z-10 object-cover rounded-full size-full">
+                                        <img src="<?php echo $item['image']['url']; ?>" alt="<?php echo $item['image']['alt']; ?>" class="relative z-10 object-cover rounded-full size-full">
                                     <?php endif; ?>
-                                    <div
-                                        class="absolute size-28 rounded-full hidden lg:block bg-jobborder top-1 right-1">
+                                    <div class="absolute size-28 rounded-full hidden lg:block bg-jobborder top-1 right-1">
                                     </div>
                                 </div>
                             </div>
@@ -66,7 +64,7 @@ $solution = valtes_get_field('solution', []);
                             </div>
                         </div>
                     <?php else: ?>
-                        <div class="flex flex-col-reverse px-3 lg:gap-0 gap-7 lg:flex-row lg:px-0">
+                        <div class="flex flex-col-reverse lg:gap-0 gap-7 lg:flex-row lg:px-0">
                             <div class="flex flex-col items-start justify-center w-full gap-4 md:gap-10 lg:w-1/2 lg:pr-32">
                                 <?php if (!empty($item['title'])): ?>
                                     <h2 class="section-sec-heading">
@@ -82,11 +80,9 @@ $solution = valtes_get_field('solution', []);
                             <div class="flex flex-row justify-center w-full lg:w-1/2 lg:justify-end lg:items-end">
                                 <div class="relative card-image">
                                     <?php if (!empty($item['image']['url'])): ?>
-                                        <img src="<?php echo $item['image']['url']; ?>" alt="<?php echo $item['image']['alt']; ?>"
-                                            class="relative z-10 object-cover rounded-full size-full">
+                                        <img src="<?php echo $item['image']['url']; ?>" alt="<?php echo $item['image']['alt']; ?>" class="relative z-10 object-cover rounded-full size-full">
                                     <?php endif; ?>
-                                    <div
-                                        class="absolute size-36 rounded-full hidden lg:block bg-evenCard bottom-1 right-1">
+                                    <div class="absolute size-36 rounded-full hidden lg:block bg-evenCard bottom-1 right-1">
                                     </div>
                                 </div>
                             </div>
@@ -95,8 +91,7 @@ $solution = valtes_get_field('solution', []);
                 <?php endforeach; ?>
             </div>
             <div class="w-full flex justify-center items-center">
-                <img src="<?php echo $solution['footer_image']['url']; ?>"
-                    alt="<?php echo $solution['footer_image']['alt']; ?>" class="w-auto h-14 sm:h-20 object-cover">
+                <img src="<?php echo $solution['footer_image']['url']; ?>" alt="<?php echo $solution['footer_image']['alt']; ?>" class="w-auto h-14 sm:h-20 object-cover">
             </div>
         </div>
     </div>

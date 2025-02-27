@@ -24,7 +24,7 @@ $challenge = valtes_get_field('challenge', []);
             <?php foreach ($challenge['challenges'] as $index => $challenge): ?>
                 <div class="flex flex-col items-center gap-4">
                     <?php if (!empty($challenge['counter'])): ?>
-                        <span class="text-[4rem] text-primary md:leading-[70.4px] leading-[52.8px]">
+                        <span class="counter">
                             <?php echo $challenge['counter'] ?>
                         </span>
                     <?php endif; ?>

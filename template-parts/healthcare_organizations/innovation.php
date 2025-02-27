@@ -14,7 +14,7 @@ $innovation = valtes_get_field('innovation', []);
 ?>
 
 
-<section class="py-7 md:py-14 max-md:px-4">
+<section class="py-7 md:py-32 max-md:px-4">
     <div class="container grid grid-cols-1 lg:grid-cols-2 gap-10 md:gap-48">
         <div class="flex items-center justify-center gap-10 md:gap-0">
             <div class="relative">

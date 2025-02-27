@@ -54,7 +54,7 @@
         @apply content-center w-full px-6 py-5 text-base font-bold text-center rounded-full sm:w-auto hover:scale-105;
     }
 
-    .btn-footer{
+    .btn-footer {
         @apply flex justify-center items-center w-full p-[1.125rem] text-base font-bold text-center rounded-full sm:w-auto hover:scale-105 h-[3.125rem];
     }
 
@@ -127,10 +127,10 @@
     }
 
     .card-image {
-        @apply  h-36 w-full md:h-80 md:w-auto;
+        @apply h-36 w-full md:h-80 md:w-auto;
     }
 
-    .card-image img{
+    .card-image img {
         @apply relative z-10 object-cover rounded-full size-full;
     }
 
@@ -138,13 +138,13 @@
         @apply flex justify-center md:w-[31.1875rem] md:h-[21.125rem] w-full h-[9.375rem];
     }
 
-    .card-image-full img{
+    .card-image-full img {
         @apply object-contain w-auto rounded-none -rotate-z-18;
     }
 
 }
 
-.partners.mySlider .slick-dots{
+.partners.mySlider .slick-dots {
     margin-bottom: 0;
     margin-top: 2rem;
 }
@@ -164,9 +164,8 @@
 }
 
 .menu-item {
-    padding: 9px 14px;
     border-radius: 50px;
-    @apply text-base;
+    @apply py-5 px-3 text-base flex flex-col justify-center items-center;
 }
 
 @media (max-width:768px) {
@@ -243,7 +242,7 @@
     position: relative;
 }
 
-.forminator-label{
+.forminator-label {
     position: absolute;
     background-color: white;
     left: 10px;
@@ -252,25 +251,25 @@
     @apply text-base;
 }
 
-.forminator-checkbox{
+.forminator-checkbox {
     @apply flex !justify-between !items-start;
 }
 
-input[name="checkbox-1[]"]{
+input[name="checkbox-1[]"] {
     @apply !h-4;
 }
 
-.forminator-button-upload{
-    @apply text-primary px-6 py-2.5 rounded-full text-sm font-medium bg-primaryLight hover:opacity-90; 
+.forminator-button-upload {
+    @apply text-primary px-6 py-2.5 rounded-full text-sm font-medium bg-primaryLight hover:opacity-90;
 }
 
-div.forminator-file-upload{
+
+div.forminator-file-upload {
     @apply flex flex-col !items-center !justify-center py-5 md:px-24 border border-dashed border-[#c3d7ff] rounded-lg;
 }
 
 div.forminator-file-upload span,
-.Uploadbtn span.forminator-description
-{
+.Uploadbtn span.forminator-description {
     @apply text-[#a6a6a6] text-sm font-normal;
 }
 

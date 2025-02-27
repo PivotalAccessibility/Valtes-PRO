@@ -9,7 +9,7 @@ $clients = valtes_get_field('clients', []);
 ?>
 
 
-<section class="lg:py-20 py-[3.75rem]">
+<section class="md:pb-32 pb-[3.75rem]">
     <div class="flex flex-col items-center lg:px-[1.8rem] gap-7.5 justify-center">
         <?php if (!empty($clients['heading'])): ?>
             <h2 class="text-center section-sec-heading">

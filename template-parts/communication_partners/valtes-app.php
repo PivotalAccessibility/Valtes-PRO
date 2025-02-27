@@ -13,7 +13,7 @@ $Explain = valtes_get_field('explain', []);
 ?>
 
 <section class="bg-primaryLight">
-    <div class="container px-5 lg:pt-20 py-10 lg:pb-[3.13rem] lg:px-0">
+    <div class="container px-4 lg:pt-20 py-10 lg:pb-[3.13rem] lg:px-0">
         <div class="flex flex-wrap justify-center">
             <?php if (!empty($Explain['title'])): ?>
                 <h2 class="text-center section-sec-heading">

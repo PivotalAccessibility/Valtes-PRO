@@ -7,7 +7,7 @@ $about_valtes = valtes_get_field('about_valtes', [], 'option');
 
 ?>
 
-<section class="container px-4 py-[3.75rem] md:py-20 md:px-5">
+<section class="container px-4 py-[3.75rem] md:py-28 md:px-5">
     <div class="flex flex-wrap-reverse sm:flex-nowrap">
         <div class="flex flex-col items-start justify-center w-full mt-[1.88rem] md:mt-10 sm:w-1/2 sm:mt-0">
             <?php if (!empty($about_valtes['title'])): ?>
