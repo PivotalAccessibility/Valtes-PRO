@@ -16,7 +16,7 @@ $query = new WP_Query($args);
 
 ?>
 
-<section class="<?= $isDarkBg ? 'bg-primaryLight' : '' ?> md:py-20 py-10 md:px-5 px-4">
+<section class="<?= $isDarkBg ? 'bg-primaryLight md:py-20 py-10' : 'md:pb-20 pb-10' ?> md:px-5 px-4">
   <div class="container flex flex-col items-center">
     <h2 class="text-center section-sec-heading">
       <?php echo 'Bekijk onze artikelen'; ?>

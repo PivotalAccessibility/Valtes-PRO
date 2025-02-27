@@ -23,29 +23,31 @@ $job_query = new WP_Query($args);
                 $job_url     = get_permalink();
                 $job_position = get_field('job_type');
                 $job_location = get_field('location');
-                ?>
-        <a href="<?php echo esc_url($job_url); ?>"
-            class="jobs">
-            <span class=" text-black font-bold text-xl">
-                <?php echo esc_html($job_title); ?>
-            </span>
-            <div class="flex item-center mt-6 md:mt-0">
-                <span class="flex">
-                    <img src="<?php echo esc_url(get_template_directory_uri() . '/assets/images/position.svg'); ?>"
-                        alt="">
-                    <span class=" ml-3 jobactions">
-                        <?php echo esc_html($job_position); ?>
-                    </span>
+        ?>
+
+        <?php if(!empty($job_title)): ?>
+            <a href="<?php echo esc_url($job_url); ?>" class="jobs">
+                <span class=" text-black font-bold text-xl">
+                    <?php echo esc_html($job_title); ?>
                 </span>
-                <span class="flex ml-6">
-                    <img src="<?php echo esc_url(get_template_directory_uri() . '/assets/images/location.svg'); ?>"
-                        alt="">
-                    <span class="ml-3 jobactions">
-                        <?php echo esc_html($job_location); ?>
+                <div class="flex item-center mt-6 md:mt-0">
+                    <span class="flex">
+                        <img src="<?php echo esc_url(get_template_directory_uri() . '/assets/images/position.svg'); ?>"
+                            alt="">
+                        <span class=" ml-3 jobactions">
+                            <?php echo esc_html($job_position); ?>
+                        </span>
                     </span>
-                </span>
-            </div>
-        </a>
+                    <span class="flex ml-6">
+                        <img src="<?php echo esc_url(get_template_directory_uri() . '/assets/images/location.svg'); ?>"
+                            alt="">
+                        <span class="ml-3 jobactions">
+                            <?php echo esc_html($job_location); ?>
+                        </span>
+                    </span>
+                </div>
+            </a>
+        <?php endif; ?>
         <?php endwhile; ?>
         <?php wp_reset_postdata(); ?>
         <?php else : ?>

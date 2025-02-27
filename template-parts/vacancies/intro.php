@@ -12,7 +12,7 @@ $intro = valtes_get_field('intro', []);
 
 ?>
 
-<section class="py-10">
+<section class="pb-10">
     <div class="container px-6 md:mt-36 mt-10">
         <div class="flex flex-col justify-center items-center">
             <?php if(!empty($intro['heading'])): ?>

@@ -117,7 +117,7 @@
 
     /* For Jobs */
     .jobs {
-        @apply md:h-14 h-auto !w-full flex flex-wrap md:flex-nowrap justify-between items-center md:p-10 p-6 border-2 border-jobborder md:rounded-full rounded-3xl bg-white;
+        @apply md:h-14 h-auto !w-full flex flex-wrap md:flex-nowrap justify-between items-center md:p-9 p-6 border-2 border-jobborder md:rounded-full rounded-3xl bg-white;
     }
 
     .jobactions {
