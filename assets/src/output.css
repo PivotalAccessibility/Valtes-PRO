@@ -32,7 +32,6 @@
       "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
     --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono",
       "Courier New", monospace;
-    --color-red-100: oklch(0.936 0.032 17.717);
     --color-green-200: oklch(0.925 0.084 155.995);
     --color-blue-50: oklch(0.97 0.014 254.604);
     --color-blue-400: oklch(0.707 0.165 254.624);
@@ -48,6 +47,7 @@
     --color-black: #1C233E;
     --color-white: #fff;
     --spacing: 0.25rem;
+    --container-2xs: 18rem;
     --container-md: 28rem;
     --container-lg: 32rem;
     --container-4xl: 56rem;
@@ -518,9 +518,6 @@
   .my-12 {
     margin-block: calc(var(--spacing) * 12);
   }
-  .my-\[0\.75rem\] {
-    margin-block: 0.75rem;
-  }
   .my-\[3\.75rem\] {
     margin-block: 3.75rem;
   }
@@ -984,12 +981,6 @@
   .mt-24 {
     margin-top: calc(var(--spacing) * 24);
   }
-  .mt-\[1\.5rem\] {
-    margin-top: 1.5rem;
-  }
-  .mt-\[1\.19rem\] {
-    margin-top: 1.19rem;
-  }
   .mt-\[1\.88rem\] {
     margin-top: 1.88rem;
   }
@@ -1225,6 +1216,9 @@
   .min-h-\[var\(--hero-height\)\] {
     min-height: var(--hero-height);
   }
+  .w-2xs {
+    width: var(--container-2xs);
+  }
   .w-3\/4 {
     width: calc(3/4 * 100%);
   }
@@ -1267,9 +1261,6 @@
   .w-48 {
     width: calc(var(--spacing) * 48);
   }
-  .w-60 {
-    width: calc(var(--spacing) * 60);
-  }
   .w-62 {
     width: calc(var(--spacing) * 62);
   }
@@ -1284,6 +1275,9 @@
   }
   .w-\[16rem\] {
     width: 16rem;
+  }
+  .w-\[18\.9375rem\] {
+    width: 18.9375rem;
   }
   .w-\[18rem\] {
     width: 18rem;
@@ -1699,9 +1693,6 @@
   .bg-primaryLight {
     background-color: var(--color-primaryLight);
   }
-  .bg-red-100 {
-    background-color: var(--color-red-100);
-  }
   .bg-transparent {
     background-color: transparent;
   }
@@ -1774,9 +1765,6 @@
   .px-16 {
     padding-inline: calc(var(--spacing) * 16);
   }
-  .px-\[1\.9rem\] {
-    padding-inline: 1.9rem;
-  }
   .py-0 {
     padding-block: calc(var(--spacing) * 0);
   }
@@ -1824,6 +1812,12 @@
   }
   .pt-20 {
     padding-top: calc(var(--spacing) * 20);
+  }
+  .pt-\[3\.75rem\] {
+    padding-top: 3.75rem;
+  }
+  .pr-0 {
+    padding-right: calc(var(--spacing) * 0);
   }
   .pr-4 {
     padding-right: calc(var(--spacing) * 4);
@@ -3027,11 +3021,6 @@
       font-size: var(--text-3_5xl);
     }
   }
-  .md\:text-\[1rem\] {
-    @media (width >= 48rem) {
-      font-size: 1rem;
-    }
-  }
   .md\:leading-7 {
     @media (width >= 48rem) {
       --tw-leading: calc(var(--spacing) * 7);
@@ -3213,11 +3202,6 @@
   .lg\:w-\[43\.65rem\] {
     @media (width >= 64rem) {
       width: 43.65rem;
-    }
-  }
-  .lg\:w-\[51rem\] {
-    @media (width >= 64rem) {
-      width: 51rem;
     }
   }
   .lg\:w-\[55rem\] {
@@ -3412,6 +3396,11 @@
   .lg\:pt-20 {
     @media (width >= 64rem) {
       padding-top: calc(var(--spacing) * 20);
+    }
+  }
+  .lg\:pt-\[7\.5rem\] {
+    @media (width >= 64rem) {
+      padding-top: 7.5rem;
     }
   }
   .lg\:pr-6 {
@@ -3723,13 +3712,37 @@
       width: auto;
     }
   }
+  .card-image img {
+    position: relative;
+    z-index: 10;
+    width: 100%;
+    height: 100%;
+    border-radius: calc(infinity * 1px);
+    object-fit: cover;
+  }
   .card-image-full {
     display: flex;
+    height: 9.375rem;
+    width: 100%;
     justify-content: center;
+    @media (width >= 48rem) {
+      height: 21.125rem;
+    }
+    @media (width >= 48rem) {
+      width: 31.1875rem;
+    }
   }
   .card-image-full img {
     width: auto;
+    --tw-rotate-z: rotateZ(calc(18deg * -1));
+    transform: var(--tw-rotate-x) var(--tw-rotate-y) var(--tw-rotate-z) var(--tw-skew-x) var(--tw-skew-y);
+    border-radius: 0;
+    object-fit: contain;
   }
+}
+.partners.mySlider .slick-dots {
+  margin-bottom: 0;
+  margin-top: 2rem;
 }
 .article-description {
   font-size: var(--text-sm);
