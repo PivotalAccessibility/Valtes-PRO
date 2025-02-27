@@ -44,6 +44,8 @@
     --text-4_1xl: 2.625rem;
     --text-3_5xl: 2.375rem;
 
+    --color-evenCard: #E5E8F3;
+
 }
 
 @layer components {
@@ -125,7 +127,7 @@
     }
 
     .card-image {
-        @apply md:w-[31.1875rem] md:h-[21.125rem] w-full h-[9.375rem];
+        @apply  h-36 w-full md:h-80 md:w-auto;
     }
 
     .card-image-full {
