@@ -12,12 +12,12 @@ $challenge = valtes_get_field('challenge', []);
 
 ?>
 
-<section class="mt-[6.81rem] bg-primaryLight" name="valtes-solution">
+<section class="bg-primaryLight" name="valtes-solution">
 
     <div class="container lg:py-20 py-[3.75rem]">
 
-        <div class="flex flex-col px-4 lg:flex-row justify-evenly lg:px-0">
-            <div class="flex flex-row w-full mb-8 lg:w-1/2 lg:mb-0">
+        <div class="flex flex-col gap-8 px-4 lg:flex-row justify-evenly lg:px-0 lg:gap-0">
+            <div class="flex flex-row justify-center w-full lg:w-1/2 lg:justify-start">
                 <?php if (!empty($challenge['image']['url'])): ?>
                     <div class="relative card-image">
                         <img src="<?php echo $challenge['image']['url']; ?>" alt="<?php echo $challenge['image']['alt']; ?>"
@@ -27,7 +27,7 @@ $challenge = valtes_get_field('challenge', []);
                 <?php endif; ?>
             </div>
             <div class="flex flex-col justify-center w-full lg:w-1/2">
-                <div class="flex flex-col justify-center">
+                <div class="flex flex-col justify-center gap-4 md:gap-10">
                     <?php if (!empty($challenge['title'])): ?>
                         <h2 class="section-sec-heading">
                             <?php echo $challenge['title']; ?>
@@ -35,7 +35,7 @@ $challenge = valtes_get_field('challenge', []);
                     <?php endif; ?>
                     <?php if (!empty($challenge['description'])): ?>
 
-                        <p class="mt-4 lg:mt-10 section-sec-description">
+                        <p class="w-full section-sec-description lg:w-md">
                             <?php echo $challenge['description']; ?>
                         </p>
                     <?php endif; ?>

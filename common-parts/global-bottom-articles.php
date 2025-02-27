@@ -16,7 +16,7 @@ $query = new WP_Query($args);
 
 ?>
 
-<section class="<?= $isDarkBg ? 'bg-primaryLight' : '' ?> md:py-20 py-10 md:px-5 px-4 overflow-hidden">
+<section class="<?= $isDarkBg ? 'bg-primaryLight' : '' ?> md:py-20 py-10 md:px-5 px-4">
   <div class="container flex flex-col items-center">
     <h2 class="text-center section-sec-heading">
       <?php echo 'Bekijk onze artikelen'; ?>
@@ -33,8 +33,11 @@ $query = new WP_Query($args);
           <p>Geen artikelen gevonden.</p>
         <?php endif; ?>
       </div>
-      <div class="absolute md:block hidden h-32 w-32 bg-[#babdf3] rounded-full -bottom-7 -left-10"></div>
-      <div class="absolute hidden rounded-full md:block h-14 w-14 bg-jobborder top-5 -right-6"></div>
+      <!-- <div class="absolute md:block hidden h-32 w-32 bg-[#babdf3] rounded-full -bottom-7 -left-10"></div>
+      <div class="absolute hidden rounded-full md:block h-14 w-14 bg-jobborder top-5 -right-6"></div> -->
+      <div class="absolute hidden rounded-full md:size-20 size-9 bg-jobborder top-1/24 -right-1/60 md:block">
+      </div>
+      <div class="bg-[#BBBEF4] md:size-40 size-20 rounded-full absolute md:-bottom-1/14 bottom-1/12 -left-1/22"></div>
     </div>
     <div class="flex flex-wrap items-center justify-center w-full gap-6 sm:flex-nowrap md:mt-10">
       <a href="<?php echo '/' ?>" class="flex items-center justify-center gap-2 btn btn-primary">

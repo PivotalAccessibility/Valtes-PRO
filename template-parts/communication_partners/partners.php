@@ -24,7 +24,7 @@ $logo = valtes_get_field('logo', []);
                 class="flex grid-cols-1 gap-[3.75rem] sm:grid lg:grid-cols-9 md:grid-cols-5 sm:grid-cols-3 md:space-x-0 md:pb-0">
                 <?php foreach ($logo['images'] as $index => $image): ?>
                     <?php if (!empty($image['image']['url'])): ?>
-                        <div class="flex items-center justify-center flex-shrink-0 w-auto sm:flex-shrink">
+                        <div class="flex items-center justify-center flex-shrink-0 w-auto ">
                             <img src="<?php echo $image['image']['url']; ?>" alt="<?php echo $image['image']['alt']; ?>"
                                 class="w-auto">
                         </div>

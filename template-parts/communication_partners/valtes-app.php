@@ -16,18 +16,18 @@ $Explain = valtes_get_field('explain', []);
     <div class="container px-5 lg:pt-20 py-10 lg:pb-[3.13rem] lg:px-0">
         <div class="flex flex-wrap justify-center">
             <?php if (!empty($Explain['title'])): ?>
-                <h2 class="w-full text-center section-sec-heading">
+                <h2 class="text-center section-sec-heading">
                     <?php echo $Explain['title']; ?>
                 </h2>
             <?php endif; ?>
             <?php if (!empty($Explain['description'])): ?>
-                <p class="text-center sm:w-1/2 lg:mt-[1.87rem] mt-5 section-description text-[#1c233e]">
+                <p class="text-center sm:w-[52.0625rem] lg:mt-[1.87rem] mt-5 section-description">
                     <?php echo $Explain['description']; ?>
                 </p>
             <?php endif; ?>
         </div>
         <?php if (!empty($Explain['image']['url'])): ?>
-            <div class="flex justify-center w-auto lg:w-[51rem] mx-auto lg:pt-10 px-[1.9rem] lg:pb-5">
+            <div class="flex justify-center w-auto lg:w-[59.125rem] mx-auto lg:pt-10 lg:pb-5 py-8">
                 <img src="<?php echo $Explain['image']['url']; ?>" class="" alt="<?php echo $Explain['image']['alt']; ?>">
             </div>
         <?php endif; ?>
