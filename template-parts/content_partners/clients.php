@@ -67,7 +67,7 @@ $logo = valtes_get_field('logo', [
 ?>
 
 
-<section class="lg:py-20 py-[3.75rem]">
+<section class="lg:pt-[7.5rem] pt-[3.75rem]">
     <div class="flex flex-col items-center lg:px-[1.8rem] gap-7.5 justify-center">
         <?php if (!empty($logo['title'])): ?>
             <h2 class="text-center section-sec-heading">

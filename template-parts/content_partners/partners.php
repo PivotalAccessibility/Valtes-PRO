@@ -60,35 +60,39 @@ $partners = valtes_get_field('partners', [
 
 ?>
 
-<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
 
 <section class="">
     <div class="container flex flex-col mb-[3.75rem]">
         <?php if (!empty($partners['title'])): ?>
-            <h2 class="text-center section-sec-heading">
+            <h2 class="mx-auto text-center section-sec-heading">
                 <?php echo $partners['title']; ?>
             </h2>
         <?php endif; ?>
-        <div class="grid grid-cols-1 md:mt-10 mt-[1.19rem] lg:grid-cols-3 mySlider">
+        <div class="relative w-full">
+        <div class="grid grid-cols-1 mt-5 md:mt-10 lg:grid-cols-3 mySlider partners">
 
             <?php foreach ($partners['partners'] as $index => $item): ?>
-                <div class="flex flex-col items-center justify-center mx-auto w-60">
-                    <div class="w-[180px] h-[180px] bg-red-100 rounded-full mx-auto">
+                <div class="flex flex-col items-center justify-center mx-auto gap-[1.88rem]">
+            <div class="flex flex-col gap-6">    
+                <div class="w-[180px] h-[180px] rounded-full mx-auto">
                         <img src="<?php echo $item['image']['url']; ?>" alt="<?php echo $item['image']['url']; ?>" class="rounded-full">
                     </div>
+                    <div class="flex flex-col gap-3">
                     <?php if (!empty($item['name'])): ?>
-                        <h2 class="section-description mt-[1.5rem] font-bold text-center">
+                        <h2 class="font-bold text-center section-description">
                             <?php echo $item['name']; ?>
                         </h2>
                     <?php endif; ?>
-                    <img src="<?php echo $item['company_image']['url']; ?>" alt="<?php echo $item['company_image']['alt']; ?>" class="w-auto mx-auto h-10 my-[0.75rem]">
+                    <img src="<?php echo $item['company_image']['url']; ?>" alt="<?php echo $item['company_image']['alt']; ?>" class="w-auto h-10 mx-auto">
                     <?php if (!empty($item['bio'])): ?>
-                        <p class="md:text-[1rem] text-sm text-center">
+                        <p class="section-sec-description text-center w-[18.9375rem] mx-auto">
                             <?php echo $item['bio']; ?>
                         </p>
                     <?php endif; ?>
+                    </div>
+                    </div>
                     <button
-                        class="border-2 border-[#2B37DC] text-[#2B37DC] mt-[1.88rem] rounded-full px-3 py-2 flex items-center w-full justify-center">
+                        class="border-2 border-[#2B37DC] text-[#2B37DC] rounded-full px-3 py-2 flex items-center w-2xs justify-center mx-auto md:mt-0 mt-[1.88rem]">
                         <span class="mr-2">
                             <img src="<?php echo valtes_assets('images/up-right-from-squares.png')?>" alt="">
                         </span>MantelzorgNL
@@ -96,33 +100,6 @@ $partners = valtes_get_field('partners', [
                 </div>
             <?php endforeach; ?>
         </div>
+        </div>
     </div>
 </section>
-
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
-<script>
-    mobileOnlySlider(".mySlider", true, false, 767);
-
-    function mobileOnlySlider($slidername, $dots, $arrows, $breakpoint) {
-        var slider = $($slidername);
-        var settings = {
-            mobileFirst: true,
-            dots: $dots,
-            arrows: $arrows,
-            responsive: [{
-                breakpoint: $breakpoint,
-                settings: "unslick"
-            }]
-        };
-        slider.slick(settings);
-        $(window).on("resize", function() {
-            if ($(window).width() > $breakpoint) {
-                return;
-            }
-            if (!slider.hasClass("slick-initialized")) {
-                return slider.slick(settings);
-            }
-        });
-    }
-</script>

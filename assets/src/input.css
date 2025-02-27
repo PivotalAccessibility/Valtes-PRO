@@ -105,7 +105,7 @@
     }
 
     .counter {
-        @apply font-medium text-6xl text-primary;
+        @apply text-6xl font-medium text-primary;
     }
 
     .counter-description {
@@ -130,16 +130,24 @@
         @apply  h-36 w-full md:h-80 md:w-auto;
     }
 
-    .card-image-full {
-        @apply flex justify-center
+    .card-image img{
+        @apply relative z-10 object-cover rounded-full size-full;
     }
 
-    .card-image-full img {
-        @apply w-auto
+    .card-image-full {
+        @apply flex justify-center md:w-[31.1875rem] md:h-[21.125rem] w-full h-[9.375rem];
+    }
+
+    .card-image-full img{
+        @apply object-contain w-auto rounded-none -rotate-z-18;
     }
 
 }
 
+.partners.mySlider .slick-dots{
+    margin-bottom: 0;
+    margin-top: 2rem;
+}
 
 .article-description {
     @apply text-sm font-normal leading-5;
