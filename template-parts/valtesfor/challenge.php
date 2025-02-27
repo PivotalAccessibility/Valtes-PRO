@@ -31,9 +31,17 @@ $challenge = valtes_get_field('challenge', []);
     </div>
 
     <div class="mt-20 relative">
-      <video controls class="w-72 h-48 md:w-[50.8125rem] md:h-[27.4375rem] rounded-2xl relative z-20">
-        <source src="movie.mp4" type="video/mp4">
-        <source src="movie.ogg" type="video/ogg">
+      <div class="absolute inset-0 flex items-center justify-center z-30 cursor-pointer" id="thumbnail-container">
+        <img src="https://media.istockphoto.com/id/814423752/photo/eye-of-model-with-colorful-art-make-up-close-up.jpg?s=612x612&w=0&k=20&c=l15OdMWjgCKycMMShP8UK94ELVlEGvt7GmB_esHWPYE=" alt="Video Thumbnail" class="h-full w-full md:h-[27.4375rem] rounded-2xl">
+        <div class="absolute z-30 h-16 w-16 bg-white rounded-full flex items-center justify-center border-2 border-primary">
+          <button class="absolute z-40">
+            <img src="<?php echo valtes_assets('images/play-button.svg'); ?>" alt="">
+          </button>
+        </div>
+      </div>
+      <video id="video" controls class="w-72 h-48 md:w-[50.8125rem] md:h-[27.4375rem] rounded-2xl relative z-20">
+        <source src="<?php echo valtes_assets('images/wordpress_video.mp4'); ?>" type="video/mp4">
+        <source src="<?php echo valtes_assets('images/wordpress_video.mp4'); ?>" type="video/ogg">
         Your browser does not support the video tag.
       </video>
       <div class="md:size-20 size-9 bg-jobborder -top-1/12 -right-1/25 rounded-full absolute">
@@ -45,7 +53,18 @@ $challenge = valtes_get_field('challenge', []);
 </section>
 
 <script>
-  document.addEventListener("DOMContentLoaded", function () {
+  const thumbnailContainer = document.getElementById('thumbnail-container');
+  const video = document.getElementById('video');
+
+  thumbnailContainer.addEventListener('click', () => {
+    thumbnailContainer.style.display = 'none';
+    video.classList.remove('hidden');
+    video.play();
+  });
+</script>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
     const counters = document.querySelectorAll(".counter-count");
 
     const observerOptions = {
