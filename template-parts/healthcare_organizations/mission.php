@@ -22,7 +22,7 @@ $mission = valtes_get_field('mission', []);
                 </h2>
             <?php endif; ?>
             <?php if (!empty($mission['description'])): ?>
-                <div class="md:mt-[1.87rem] mt-5 section-sec-description w-full sm:w-3/4">
+                <div class="md:mt-[1.87rem] mt-5 section-sec-description w-full lg:w-3/4">
                     <?php echo $mission['description']; ?>
                 </div>
             <?php endif; ?>
