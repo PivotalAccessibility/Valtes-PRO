@@ -9,13 +9,13 @@ $form = valtes_get_field('form', [], 'option');
 ?>
 
 <section class="">
-  <div class="container lg:py-[7.5rem] py-[3.75rem]">
+  <div class="container flex flex-col lg:py-[7.5rem] py-[3.75rem] gap-[1.88rem] md:gap-[3.75rem]">
     <?php if (!empty($form['section_heading'])): ?>
       <h2 class="mx-auto text-center section-sec-heading">
         <?php echo $form['section_heading'] ?>
       </h2>
     <?php endif ?>
-    <div class="grid items-center justify-center w-full grid-cols-1 px-4 mx-auto mt-[1.88rem] md:mt-[3.75rem] gap-6 lg:grid-cols-2">
+    <div class="grid items-center justify-center w-full grid-cols-1 gap-6 px-4 mx-auto lg:grid-cols-2">
       <!-- Left Content -->
       <div class="grid gap-4 md:p-11 p-5 mx-auto lg:p-[2.25rem] lg:gap-8 bg-primaryLight rounded-3xl">
         <?php if (!empty($form['title'])): ?>
