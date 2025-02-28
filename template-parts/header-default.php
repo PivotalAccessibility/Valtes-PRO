@@ -33,13 +33,13 @@ if (!defined('ABSPATH')) {
 
             <div class="ml-10 ">
                 <?php
-                    //   wp_nav_menu( 
-                    //     array( 
-                    //         'theme_location' => 'my-custom-menu'
-                    //     ) 
-                    // ); 
-
-                    wp_nav_menu(array(
+                //   wp_nav_menu( 
+                //     array( 
+                //         'theme_location' => 'my-custom-menu'
+                //     ) 
+                // ); 
+                
+                wp_nav_menu(array(
                     'theme_location' => 'my-custom-menu',
                     'container' => 'nav',
                     'menu_class' => 'navbar-menu flex',
@@ -49,11 +49,9 @@ if (!defined('ABSPATH')) {
             </div>
         </div>
 
-        <a href=""
-            class="flex items-center px-3 py-2 text-xs font-semibold text-blue-700 bg-white border-2 border-blue-700 rounded-full">
+        <a href="" class="flex items-center px-3 py-2 text-xs font-semibold text-blue-700 bg-white border-2 border-blue-700 rounded-full">
             <span>
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-5 h-5 mr-2">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-5 h-5 mr-2">
                     <path stroke="none" d="M0 0h24v24H0z" fill="none" />
                     <path d="M12 6h-6a2 2 0 0 0 -2 2v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-6" />
                     <path d="M11 13l9 -9" />
@@ -71,8 +69,7 @@ if (!defined('ABSPATH')) {
             <img src="<?php echo valtes_assets('images/Valtespro_logo.png') ?>" alt="" class="w-20 ">
         </a>
         <div>
-            <a href=""
-                class="sm:flex items-center px-3 py-2 text-sm font-semibold text-primary bg-white border-2 border-primary rounded-full w-full">
+            <a href="" class="sm:flex items-center px-3 py-2 text-sm font-semibold text-primary bg-white border-2 border-primary rounded-full w-full">
                 Voor professionals
             </a>
         </div>
@@ -93,19 +90,19 @@ if (!defined('ABSPATH')) {
             <div class=" mt-10">
                 <h2 class="text-xl font-bold text-center mb-4 text-[#1C233E]">Menu</h2>
                 <?php
-                        //   wp_nav_menu( 
-                        //     array( 
-                        //         'theme_location' => 'my-custom-menu'
-                        //     ) 
-                        // ); 
-
-                        wp_nav_menu(array(
-                        'theme_location' => 'my-custom-menu',
-                        'container' => 'nav',
-                        'menu_class' => 'navbar-menu',
-                        // 'walker' => new Custom_Nav_Walker()
-                    ));
-                    ?>
+                //   wp_nav_menu( 
+                //     array( 
+                //         'theme_location' => 'my-custom-menu'
+                //     ) 
+                // ); 
+                
+                wp_nav_menu(array(
+                    'theme_location' => 'my-custom-menu',
+                    'container' => 'nav',
+                    'menu_class' => 'navbar-menu',
+                    // 'walker' => new Custom_Nav_Walker()
+                ));
+                ?>
             </div>
             <div class="">
                 <button class="py-4 font-bold text-center text-white bg-primary text-xl rounded-full w-full">Download
@@ -115,27 +112,27 @@ if (!defined('ABSPATH')) {
     </div>
 
     <script>
-    const mobileHeader = document.getElementById('mobile-header');
-    const menuToggle = document.getElementById('menuToggle');
-    const mobileMenu = document.getElementById('mobileMenu');
-    const bars = menuToggle.querySelectorAll('span');
+        const mobileHeader = document.getElementById('mobile-header');
+        const menuToggle = document.getElementById('menuToggle');
+        const mobileMenu = document.getElementById('mobileMenu');
+        const bars = menuToggle.querySelectorAll('span');
 
-    menuToggle.addEventListener('click', function() {
-        mobileMenu.classList.toggle('hidden');
-        if (!mobileMenu.classList.contains('hidden')) {
-            // Transform hamburger into close button
-            bars[0].classList.add('rotate-45', 'translate-y-[6px]');
-            bars[1].classList.add('opacity-0');
-            bars[2].classList.add('-rotate-45', '-translate-y-[6px]');
-            mobileHeader.classList.add('bg-white');
-        } else {
-            // Restore hamburger
-            bars[0].classList.remove('rotate-45', 'translate-y-[6px]');
-            bars[1].classList.remove('opacity-0');
-            bars[2].classList.remove('-rotate-45', '-translate-y-[6px]');
-            mobileHeader.classList.remove('bg-white');
-        }
-    });
+        menuToggle.addEventListener('click', function () {
+            mobileMenu.classList.toggle('hidden');
+            if (!mobileMenu.classList.contains('hidden')) {
+                // Transform hamburger into close button
+                bars[0].classList.add('rotate-45', 'translate-y-[6px]');
+                bars[1].classList.add('opacity-0');
+                bars[2].classList.add('-rotate-45', '-translate-y-[6px]');
+                mobileHeader.classList.add('bg-white');
+            } else {
+                // Restore hamburger
+                bars[0].classList.remove('rotate-45', 'translate-y-[6px]');
+                bars[1].classList.remove('opacity-0');
+                bars[2].classList.remove('-rotate-45', '-translate-y-[6px]');
+                mobileHeader.classList.remove('bg-white');
+            }
+        });
     </script>
 
 </header>

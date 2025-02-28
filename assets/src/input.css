@@ -165,7 +165,7 @@
 
 .menu-item {
     border-radius: 50px;
-    @apply py-5 px-3 text-base flex flex-col justify-center items-center;
+    @apply py-2.5 px-3 text-base flex flex-col justify-center items-center;
 }
 
 @media (max-width:768px) {
