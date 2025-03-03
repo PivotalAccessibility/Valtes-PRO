@@ -32,18 +32,12 @@ if (!defined('ABSPATH')) {
             </a>
 
             <div class="ml-10 ">
-                <?php
-                //   wp_nav_menu( 
-                //     array( 
-                //         'theme_location' => 'my-custom-menu'
-                //     ) 
-                // ); 
-                
+                <?php                
                 wp_nav_menu(array(
                     'theme_location' => 'my-custom-menu',
                     'container' => 'nav',
                     'menu_class' => 'navbar-menu flex',
-                    // 'walker' => new Custom_Nav_Walker()
+                    'walker' => new Custom_Walker_Nav_Menu()
                 ));
                 ?>
             </div>

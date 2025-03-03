@@ -344,14 +344,35 @@ button.slick-arrow {
 }
 
 .mySlider .slick-dots {
-    @apply mb-3.5
+    @apply mb-3.5;
 }
 
 .navbar-menu ul {
-    display: flex;
+    @apply flex flex-row;
 }
 
 .navbar-menu ul li {
     margin: 0 12px;
     padding: 6px 12px;
+}
+
+
+li.menu-item-has-children {
+    @apply flex flex-row gap-1.5 relative;
+}
+
+li.menu-item-has-children .dropdown-menu {
+    @apply hidden
+}
+
+li.menu-item-has-children.active .dropdown-menu, li.menu-item-has-children:hover .dropdown-menu {
+    @apply flex absolute top-full left-0 z-50 min-w-[200px] bg-primaryLight;
+}
+
+.navbar-menu ul li a {
+    @apply text-left w-max;
+}
+
+.custom-menu {
+    @apply w-6 h-6 cursor-pointer;
 }

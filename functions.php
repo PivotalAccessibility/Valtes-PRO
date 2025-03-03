@@ -159,7 +159,7 @@ function valtes_enqueue_scripts()
     wp_enqueue_style('slick-style-cdn', 'https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css', array(), valtes_get_version(), 'all');
     wp_enqueue_script('jquery');
     wp_enqueue_script('slick-js-cdn', 'https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js', array('jquery'), null, true);
-    
+
     wp_enqueue_script('only-mobile-slider', valtes_assets('js/OnlyMobileSlider.js'), array('jquery', 'slick-js-cdn'), valtes_get_version(), true);
 
     wp_enqueue_style('pivotalaccessibility-twind', valtes_assets('src/output.css'), array(), valtes_get_version(), 'all');
@@ -563,27 +563,51 @@ function valtes_get_post_category()
     return ''; // Return an empty string if no valid category is found.
 }
 
-class Pivotal_Accessibility_Nav_Walker extends Walker_Nav_Menu
-{
-    function start_lvl(&$output, $depth = 0, $args = null)
-    {
-        // Add a button after the list item's opening tag
-        $output .= '<button class="flex items-center justify-center w-6 menu-toggle" aria-expanded="false" aria-label="' . __('Toggle sub-menu', 'valtes') . '">';
-        $output .= '<span class="menu-toggle-icon" aria-hidden="true">' . valtes_svg('chevron-down') . '</span>';
-        $output .= '</button>';
 
-        // Make the submenu a flex container
-        $output .= '<ul class="flex flex-col sub-menu md:flex-row md:space-x-4">';
+class Custom_Walker_Nav_Menu extends Walker_Nav_Menu
+{
+    // Start Level (Dropdown Wrapper)
+    public function start_lvl(&$output, $depth = 0, $args = null)
+    {
+        $output .= "<ul class='sub-menu dropdown-menu'>";
+    }
+
+    // End Level (Dropdown Wrapper)
+    public function end_lvl(&$output, $depth = 0, $args = null)
+    {
+        $output .= '</ul>';
+    }
+
+    // Start Element (Menu Item)
+    public function start_el(&$output, $item, $depth = 0, $args = null, $id = 0)
+    {
+        $classes = empty($item->classes) ? [] : (array) $item->classes;
+        $class_names = join(' ', array_filter($classes));
+
+        if (in_array('menu-item-has-children', $classes)) {
+            $class_names .= ' dropdown';
+        }
+
+        $output .= '<li class="' . esc_attr($class_names) . '">' . $args->before;
+        $output .= '<a href="' . esc_url($item->url) . '" class="nav-link">' . esc_html($item->title);
+        $output .= '</a>' . $args->after;
+
+        if (in_array('menu-item-has-children', $classes)) {
+            $output .= ' <button aria-label="Toggle Submenu - ' . esc_html($item->title) . '" class="dropdown-toggle custom-menu" data-bs-toggle="dropdown">
+            <svg xmlns="http://www.w3.org/2000/svg" width="9" height="6" viewBox="0 0 9 6" fill="none">
+  <path d="M4.8303 5.10938L8.35764 1.59375C8.4592 1.5 8.50998 1.38281 8.50998 1.24219C8.50998 1.10156 8.4592 0.984375 8.35764 0.890625C8.25608 0.796875 8.13694 0.748047 8.00022 0.744141C7.8635 0.740234 7.74826 0.789062 7.65451 0.890625L4.50217 4.04297L1.34983 0.890625C1.24826 0.789062 1.12912 0.738281 0.992405 0.738281C0.855686 0.738281 0.740451 0.789062 0.646701 0.890625C0.552951 0.992188 0.504123 1.11133 0.500217 1.24805C0.496311 1.38477 0.545139 1.5 0.646701 1.59375L4.15061 5.10938C4.24436 5.21094 4.35959 5.26172 4.49631 5.26172C4.63303 5.26172 4.74436 5.21094 4.8303 5.10938Z" fill="#1C233E"/>
+</svg>
+            </button>';
+        }
+    }
+
+    // End Element
+    public function end_el(&$output, $item, $depth = 0, $args = null)
+    {
+        $output .= '</li>';
     }
 }
 
-class Custom_Nav_Walker extends Walker_Nav_Menu
-{
-    function start_lvl(&$output, $depth = 0, $args = null)
-    {
-        $output .= '<ul class="flex space-x-4 navbar-menu">'; // Flex applied to the <ul>
-    }
-}
 
 function my_custom_menu()
 {
