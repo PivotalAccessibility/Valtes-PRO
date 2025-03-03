@@ -4,102 +4,69 @@ if (!defined('ABSPATH')) {
     exit; // Exit if accessed directly.
 }
 
-$partners = valtes_get_field('partners', [
-    'title' => 'Dit vinden andere contentpartners',
-    'partners' => [
-        [
-            'image' => [
-                'url' => 'https://wac-cdn.atlassian.com/dam/jcr:ba03a215-2f45-40f5-8540-b2015223c918/Max-R_Headshot%20(1).jpg?cdnVersion=2574',
-                'alt' => ''
-            ],
-            'name' => 'Interzorg',
-            'bio' => 'Sapien viverra tellus facilisi vitae ornare fringilla pharetra.Tellus condimentu...',
-            'cta' => [
-                'text' => 'MantelzorgNL',
-                'url' => 'https://www.mantelzorg.nl'
-            ],
-            'company_image' => [
-                'url' => 'https://www.citypng.com/public/uploads/preview/amazon-official-logo-7017516947919651epoyhkqor.png',
-                'alt' => ''
-            ]
-        ],
-        [
-            'image' => [
-                'url' => 'https://wac-cdn.atlassian.com/dam/jcr:ba03a215-2f45-40f5-8540-b2015223c918/Max-R_Headshot%20(1).jpg?cdnVersion=2574',
-                'alt' => ''
-            ],
-            'name' => 'Interzorg',
-            'bio' => 'Sapien viverra tellus facilisi vitae ornare fringilla pharetra.Tellus condimentu...',
-            'cta' => [
-                'text' => 'MantelzorgNL',
-                'url' => 'https://www.mantelzorg.nl'
-            ],
-            'company_image' => [
-                'url' => 'https://www.citypng.com/public/uploads/preview/amazon-official-logo-7017516947919651epoyhkqor.png',
-                'alt' => ''
-            ]
-        ],
-        [
-            'image' => [
-                'url' => 'https://wac-cdn.atlassian.com/dam/jcr:ba03a215-2f45-40f5-8540-b2015223c918/Max-R_Headshot%20(1).jpg?cdnVersion=2574',
-                'alt' => ''
-            ],
-            'name' => 'Interzorg',
-            'bio' => 'Sapien viverra tellus facilisi vitae ornare fringilla pharetra.Tellus condimentu...',
-            'cta' => [
-                'text' => 'MantelzorgNL',
-                'url' => 'https://www.mantelzorg.nl'
-            ],
-            'company_image' => [
-                'url' => 'https://www.citypng.com/public/uploads/preview/amazon-official-logo-7017516947919651epoyhkqor.png',
-                'alt' => ''
-            ]
-        ]
-    ]
-]);
-
 ?>
-
 
 <section class="">
     <div class="container flex flex-col mb-[3.75rem]">
-        <?php if (!empty($partners['title'])): ?>
-            <h2 class="mx-auto text-center section-sec-heading">
-                <?php echo $partners['title']; ?>
-            </h2>
-        <?php endif; ?>
+        <h2 class="mx-auto text-center section-sec-heading">
+            Dit vinden andere contentpartners
+        </h2>
         <div class="relative w-full">
-        <div class="grid grid-cols-1 mt-5 md:mt-10 lg:grid-cols-3 mySlider partners">
+            <div class="grid grid-cols-1 mt-5 md:mt-10 lg:grid-cols-3 mySlider gap-7">
+                <?php
+                $authors = get_users(['role__in' => ['author', 'administrator', 'editor', 'subscriber']]);
+                foreach ($authors as $author): 
+                    $user = get_field('user_image', 'user_' . $author->ID) ?: get_author_posts_url($author->ID);
+                    $author_name = $author->display_name;
+                    $company_logo = get_field('user_organization_logo', 'user_' . $author->ID);
+                    $author_bio = get_field('user_bio', 'user_' . $author->ID) ?: get_the_author_meta('description', $author->ID);
+                    $user_org = get_field('user_organization', 'user_' . $author->ID);
+                ?>
+                <div class="flex flex-col items-center justify-between">
 
-            <?php foreach ($partners['partners'] as $index => $item): ?>
-                <div class="flex flex-col items-center justify-center mx-auto gap-[1.88rem]">
-            <div class="flex flex-col gap-6">    
-                <div class="w-[180px] h-[180px] rounded-full mx-auto">
-                        <img src="<?php echo $item['image']['url']; ?>" alt="<?php echo $item['image']['url']; ?>" class="rounded-full">
-                    </div>
-                    <div class="flex flex-col gap-3">
-                    <?php if (!empty($item['name'])): ?>
-                        <h2 class="font-bold text-center section-description">
-                            <?php echo $item['name']; ?>
+                    <div class=" px-10 flex flex-col items-center justify-center">
+
+                        <?php if(!empty($user['url'])): ?>
+                        <div class="rounded-full h-44 w-44 bg-purple-400">
+                            <img src="<?php echo $user['url'] ?>" alt="<?php echo $user['alt'] ?>"
+                                class="rounded-full h-44 w-44 object-cover">
+                        </div>
+                        <?php endif; ?>
+
+                        <?php if(!empty($author_name)): ?>
+                        <h2 class="font-bold text-center section-description mt-6">
+                            <?php echo esc_html($author_name); ?>
                         </h2>
-                    <?php endif; ?>
-                    <img src="<?php echo $item['company_image']['url']; ?>" alt="<?php echo $item['company_image']['alt']; ?>" class="w-auto h-10 mx-auto">
-                    <?php if (!empty($item['bio'])): ?>
-                        <p class="section-sec-description text-center w-[18.9375rem] mx-auto">
-                            <?php echo $item['bio']; ?>
+                        <?php endif; ?>
+
+                        <?php if(!empty($company_logo['url'])): ?>
+                        <div class=" py-7">
+                            <img src="<?php echo $company_logo['url'] ?>" alt="<?php echo $company_logo['alt'] ?>"
+                                class=" h-10 w-auto">
+                        </div>
+                        <?php endif; ?>
+
+                        <?php if (!empty($author_bio)): ?>
+                        <p class="section-sec-description text-center">
+                            <?php echo wp_trim_words($author_bio, 10, '...'); ?>
                         </p>
-                    <?php endif; ?>
+                        <?php endif; ?>
                     </div>
+
+                    <div class="mt-8">
+                        <?php if(!empty($user_org['url'])): ?>
+                        <a href="<?php echo $user_org['url'] ?>" class="btn btn-outline flex items-center">
+                            <span class="mr-2">
+                                <img src="<?php echo valtes_assets('images/up-right-from-squares.png')?>" alt="">
+                            </span>
+                            <?php echo $user_org['title'] ?>
+                        </a>
+                        <?php endif; ?>
                     </div>
-                    <button
-                        class="border-2 border-[#2B37DC] text-[#2B37DC] rounded-full px-3 py-2 flex items-center w-2xs justify-center mx-auto md:mt-0 mt-[1.88rem]">
-                        <span class="mr-2">
-                            <img src="<?php echo valtes_assets('images/up-right-from-squares.png')?>" alt="">
-                        </span>MantelzorgNL
-                    </button>
+
                 </div>
-            <?php endforeach; ?>
-        </div>
+                <?php endforeach; ?>
+            </div>
         </div>
     </div>
 </section>
