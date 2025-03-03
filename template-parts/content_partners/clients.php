@@ -5,65 +5,7 @@ if (!defined('ABSPATH')) {
 if ($args) {
     extract($args);
 }
-$logo = valtes_get_field('logo', [
-    'title' => 'Wij werken met:',
-    'images' => [
-        [
-            'image' => [
-                'url' => valtes_assets("/images/partners/biblionet drenthe.png"),
-                'alt' => ''
-            ],
-        ],
-        [
-            'image' => [
-                'url' => valtes_assets("/images/partners/dkn-logo-assen-bioscoop-400x169 1.png"),
-                'alt' => ''
-            ],
-        ],
-        [
-            'image' => [
-                'url' => valtes_assets("/images/partners/dokter drenthe.png"),
-                'alt' => ''
-            ],
-        ],
-        [
-            'image' => [
-                'url' => valtes_assets("/images/partners/IcareLogo 1.png"),
-                'alt' => ''
-            ],
-        ],
-        [
-            'image' => [
-                'url' => valtes_assets("/images/partners/interzorg-logo-landscape-removebg-preview 1.png"),
-                'alt' => ''
-            ],
-        ],
-        [
-            'image' => [
-                'url' => valtes_assets("/images/partners/JMZ+Pro_logo_bw-removebg-preview 1.png"),
-                'alt' => ''
-            ],
-        ],
-        [
-            'image' => [
-                'url' => valtes_assets("/images/partners/b.png"),
-                'alt' => ''
-            ],
-        ],
-        [
-            'image' => [
-                'url' => valtes_assets("/images/partners/stichtingervaringskenniscentrumschouders1-removebg-preview 1.png"),
-                'alt' => ''
-            ],
-        ],
-        [
-            'image' => [
-                'url' => valtes_assets("/images/partners/wza.png"),
-                'alt' => ''
-            ],
-        ]
-    ]
-]);
+$logo = valtes_get_field('logo', []);
 ?>
 
 

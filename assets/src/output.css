@@ -1,4 +1,4 @@
-/*! tailwindcss v4.0.8 | MIT License | https://tailwindcss.com */
+/*! tailwindcss v4.0.9 | MIT License | https://tailwindcss.com */
 @font-face {
   font-family: "TT Norms Pro";
   src: url("../fonts/WOFF2/TT_Norms_Pro_Regular.woff2") format("woff2");
@@ -442,7 +442,7 @@
     isolation: isolate;
   }
   .\!z-50 {
-    z-index: 50;
+    z-index: 50 !important;
   }
   .-z-9 {
     z-index: calc(9 * -1);
@@ -3053,6 +3053,11 @@
   .md\:py-\[7\.5rem\] {
     @media (width >= 48rem) {
       padding-block: 7.5rem;
+    }
+  }
+  .md\:pt-20 {
+    @media (width >= 48rem) {
+      padding-top: calc(var(--spacing) * 20);
     }
   }
   .md\:pr-10 {

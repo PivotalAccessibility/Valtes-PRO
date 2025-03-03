@@ -12,7 +12,7 @@ $brochure = valtes_get_field('brochure', []);
 
 ?>
 
-<section class="container md:py-20 px-4 sm:px-5 xl:px-0 py-10">
+<section class="container md:pt-20 px-4 sm:px-5 xl:px-0 py-10">
     <div class=" flex flex-wrap-reverse sm:flex-nowrap ">
         <div class=" sm:w-1/2 w-full flex flex-col items-start justify-center sm:mt-0 mt-10 md:pr-40">
             <?php if(!empty($brochure['title'])): ?>
