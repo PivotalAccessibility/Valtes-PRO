@@ -4054,7 +4054,9 @@ li.menu-item-has-children.active .dropdown-menu, li.menu-item-has-children:hover
   z-index: 50;
   display: flex;
   min-width: 200px;
+  border-radius: calc(infinity * 1px);
   background-color: var(--color-primaryLight);
+  padding: calc(var(--spacing) * 3);
 }
 .navbar-menu ul li a {
   width: max-content;

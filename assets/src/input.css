@@ -366,7 +366,7 @@ li.menu-item-has-children .dropdown-menu {
 }
 
 li.menu-item-has-children.active .dropdown-menu, li.menu-item-has-children:hover .dropdown-menu {
-    @apply flex absolute top-full left-0 z-50 min-w-[200px] bg-primaryLight;
+    @apply flex absolute top-full left-0 z-50 min-w-[200px] bg-primaryLight p-3 rounded-full;
 }
 
 .navbar-menu ul li a {
