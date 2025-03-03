@@ -70,30 +70,27 @@ $categories = get_categories();
                 <p>Geen artikelen gevonden.</p>
             <?php endif; ?>
         </div>
-
-        <div component="pagination" class="flex items-center justify-center sm:mt-20 mt-10 space-x-2">
-            <?php
-            $paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
-            $pagination = paginate_links(array(
-                'total' => $query->max_num_pages,
-                'current' => $paged,
-                'prev_text' => '<svg width="40" height="40" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <?php
+        $paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
+        $pagination = paginate_links(array(
+            'total' => $query->max_num_pages,
+            'current' => $paged,
+            'prev_text' => '<svg width="40" height="40" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
             <rect x="49" y="49" width="48" height="48" rx="24" transform="rotate(-180 49 49)" fill="white"/>
             <rect x="49" y="49" width="48" height="48" rx="24" transform="rotate(-180 49 49)" stroke="#2B37DC" stroke-width="2"/>
             <path d="M15 25.0226L24.9774 15L25.9707 15.9932L17.6185 24.3454L35 24.3454L35 25.6998L17.6185 25.6998L25.9707 34.0519L24.9774 35L15 25.0226Z" fill="#2B37DC"/>
         </svg>',
-                'next_text' => '<svg width="40" height="40" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+            'next_text' => '<svg width="40" height="40" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
             <rect x="1" y="1" width="48" height="48" rx="24" fill="white"/>
             <rect x="1" y="1" width="48" height="48" rx="24" stroke="#2B37DC" stroke-width="2"/>
             <path d="M35 24.9774L25.0226 35L24.0293 34.0068L32.3815 25.6546H15V24.3002H32.3815L24.0293 15.9481L25.0226 15L35 24.9774Z" fill="#2B37DC"/>
         </svg>',
-                'mid_size' => 1,
-                'type' => 'list' // You can switch to 'plain' if needed
-            ));
-            if ($pagination) {
-                echo '<div class="flex space-x-2">' . $pagination . '</div>';
-            }
-            ?>
-        </div>
+            'mid_size' => 1,
+            'type' => 'list' // You can switch to 'plain' if needed
+        ));
+        if ($pagination) {
+            echo '<div component="pagination" class="flex items-center justify-center sm:mt-20 mt-10 space-x-2"> <div class="flex space-x-2">' . $pagination . '</div> </div>';
+        }
+        ?>
     </div>
 </section>
