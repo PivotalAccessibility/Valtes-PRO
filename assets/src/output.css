@@ -1941,6 +1941,9 @@
   .pr-16 {
     padding-right: calc(var(--spacing) * 16);
   }
+  .pr-32 {
+    padding-right: calc(var(--spacing) * 32);
+  }
   .pb-4 {
     padding-bottom: calc(var(--spacing) * 4);
   }
@@ -3131,6 +3134,11 @@
   .md\:pr-10 {
     @media (width >= 48rem) {
       padding-right: calc(var(--spacing) * 10);
+    }
+  }
+  .md\:pr-32 {
+    @media (width >= 48rem) {
+      padding-right: calc(var(--spacing) * 32);
     }
   }
   .md\:pr-40 {
