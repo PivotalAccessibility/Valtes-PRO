@@ -53,7 +53,7 @@ $categories = get_categories();
                     <?php foreach ($catagories as $category):
                         if ($category->name !== 'Uncategorized'): ?>
                             <a href="?c=<?php echo $category->slug; ?>" class="<?= $selected_category === $category->slug ? 'bg-[#C3D7FF] font-bold' : 'bg-[#F0F5FF] font-medium'; ?> shrink-0 md:w-auto p-4 rounded-full text-base whitespace-nowrap"><?php echo $category->name; ?></a>
-                    <?php endif;
+                        <?php endif;
                     endforeach; ?>
                 </div>
             </div>
@@ -63,7 +63,7 @@ $categories = get_categories();
             <?php if ($query->have_posts()): ?>
                 <?php while ($query->have_posts()):
                     $query->the_post(); ?>
-                    <?php get_template_part('template-parts/article', 'card'); ?>
+                    <?php get_template_part('common-parts/article-card'); ?>
                 <?php endwhile; ?>
                 <?php wp_reset_postdata(); ?>
             <?php else: ?>

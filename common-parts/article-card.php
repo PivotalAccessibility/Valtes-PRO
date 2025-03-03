@@ -30,7 +30,6 @@
         echo $title;
         ?>
       </h2>
-
       <p class="article-description">
         <?php echo wp_trim_words(get_the_excerpt(), 15, '...'); ?>
       </p>
