@@ -544,6 +544,26 @@
                     "layout": "block",
                     "sub_fields": [
                         {
+                            "key": "field_67c6943788c68",
+                            "label": "Download Title",
+                            "name": "download_title",
+                            "aria-label": "",
+                            "type": "text",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "maxlength": "",
+                            "placeholder": "",
+                            "prepend": "",
+                            "append": ""
+                        },
+                        {
                             "key": "field_67c570f2317a8",
                             "label": "Main Image",
                             "name": "main_image",
@@ -922,5 +942,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1740996308
+    "modified": 1741067346
 }

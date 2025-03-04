@@ -1,4 +1,4 @@
-/*! tailwindcss v4.0.8 | MIT License | https://tailwindcss.com */
+/*! tailwindcss v4.0.9 | MIT License | https://tailwindcss.com */
 @font-face {
   font-family: "TT Norms Pro";
   src: url("../fonts/WOFF2/TT_Norms_Pro_Regular.woff2") format("woff2");
@@ -32,7 +32,9 @@
       "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
     --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono",
       "Courier New", monospace;
+    --color-red-700: oklch(0.505 0.213 27.518);
     --color-green-200: oklch(0.925 0.084 155.995);
+    --color-green-800: oklch(0.448 0.119 151.328);
     --color-blue-50: oklch(0.97 0.014 254.604);
     --color-blue-400: oklch(0.707 0.165 254.624);
     --color-blue-700: oklch(0.488 0.243 264.376);
@@ -442,7 +444,7 @@
     isolation: isolate;
   }
   .\!z-50 {
-    z-index: 50;
+    z-index: 50 !important;
   }
   .-z-9 {
     z-index: calc(9 * -1);
@@ -1694,6 +1696,9 @@
   .bg-green-200 {
     background-color: var(--color-green-200);
   }
+  .bg-green-800 {
+    background-color: var(--color-green-800);
+  }
   .bg-jobborder {
     background-color: var(--color-jobborder);
   }
@@ -1705,6 +1710,9 @@
   }
   .bg-purple-400 {
     background-color: var(--color-purple-400);
+  }
+  .bg-red-700 {
+    background-color: var(--color-red-700);
   }
   .bg-transparent {
     background-color: transparent;
@@ -3489,6 +3497,12 @@
   .lg\:text-start {
     @media (width >= 64rem) {
       text-align: start;
+    }
+  }
+  .lg\:text-base {
+    @media (width >= 64rem) {
+      font-size: var(--text-base);
+      line-height: var(--tw-leading, var(--text-base--line-height));
     }
   }
   .lg\:text-xs {
