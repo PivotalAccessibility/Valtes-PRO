@@ -21,7 +21,7 @@ $share = valtes_get_field('share', []);
     <?php endif; ?>
     <div class="grid grid-cols-1 gap-5 mt-10 md:gap-11 lg:grid-cols-2">
         <?php foreach ($share['cards'] as $card): ?>
-            <a href="<?php echo $card['link']['url']; ?>" class=" md:w-auto w-full md:rounded-full rounded-t-[60px] rounded-b-3xl border-2 border-jobborder p-3 flex md:flex-row flex-col items-center hover:bg-primaryLight group">
+            <a href="<?php echo $card['link']['url']; ?>" class=" md:w-auto w-full md:rounded-full rounded-t-[60px] rounded-b-3xl border-2 border-jobborder p-3 flex md:flex-row flex-col items-center hover:bg-primaryLight group" target="_blank">
                 <img src="<?php echo $card['image']['url']; ?>" alt="<?php echo $card['image']['alt']; ?>" class="w-full h-24 md:h-40 rounded-[60px] md:rounded-full md:w-48 object-cover">
                 <div class="flex items-center justify-between gap-5">
                     <div class="md:px-5 mt-4 md:mt-0">

@@ -3138,6 +3138,11 @@
       padding-top: calc(var(--spacing) * 20);
     }
   }
+  .md\:pt-32 {
+    @media (width >= 48rem) {
+      padding-top: calc(var(--spacing) * 32);
+    }
+  }
   .md\:pr-10 {
     @media (width >= 48rem) {
       padding-right: calc(var(--spacing) * 10);

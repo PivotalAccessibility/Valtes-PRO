@@ -13,7 +13,7 @@ $mission = valtes_get_field('mission', []);
 
 ?>
 
-<section class="container px-4 py-[3.75rem] md:py-32 md:px-5">
+<section class="container px-4 py-[3.75rem] md:pt-32 md:px-5">
     <div class="flex flex-wrap-reverse lg:flex-nowrap">
         <div class="flex flex-col items-start justify-center w-full mt-[1.88rem] md:mt-10 lg:w-1/2 sm:mt-0">
             <?php if (!empty($mission['title'])): ?>
