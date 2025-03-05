@@ -149,6 +149,22 @@
             ]
         },
         {
+            "key": "field_67c7f7af717ae",
+            "label": "Article's CTA",
+            "name": "articles_cta",
+            "aria-label": "",
+            "type": "link",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "array"
+        },
+        {
             "key": "field_67c048361237f",
             "label": "Job Form Shortcode",
             "name": "job_form",
@@ -1001,5 +1017,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1741080282
+    "modified": 1741158377
 }

@@ -47,7 +47,7 @@ $header = valtes_get_field('header', [], 'option');
             </div>
         </div>
 
-        <a href=""
+        <a href="<?php echo $header['cta']['url'] ?>"
             class="flex items-center px-3 py-2 text-xs font-semibold text-blue-700 bg-white border-2 border-blue-700 rounded-full">
             <span>
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
@@ -69,7 +69,7 @@ $header = valtes_get_field('header', [], 'option');
             <img src="<?php echo valtes_assets('images/Valtespro_logo.png') ?>" alt="" class="w-20 ">
         </a>
         <div>
-            <a href=""
+            <a href="<?php echo $header['cta']['url'] ?>"
                 class="sm:flex items-center px-3 py-2 text-sm font-semibold text-primary bg-white border-2 border-primary rounded-full w-full">
                 <?php echo $header['cta']['title'] ?>
             </a>

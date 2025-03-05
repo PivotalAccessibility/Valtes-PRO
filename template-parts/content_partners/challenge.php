@@ -25,7 +25,7 @@ $challenge = valtes_get_field('challenge', []);
                 <div class="flex flex-col items-center gap-4">
                     <?php if (!empty($challenge['counter'])): ?>
                         <span class="counter">
-                            <?php echo $challenge['counter'] ?>
+                            <span class="counter-count" data-target="<?php echo $challenge['counter']; ?>">0</span>%
                         </span>
                     <?php endif; ?>
                     <?php if (!empty($challenge['description'])): ?>

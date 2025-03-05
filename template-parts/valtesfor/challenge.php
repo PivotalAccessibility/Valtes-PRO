@@ -71,39 +71,3 @@ $video_url = $challenge['video'];
     video.play();
   });
 </script>
-
-<script>
-  document.addEventListener("DOMContentLoaded", function() {
-    const counters = document.querySelectorAll(".counter-count");
-
-    const observerOptions = {
-      root: null,
-      rootMargin: "0px",
-      threshold: 1,
-    };
-
-    const startCounter = (counter) => {
-      let count = 0;
-      const target = parseInt(counter.getAttribute("data-target"), 10);
-      const speed = Math.max(10, 2000 / target); // Dynamic speed
-      counter.textContent = 0; // Reset counter every time it enters
-      const timer = setInterval(() => {
-        if (count < target) {
-          count++;
-          counter.textContent = count;
-        } else {
-          clearInterval(timer);
-        }
-      }, speed);
-    };
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          startCounter(entry.target);
-        }
-      });
-    }, observerOptions);
-
-    counters.forEach(counter => observer.observe(counter));
-  });
-</script>

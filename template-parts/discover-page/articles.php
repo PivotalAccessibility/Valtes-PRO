@@ -22,8 +22,8 @@ $query = new WP_Query($args);
 $categories = get_categories();
 ?>
 
-<section class="mt-10">
-    <div class="container md:px-5 px-4 md:pb-20 pb-10">
+<section class="">
+    <div class="mt-10 container md:px-5 px-4 md:pb-0 pb-10">
         <form method="GET" action="<?php the_permalink(); ?>">
             <div component="search" class="flex flex-row items-center justify-center p-1 border-2 border-gray-300 rounded-full">
                 <input type="text" name="q" placeholder="Zoek in onze artikelen..." class="w-full ml-6 outline-none">
