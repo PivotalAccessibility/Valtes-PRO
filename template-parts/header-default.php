@@ -10,24 +10,13 @@ $header = valtes_get_field('header', [], 'option');
 
 <header id="header" x-data="header" role="banner" class=" bg-transparent fixed top-0 w-full !z-50">
     <?php get_template_part('template-parts/skip-link'); ?>
-    <section class="bg-[#1c233e] text-white">
+    <!-- <section class="bg-[#1c233e] text-white">
         <div class="container flex items-center justify-between py-2">
             <div class="hidden sm:block">
                 <?php esc_html_e( "Toegankelijkheidsinstellingen" , "valtes" ) ?>
             </div>
-            <div class="flex items-center justify-center w-full gap-8 sm:w-auto">
-                <a href="#" class="flex justify-between gap-4 underline">
-                    <?php esc_html_e( "Lettertype" , "valtes" ) ?>
-                    <img src="<?php echo valtes_assets('images/Subtract.svg') ?>" alt="">
-                    <img src="<?php echo valtes_assets('images/Add.svg') ?>" alt="">
-                </a>
-                <a href="#" class="flex justify-between gap-4 underline">
-                    <?php esc_html_e( "vergroot contrast" , "valtes" ) ?>
-                    <img src="<?php echo valtes_assets('images/CircleHalf.svg') ?>" alt="">
-                </a>
-            </div>
         </div>
-    </section>
+    </section> -->
 
     <div class="container items-center justify-between hidden py-2 lg:flex">
         <div class="flex items-center ">
@@ -134,6 +123,17 @@ $header = valtes_get_field('header', [], 'option');
             bars[2].classList.remove('-rotate-45', '-translate-y-[6px]');
             mobileHeader.classList.remove('bg-white');
         }
+    });
+
+    document.addEventListener("DOMContentLoaded", function() {
+        const header = document.getElementById("header");
+        window.addEventListener("scroll", function() {
+            if (window.scrollY > 50) {
+                header.classList.add("bg-white", "shadow-md");
+            } else {
+                header.classList.remove("bg-white", "shadow-md");
+            }
+        });
     });
     </script>
 
