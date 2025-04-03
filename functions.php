@@ -2,7 +2,7 @@
 
 require_once get_template_directory() . '/lib/class-tgm-plugin-activation.php';
 
-define('PIVOTAL_ACCESSIBILITY_VERSION', '1.1.24');
+define('PIVOTAL_ACCESSIBILITY_VERSION', '1.1.25');
 
 add_action("after_setup_theme", "valtes_after_setup_theme");
 add_action("wp_enqueue_scripts", "valtes_enqueue_scripts");
