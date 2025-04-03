@@ -4,56 +4,7 @@ if (!defined('ABSPATH')) {
     exit; // Exit if accessed directly.
 }
 
-$partners = valtes_get_field('partners', [
-    [
-        "image" => [
-            "url" => valtes_assets('images/new-client/rk.png'),
-            "alt" => "User 1"
-        ],
-        "name" => "Rik Kraan",
-        "company_logo" => [
-            "url" => valtes_assets('images/new-client/mantelzorg.png'),
-            "alt" => "Logo 1"
-        ],
-        "description" => "Sapien viverra tellus facilisi vitae ornare fringilla pharetra. Tellus condimentum viverra at nunc. Euismod ipsum et felis nibh hac.",
-        "company_link" => [
-            "url" => "#",
-            "title" => "MantelzorgNL"
-        ]
-    ],
-    [
-        "image" => [
-            "url" => valtes_assets('images/new-client/ju.png'),
-            "alt" => "User 2"
-        ],
-        "name" => "Joao Uldrich",
-        "company_logo" => [
-            "url" => valtes_assets('images/new-client/netwerk.png'),
-            "alt" => "Logo 2"
-        ],
-        "description" => "Massa maecenas consequat condimentum molestie malesuada. Consequat rhoncus in pretium pharetra ultrices nibh a dignissim convallis.",
-        "company_link" => [
-            "url" => "#",
-            "title" => "Netwerk Dementie Drenthe"
-        ]
-    ],
-    [
-        "image" => [
-            "url" => valtes_assets('images/new-client/lm.png'),
-            "alt" => "User 3"
-        ],
-        "name" => "Loralee Matsuda",
-        "company_logo" => [
-            "url" => valtes_assets('images/new-client/stichtingervaringskenniscentrumschouders.png'),
-            "alt" => "Logo 3"
-        ],
-        "description" => "Fames sit in mattis sed. Aliquet at fringilla cum turpis sem. Tincidunt donec tellus ac tortor pretium scelerisque risus. Quam non dui eu id odio a ultrices at.",
-        "company_link" => [
-            "url" => "#",
-            "title" => "Schouders"
-        ]
-    ],
-]);
+$partners = valtes_get_field('partners', []);
 
 ?>
 
