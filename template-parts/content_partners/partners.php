@@ -5,18 +5,17 @@ if (!defined('ABSPATH')) {
 }
 
 $partners = valtes_get_field('partners', []);
-
 ?>
 
 <section class="">
     <div class="container flex flex-col mb-[3.75rem]">
         <h2 class="mx-auto text-center section-sec-heading">
-            Dit vinden andere contentpartners
+            <?php echo $partners['heading']; ?>
         </h2>
         <div class="relative w-full">
             <div class="grid grid-cols-1 mt-5 md:mt-10 lg:grid-cols-3 mySlider gap-7">
 
-                <?php foreach ($partners as $partner): ?>
+                <?php foreach ($partners['all_partners'] as $partner): ?>
 
                 <div class="flex flex-col items-center justify-between">
 
