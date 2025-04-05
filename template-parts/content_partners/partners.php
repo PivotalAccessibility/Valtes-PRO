@@ -35,7 +35,7 @@ $partners = valtes_get_field('partners', []);
 
                             <?php if (!empty($partner["company_logo"]['url'])): ?>
                                 <div class=" py-7">
-                                    <img src="<?php echo $partner["company_logo"]['url'] ?>" alt="<?php echo $partner["company_logo"]['alt'] ?>" class="h-auto w-1/2 self-center">
+                                    <img src="<?php echo $partner["company_logo"]['url'] ?>" alt="<?php echo $partner["company_logo"]['alt'] ?>" class="h-auto w-1/2 justify-self-center">
                                 </div>
                             <?php endif; ?>
 
