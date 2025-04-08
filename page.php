@@ -15,12 +15,13 @@
 get_header(); ?>
 
 <div class="container">
-	<div id="primary" class="content-area">
+	<h1 class="section-heading mt-20"><?php the_title(); ?></h1>
+	<div id="primary" class="content-area prose py-10">
 		<?php
 			/* Start the Loop */
 			while ( have_posts() ) :
 				the_post();
-
+				the_content();
 				get_template_part( 'template-parts/content/page');
 
 				// If comments are open or we have at least one comment, load up the comment template.
