@@ -1759,9 +1759,6 @@
   .px-16 {
     padding-inline: calc(var(--spacing) * 16);
   }
-  .py-0 {
-    padding-block: calc(var(--spacing) * 0);
-  }
   .py-2 {
     padding-block: calc(var(--spacing) * 2);
   }
@@ -2463,11 +2460,6 @@
   .sm\:pr-24 {
     @media (width >= 40rem) {
       padding-right: calc(var(--spacing) * 24);
-    }
-  }
-  .sm\:pb-0 {
-    @media (width >= 40rem) {
-      padding-bottom: calc(var(--spacing) * 0);
     }
   }
   .md\:absolute {
@@ -3443,11 +3435,6 @@
       padding-right: calc(var(--spacing) * 32);
     }
   }
-  .lg\:pb-0 {
-    @media (width >= 64rem) {
-      padding-bottom: calc(var(--spacing) * 0);
-    }
-  }
   .lg\:pb-5 {
     @media (width >= 64rem) {
       padding-bottom: calc(var(--spacing) * 5);
@@ -3822,6 +3809,10 @@
   .current_page_item {
     background-color: #F0F5FF;
     border-radius: none;
+  }
+  .navbar-menu ul {
+    display: flex;
+    flex-direction: row;
   }
 }
 .page-numbers {
