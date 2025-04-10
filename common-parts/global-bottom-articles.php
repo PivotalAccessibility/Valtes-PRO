@@ -40,7 +40,7 @@ $cta = valtes_get_field('articles_cta', [], 'option');
             <div class="bg-[#BBBEF4] md:size-40 size-20 rounded-full absolute md:-bottom-1/14 bottom-1/12 -left-1/22">
             </div>
         </div>
-        <div class="flex flex-wrap items-center justify-center w-full gap-6 sm:flex-nowrap md:mt-10">
+        <div class="flex flex-wrap items-center justify-center w-full gap-6 sm:flex-nowrap mt-10">
             <a href="<?php echo $cta['url']; ?>" class="flex items-center justify-center gap-2 btn btn-primary">
                 <?php echo $cta['title']; ?>
                 <span>

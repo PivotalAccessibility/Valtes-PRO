@@ -8,7 +8,7 @@ $share = valtes_get_field('share', []);
 
 ?>
 
-<section class="container flex flex-col items-center px-5 py-0 md:py-[7.5rem] sm:px-0">
+<section class="container flex flex-col items-center px-5 py-10 md:py-[7.5rem] sm:px-0">
     <?php if (!empty($share['title'])): ?>
         <h2 class="text-center section-sec-heading">
             <?php echo $share['title']; ?>

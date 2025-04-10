@@ -2465,6 +2465,11 @@
       padding-right: calc(var(--spacing) * 24);
     }
   }
+  .sm\:pb-0 {
+    @media (width >= 40rem) {
+      padding-bottom: calc(var(--spacing) * 0);
+    }
+  }
   .md\:absolute {
     @media (width >= 48rem) {
       position: absolute;
@@ -3436,6 +3441,11 @@
   .lg\:pr-32 {
     @media (width >= 64rem) {
       padding-right: calc(var(--spacing) * 32);
+    }
+  }
+  .lg\:pb-0 {
+    @media (width >= 64rem) {
+      padding-bottom: calc(var(--spacing) * 0);
     }
   }
   .lg\:pb-5 {
