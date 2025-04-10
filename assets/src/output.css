@@ -3810,9 +3810,8 @@
     background-color: #F0F5FF;
     border-radius: none;
   }
-  .navbar-menu ul {
-    display: flex;
-    flex-direction: row;
+  #mobileMenu nav ul {
+    display: block;
   }
 }
 .page-numbers {

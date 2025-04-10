@@ -184,9 +184,10 @@
         border-radius: none;
     }
 
-    .navbar-menu li ul li{
-        @apply flex flex-column;
+    #mobileMenu nav ul{
+        @apply block;
     }
+    
 }
 
 .page-numbers {
