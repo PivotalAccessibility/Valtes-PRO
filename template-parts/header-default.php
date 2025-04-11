@@ -80,7 +80,7 @@ $header = valtes_get_field('header', [], 'option');
     <!-- </header> -->
     <!-- Mobile Menu -->
     <div id="mobileMenu" class="z-40 flex-col h-screen hidden p-6 bg-white">
-        <div class="flex flex-col justify-between h-[80vh]">
+        <div class="flex flex-col justify-between h-[80vh] overflow-y-scroll">
             <div class=" mt-10">
                 <h2 class="text-xl font-bold text-center mb-4 text-[#1C233E]">
                     <?php esc_html_e( "Menu" , "valtes" ) ?>

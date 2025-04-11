@@ -2,7 +2,7 @@
 
 require_once get_template_directory() . '/lib/class-tgm-plugin-activation.php';
 
-define('PIVOTAL_ACCESSIBILITY_VERSION', '1.1.33');
+define('PIVOTAL_ACCESSIBILITY_VERSION', '1.1.34');
 
 add_action("after_setup_theme", "valtes_after_setup_theme");
 add_action("wp_enqueue_scripts", "valtes_enqueue_scripts");
@@ -51,17 +51,14 @@ function valtes_truncate($string, $length = 100, $append = "&hellip;")
 
 //breadCrumbs start
 
-
 function custom_breadcrumbs()
 {
     // Only show breadcrumbs on single post or author pages
     if (is_single() || is_author()) {
-        $discover_url = home_url('discover-page');
-        $breadcrumb = '<nav class="my-6 text-xs text-gray-600 breadcrumbs">';
+        $page = get_page_by_path('onze-kennis');
+        $discover_url = $page ? get_permalink($page->ID) : home_url();
+        $breadcrumb = '<nav class="my-6 overflow-hidden text-xs text-gray-600 md:text-base breadcrumbs">';
         $breadcrumb .= '<a href="' . $discover_url . '" class="mr-1 hover:underline">Discover Page</a>';
-
-        // $breadcrumb = '<nav class="text-sm text-gray-600 breadcrumbs">';
-
         if (is_single()) {
             // For Single Post Page
             $breadcrumb .= ' > ';
@@ -69,20 +66,16 @@ function custom_breadcrumbs()
             if ($categories) {
                 $breadcrumb .= '<a href="' . get_category_link($categories[0]->term_id) . '" class="mb-1 hover:underline">' . $categories[0]->name . '</a>';
             }
-            $breadcrumb .= ' > <span class="font-bold hover:underline text-jobborder mx-1">' . get_the_title() . '</span>';
+            $breadcrumb .= ' > <span class="font-bold tag hover:underline text-[#6997FF] mx-1">' . get_the_title() . '</span>';
         } elseif (is_author()) {
             // For Author Profile Page
             $breadcrumb .= ' > ';
-            $breadcrumb .= '<span class="font-bold text-jobborder hover:underline ml-1">' . get_the_author() . '</span>';
+            $breadcrumb .= '<span class="font-bold tag_2 text-[#6997FF] hover:underline ml-1">' . get_the_author() . '</span>';
         }
-
         $breadcrumb .= '</nav>';
         echo $breadcrumb;
     }
 }
-
-
-
 
 //breadCrumbs end
 

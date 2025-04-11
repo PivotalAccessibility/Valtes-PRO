@@ -1531,6 +1531,9 @@
   .overflow-x-auto {
     overflow-x: auto;
   }
+  .overflow-y-scroll {
+    overflow-y: scroll;
+  }
   .rounded-2xl {
     border-radius: var(--radius-2xl);
   }
@@ -1944,6 +1947,9 @@
   }
   .text-\[\#6E7A84\] {
     color: #6E7A84;
+  }
+  .text-\[\#6997FF\] {
+    color: #6997FF;
   }
   .text-\[\#A6A6A6\] {
     color: #A6A6A6;
@@ -3036,6 +3042,12 @@
     @media (width >= 48rem) {
       font-size: var(--text-2xl);
       line-height: var(--tw-leading, var(--text-2xl--line-height));
+    }
+  }
+  .md\:text-base {
+    @media (width >= 48rem) {
+      font-size: var(--text-base);
+      line-height: var(--tw-leading, var(--text-base--line-height));
     }
   }
   .md\:text-xl {
