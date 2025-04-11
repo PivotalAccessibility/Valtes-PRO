@@ -125,16 +125,35 @@ $header = valtes_get_field('header', [], 'option');
         }
     });
 
-    document.addEventListener("DOMContentLoaded", function() {
+    document.addEventListener("DOMContentLoaded", function () {
         const header = document.getElementById("header");
-        window.addEventListener("scroll", function() {
-            if (window.scrollY > 50) {
-                header.classList.add("bg-white", "shadow-md");
-            } else {
-                header.classList.remove("bg-white", "shadow-md");
+
+        const topSentinel = document.createElement("div");
+        topSentinel.style.position = "absolute";
+        topSentinel.style.top = "0";
+        topSentinel.style.height = "1px";
+        topSentinel.style.width = "100%";
+        document.body.prepend(topSentinel);
+
+        const observer = new IntersectionObserver(
+            (entries) => {
+                entries.forEach((entry) => {
+                    if (!entry.isIntersecting) {
+                        header.classList.add("bg-white", "shadow-md");
+                    } else {
+                        header.classList.remove("bg-white", "shadow-md");
+                    }
+                });
+            },
+            {
+                root: null,
+                threshold: 0,
             }
-        });
+        );
+
+        observer.observe(topSentinel);
     });
+    
     </script>
 
 </header>

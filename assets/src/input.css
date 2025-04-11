@@ -191,6 +191,10 @@
     #mobileMenu nav ul{
         @apply block;
     }
+
+    li.menu-item-has-children {
+        @apply gap-1.5 relative !block;
+    }
     
 }
 
@@ -367,15 +371,19 @@ button.slick-arrow {
 
 
 li.menu-item-has-children {
-    @apply gap-1.5 relative;
+    @apply gap-1.5 relative flex items-center;
 }
 
 li.menu-item-has-children .dropdown-menu {
     @apply hidden
 }
 
-li.menu-item-has-children.active .dropdown-menu, li.menu-item-has-children:hover .dropdown-menu {
-    @apply flex absolute top-full left-0 z-50 min-w-[200px] bg-primaryLight p-3 rounded-full;
+li.menu-item-has-children:hover .dropdown-menu {
+    @apply flex absolute top-full left-0 z-50 min-w-[200px] bg-primaryLight p-3 rounded-xl flex-col;
+}
+
+li.menu-item-has-children.active .dropdown-menu {
+    @apply flex absolute top-full left-0 z-50 min-w-[200px] bg-primaryLight p-3 rounded-xl flex-col;
 }
 
 .navbar-menu ul li a {
