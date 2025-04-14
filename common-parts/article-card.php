@@ -49,9 +49,9 @@
         $user_image = get_field('user_organization_logo', 'user_' . $user_id);
 
         if ($user_image && $user_image['url']) {
-          echo '<img src="' . esc_url($user_image['url']) . '" alt="Author Image" class="w-auto h-5 rounded-full">';
+          echo '<img src="' . esc_url($user_image['url']) . '" alt="Author Image" class="w-auto h-5">';
         } else {
-          echo '<img src="' . esc_url(get_avatar_url($user_id)) . '" alt="Author Image" class="w-auto h-5 rounded-full">';
+          echo '<img src="' . esc_url(get_avatar_url($user_id)) . '" alt="Author Image" class="w-auto h-5">';
         }
         ?>
       </div>

@@ -2,7 +2,7 @@
 
 require_once get_template_directory() . '/lib/class-tgm-plugin-activation.php';
 
-define('PIVOTAL_ACCESSIBILITY_VERSION', '1.1.35');
+define('PIVOTAL_ACCESSIBILITY_VERSION', '1.1.37');
 
 add_action("after_setup_theme", "valtes_after_setup_theme");
 add_action("wp_enqueue_scripts", "valtes_enqueue_scripts");
@@ -64,7 +64,7 @@ function custom_breadcrumbs()
             $breadcrumb .= ' > ';
             $categories = get_the_category();
             if ($categories) {
-                $breadcrumb .= '<a href="' . get_category_link($categories[0]->term_id) . '" class="mb-1 hover:underline">' . $categories[0]->name . '</a>';
+                $breadcrumb .= '<span class="mb-1">' . $categories[0]->name . '</span>';
             }
             $breadcrumb .= ' > <span class="font-bold tag hover:underline text-[#6997FF] mx-1">' . get_the_title() . '</span>';
         } elseif (is_author()) {

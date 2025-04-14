@@ -29,7 +29,7 @@ get_header(); ?>
                     <?php if (has_post_thumbnail()): ?>
                         <div class="relative">
                             <div class="w-full mb-6">
-                                <img src="<?php echo get_the_post_thumbnail_url(get_the_ID(), 'full'); ?>" alt="<?php the_title(); ?>" class="test relative z-10 object-cover w-full rounded-full md:h-96 h-40">
+                                <?php echo get_the_post_thumbnail( get_the_ID(), 'full', array( 'class' => 'test relative z-10 !w-full rounded-full md:h-96 h-40 bg-center object-cover' ) ); ?>
                             </div>
                             <div class="md:h-20 md:w-20 h-9 w-9 rounded-full bg-[#2b37db] absolute top-2 -right-2"></div>
                             <div class="md:h-32 md:w-32 h-20 w-20 rounded-full bg-[#e1eaff] absolute bottom-0 left-0"></div>

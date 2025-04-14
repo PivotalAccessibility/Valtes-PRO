@@ -123,7 +123,7 @@ $user_bio = get_user_meta($current_user_id, 'description', true);
                                             </h2>
                                         </div>
                                         <div>
-                                            <img src="<?php echo get_avatar_url(get_the_author_meta('ID')); ?>" alt="Author Image" class="w-auto h-5 rounded-full">
+                                            <img src="<?php echo get_avatar_url(get_the_author_meta('ID')); ?>" alt="Author Image" class="w-auto h-5">
                                         </div>
                                     </div>
                                 </div>
