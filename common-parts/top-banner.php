@@ -18,7 +18,7 @@ $floating_image = !empty($args['floating_image']) ? $args['floating_image'] : fa
 ?>
 
 <section class="<?= $isDarkBg ? 'bg-primaryLight' : '' ?> pb-16 md:pb-32">
-  <div class="container flex flex-col-reverse px-4 md:flex md:flex-wrap md:flex-row md:px-5">
+  <div class="container flex flex-col-reverse px-4 md:px-5 sm:flex-row max-lg:flex-wrap">
     <div class="flex items-center justify-start h-auto p-0 mt-5 sm:mt-20 xl:w-1/2 sm:w-full xl:mt-12 md:mt-20">
       <div class=" sm:pr-24" dir="ltr">
         <?php if (!empty($heroTitle)): ?>
@@ -75,7 +75,7 @@ $floating_image = !empty($args['floating_image']) ? $args['floating_image'] : fa
     </div>
     <div class="flex justify-center h-auto mt-24 xl:w-1/2 sm:w-full xl:justify-start xl:mt-0">
       <div class="relative 2xl:left-16 -top-7 lg:-top-16">
-        <div class="rounded-full h-[18rem] w-[18rem] md:h-[40rem] md:w-[40rem] overflow-hidden">
+        <div class="rounded-full size-[40rem] sm:size-[40rem] md:size-[20rem] lg:size-[30rem] xl:size-[40rem] overflow-hidden">
           <img src="<?php echo $heroImage['url']; ?>" class="object-cover w-full h-full" alt="<?php echo $heroImage['alt']; ?>">
         </div>
         <img src="<?php echo valtes_assets('images/Ellipse-2.svg') ?>" class="absolute w-full h-full -bottom-3/20 -left-1/14" alt="">

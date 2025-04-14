@@ -178,8 +178,8 @@
         font-size: 24px;
         font-weight: 400;
     }
-    
-    ul.sub-menu li{
+
+    ul.sub-menu li {
         @apply !w-full;
     }
 
@@ -188,14 +188,14 @@
         border-radius: none;
     }
 
-    #mobileMenu nav ul{
+    #mobileMenu nav ul {
         @apply block;
     }
 
     li.menu-item-has-children {
         @apply gap-1.5 relative !block;
     }
-    
+
 }
 
 .page-numbers {
@@ -371,7 +371,7 @@ button.slick-arrow {
 
 
 li.menu-item-has-children {
-    @apply gap-1.5 relative flex items-center;
+    @apply gap-1.5 relative flex items-center p-3 py-2.5;
 }
 
 li.menu-item-has-children .dropdown-menu {
@@ -391,5 +391,9 @@ li.menu-item-has-children.active .dropdown-menu {
 }
 
 .custom-menu {
-    @apply w-6 h-6 cursor-pointer;
+    @apply cursor-pointer;
+}
+
+#wpadminbar+#page #header {
+    top: 32px;
 }
