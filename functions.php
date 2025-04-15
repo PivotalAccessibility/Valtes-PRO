@@ -2,7 +2,7 @@
 
 require_once get_template_directory() . '/lib/class-tgm-plugin-activation.php';
 
-define('PIVOTAL_ACCESSIBILITY_VERSION', '1.1.37');
+define('PIVOTAL_ACCESSIBILITY_VERSION', '1.1.38');
 
 add_action("after_setup_theme", "valtes_after_setup_theme");
 add_action("wp_enqueue_scripts", "valtes_enqueue_scripts");
@@ -58,7 +58,7 @@ function custom_breadcrumbs()
         $page = get_page_by_path('onze-kennis');
         $discover_url = $page ? get_permalink($page->ID) : home_url();
         $breadcrumb = '<nav class="my-6 overflow-hidden text-xs text-gray-600 md:text-base breadcrumbs">';
-        $breadcrumb .= '<a href="' . $discover_url . '" class="mr-1 hover:underline">Discover Page</a>';
+        $breadcrumb .= '<a href="' . $discover_url . '" class="mr-1 hover:underline">Onze kennis</a>';
         if (is_single()) {
             // For Single Post Page
             $breadcrumb .= ' > ';
