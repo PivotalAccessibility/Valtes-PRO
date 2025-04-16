@@ -75,7 +75,7 @@ $floating_image = !empty($args['floating_image']) ? $args['floating_image'] : fa
     </div>
     <div class="flex justify-center h-auto mt-24 xl:w-1/2 sm:w-full xl:justify-start xl:mt-0">
       <div class="relative 2xl:left-16 -top-7 lg:-top-16">
-        <div class="rounded-full size-[100%] aspect-square sm:size-[40rem] md:size-[20rem] lg:size-[30rem] xl:size-[40rem] overflow-hidden">
+        <div class="rounded-full size-[300px] aspect-square sm:size-[40rem] md:size-[20rem] lg:size-[30rem] xl:size-[40rem] overflow-hidden">
           <img src="<?php echo $heroImage['url']; ?>" class="object-cover w-full h-full" alt="<?php echo $heroImage['alt']; ?>">
         </div>
         <img src="<?php echo valtes_assets('images/Ellipse-2.svg') ?>" class="absolute w-full h-full -bottom-3/20 -left-1/14" alt="">
