@@ -23,44 +23,43 @@ $user_company_logo = get_field('user_organization_logo', 'user_' . $current_user
 $user_image_acf = get_field('user_image', 'user_' . $current_user_id);
 
 get_header(); ?>
-
+    
 <section class="pt-28 pb-10">
     <div class="container px-5 sm:px-5 xl:px-0">
         <?php if (have_posts()):
             while (have_posts()):
                 the_post(); ?>
-                <div class="">
-                    <?php if (has_post_thumbnail()): ?>
-                        <div class="relative">
-                            <div class="w-full mb-6">
-                                <?php echo get_the_post_thumbnail( get_the_ID(), 'full', array( 'class' => 'test relative z-10 !w-full rounded-full md:h-96 h-40 bg-center object-cover' ) ); ?>
-                            </div>
-                            <div class="md:h-20 md:w-20 h-9 w-9 rounded-full bg-[#2b37db] absolute top-2 -right-2"></div>
-                            <div class="md:h-32 md:w-32 h-20 w-20 rounded-full bg-[#e1eaff] absolute bottom-0 left-0"></div>
-                        </div>
-                    <?php endif; ?>
-                    <div class="flex flex-wrap md:flex-nowrap items-start sm:mt-20 mt-5 md:gap-32 gap-16">
-                        <div class="sm:w-[70%] w-full h-auto">
-                            <p class="inline-block mb-4 text-base font-semibold text-primary">
-                                <?php $category = get_the_category(); ?>
-                                <?php echo $category ? esc_html($category[0]->name) : ''; ?>
-                            </p>
+        <div class="">
+            <?php if (has_post_thumbnail()): ?>
+            <div class="relative">
+                <div class="w-full mb-6">
+                    <?php echo get_the_post_thumbnail( get_the_ID(), 'full', array( 'class' => 'test relative z-10 !w-full rounded-full md:h-96 h-40 bg-center object-cover' ) ); ?>
+                </div>
+                <div class="md:h-20 md:w-20 h-9 w-9 rounded-full bg-[#2b37db] absolute top-2 -right-2"></div>
+                <div class="md:h-32 md:w-32 h-20 w-20 rounded-full bg-[#e1eaff] absolute bottom-0 left-0"></div>
+            </div>
+            <?php endif; ?>
+            <div class="flex flex-wrap md:flex-nowrap items-start sm:mt-20 mt-5 md:gap-32 gap-16">
+                <div class="sm:w-[70%] w-full h-auto">
+                    <p class="inline-block mb-4 text-base font-semibold text-primary">
+                        <?php $category = get_the_category(); ?>
+                        <?php echo $category ? esc_html($category[0]->name) : ''; ?>
+                    </p>
 
-                            <h1 class="mb-4 md:section-sec-heading section-heading">
-                                <?php the_title(); ?>
-                            </h1>
+                    <h1 class="mb-4 md:section-sec-heading section-heading">
+                        <?php the_title(); ?>
+                    </h1>
 
-                            <div class="text-base text-black prose">
-                                <?php the_content(); ?>
-                            </div>
-                        </div>
-                        <div class="sm:w-[30%] w-full h-auto sm:px-5 mt-5 sm:mt-0">
+                    <div class="text-base text-black prose">
+                        <?php the_content(); ?>
+                    </div>
+                </div>
+                <div class="sm:w-[30%] w-full h-auto sm:px-5 mt-5 sm:mt-0">
                     <h2 class="text-2xl font-bold ">Auteur</h2>
                     <div class="flex mt-5 ">
                         <div>
-                            <img src="<?php echo $user_image_acf['url'] ?>"
-                            
-                                alt="<?php echo $user_image_acf['alt'] ?>" class="rounded-full h-20 w-20 object-cover">
+                            <img src="<?php echo $user_image_acf['url'] ?>" alt="<?php echo $user_image_acf['alt'] ?>"
+                                class="rounded-full h-20 w-20 object-cover">
                         </div>
                         <div class="ml-3 ">
                             <span class="font-bold text-black text-xl">
@@ -119,8 +118,14 @@ get_header(); ?>
                                 Link kopiëren
                             </button>
 
-                            <a href="whatsapp://send?text=Bekijk%20dit%20item:%20<?php echo get_the_permalink(); ?>"
-                                class="flex items-center text-sm text-green-700 ">
+                            <?php
+                                $post_title = get_the_title();
+                                $post_content = wp_strip_all_tags(get_the_content());
+                                $post_link = get_the_permalink();
+                                $whatsapp_message = urlencode("📄 *$post_title*\n\n$post_content\n\nLees meer: $post_link");
+                            ?>
+                            <a href="https://wa.me/?text=<?php echo $whatsapp_message; ?>"
+                                class="flex items-center text-sm text-green-700" target="_blank">
                                 <span class="pr-3">
                                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
                                         fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
@@ -134,6 +139,7 @@ get_header(); ?>
                                 </span>
                                 Whatsaap
                             </a>
+
                             <a href="https://www.facebook.com" target="_blank" rel="noopener noreferrer"
                                 class="flex items-center text-sm text-blue-700">
                                 <span class="pr-3">
@@ -183,9 +189,9 @@ get_header(); ?>
                         </div>
                     </div>
                 </div>
-                    </div>
-                </div>
-            <?php endwhile; endif; ?>
+            </div>
+        </div>
+        <?php endwhile; endif; ?>
 
     </div>
 </section>

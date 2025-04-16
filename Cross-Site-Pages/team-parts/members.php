@@ -37,17 +37,19 @@ $team_members = $args['team_members'];
                             <h2 class="md:text-2xl text-xl font-bold text-left">
                                 <?= $singleTopmember['title'] ?>
                             </h2>
-                            <p class="md:text-xl text-base font-bold flex flex-row md:gap-4 gap-2.5 text-primary text-left">
-                                <span>
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor" class="icon icon-tabler icons-tabler-filled icon-tabler-brand-linkedin">
-                                        <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-                                        <path d="M17 2a5 5 0 0 1 5 5v10a5 5 0 0 1 -5 5h-10a5 5 0 0 1 -5 -5v-10a5 5 0 0 1 5 -5zm-9 8a1 1 0 0 0 -1 1v5a1 1 0 0 0 2 0v-5a1 1 0 0 0 -1 -1m6 0a3 3 0 0 0 -1.168 .236l-.125 .057a1 1 0 0 0 -1.707 .707v5a1 1 0 0 0 2 0v-3a1 1 0 0 1 2 0v3a1 1 0 0 0 2 0v-3a3 3 0 0 0 -3 -3m-6 -3a1 1 0 0 0 -.993 .883l-.007 .127a1 1 0 0 0 1.993 .117l.007 -.127a1 1 0 0 0 -1 -1" />
-                                    </svg>
-                                </span>
-                                <span>
-                                    <?= $singleTopmember['designation'] ?>
-                                </span>
-                            </p>
+                            <?php if (!empty($singleTopmember['linkedin_url']['url'])): ?>
+                                <a href="<?php echo $singleTopmember['linkedin_url']['url']; ?>" class="md:text-xl text-base font-bold flex flex-row md:gap-4 gap-2.5 text-primary text-left">
+                                    <span>
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor" class="icon icon-tabler icons-tabler-filled icon-tabler-brand-linkedin">
+                                            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                            <path d="M17 2a5 5 0 0 1 5 5v10a5 5 0 0 1 -5 5h-10a5 5 0 0 1 -5 -5v-10a5 5 0 0 1 5 -5zm-9 8a1 1 0 0 0 -1 1v5a1 1 0 0 0 2 0v-5a1 1 0 0 0 -1 -1m6 0a3 3 0 0 0 -1.168 .236l-.125 .057a1 1 0 0 0 -1.707 .707v5a1 1 0 0 0 2 0v-3a1 1 0 0 1 2 0v3a1 1 0 0 0 2 0v-3a3 3 0 0 0 -3 -3m-6 -3a1 1 0 0 0 -.993 .883l-.007 .127a1 1 0 0 0 1.993 .117l.007 -.127a1 1 0 0 0 -1 -1" />
+                                        </svg>
+                                    </span>
+                                    <span>
+                                        <?php echo $singleTopmember['linkedin_url']['title']; ?>
+                                    </span>
+                                </a>
+                            <?php endif; ?>
                             <div class="md:block hidden text-base text-left ">
                                 <?= apply_filters('the_content', $singleTopmember['content']); ?>
                             </div>
@@ -75,16 +77,18 @@ $team_members = $args['team_members'];
                     </div>
                     <div class="mt-3 text-center flex flex-col sm:items-start items-center w-full members_info gap-3">
                         <h2 class="text-lg font-bold"><?= esc_html($member['title']); ?></h2>
-                        <div class="text-blue-800 flex items-center font-bold text-base">
-                            <span>
-                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
-                                    <path d="M17 2a5 5 0 0 1 5 5v10a5 5 0 0 1 -5 5h-10a5 5 0 0 1 -5 -5v-10a5 5 0 0 1 5 -5zm-9 8a1 1 0 0 0 -1 1v5a1 1 0 0 0 2 0v-5a1 1 0 0 0 -1 -1m6 0a3 3 0 0 0 -1.168 .236l-.125 .057a1 1 0 0 0 -1.707 .707v5a1 1 0 0 0 2 0v-3a1 1 0 0 1 2 0v3a1 1 0 0 0 2 0v-3a3 3 0 0 0 -3 -3m-6 -3a1 1 0 0 0 -.993 .883l-.007 .127a1 1 0 0 0 1.993 .117l.007 -.127a1 1 0 0 0 -1 -1" />
-                                </svg>
-                            </span>
-                            <p class="ml-2 text-left w-full">
-                                <?= esc_html($member['designation']); ?>
-                            </p>
-                        </div>
+                        <?php if (!empty($member['linkedin_url']['url'])): ?>
+                            <a href="<?php echo $member['linkedin_url']['url']; ?>" class="text-blue-800 flex items-center font-bold text-base">
+                                <span>
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                                        <path d="M17 2a5 5 0 0 1 5 5v10a5 5 0 0 1 -5 5h-10a5 5 0 0 1 -5 -5v-10a5 5 0 0 1 5 -5zm-9 8a1 1 0 0 0 -1 1v5a1 1 0 0 0 2 0v-5a1 1 0 0 0 -1 -1m6 0a3 3 0 0 0 -1.168 .236l-.125 .057a1 1 0 0 0 -1.707 .707v5a1 1 0 0 0 2 0v-3a1 1 0 0 1 2 0v3a1 1 0 0 0 2 0v-3a3 3 0 0 0 -3 -3m-6 -3a1 1 0 0 0 -.993 .883l-.007 .127a1 1 0 0 0 1.993 .117l.007 -.127a1 1 0 0 0 -1 -1" />
+                                    </svg>
+                                </span>
+                                <p class="ml-2 text-left w-full">
+                                    <?php echo $member['linkedin_url']['title']; ?>
+                                </p>
+                            </a>
+                        <?php endif; ?>
                         <div class="text-base text-left">
                             <?= esc_html($member['excerpt']); ?>
                         </div>
@@ -94,5 +98,3 @@ $team_members = $args['team_members'];
         </div>
     </section>
 <?php endif; ?>
-
-?>
