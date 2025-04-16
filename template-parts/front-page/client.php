@@ -19,8 +19,8 @@ $clients = valtes_get_field('clients', []);
                 <?php echo $clients['title']; ?>
             </h2>
         <?php endif; ?>
-        <div class="w-full px-5 mt-10 overflow-x-auto">
-            <div class="flex grid-cols-1 gap-12 pb-5 space-x-5 sm:grid lg:grid-cols-7 md:grid-cols-5 sm:grid-cols-3 md:space-x-0 md:pb-0">
+        <div class="w-full mt-10 overflow-x-auto">
+            <div class="flex grid-cols-1 gap-12 pb-5 space-x-5 sm:grid lg:grid-cols-7 md:grid-cols-5 sm:grid-cols-3 md:space-x-0 md:pb-0 imageSlider">
                 <?php foreach ($clients['images'] as $index => $image): ?>
                     <?php if (!empty($image['image']['url'])): ?>
                         <div class="flex items-center justify-center flex-shrink-0 w-auto sm:flex-shrink">

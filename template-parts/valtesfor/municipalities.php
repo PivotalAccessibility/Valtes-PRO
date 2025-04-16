@@ -19,8 +19,8 @@ $municipalities = valtes_get_field('municipalities', []);
                 <?php echo $municipalities['heading']; ?>
             </h2>
         <?php endif; ?>
-        <div class="mt-10 w-full overflow-x-auto px-5">
-            <div class="flex sm:grid lg:grid-cols-9 md:grid-cols-6 sm:grid-cols-3 grid-cols-1 gap-4 space-x-5 md:space-x-0 pb-5 md:pb-0">
+        <div class="mt-10 w-full overflow-x-auto">
+            <div class="flex sm:grid lg:grid-cols-9 md:grid-cols-6 sm:grid-cols-3 grid-cols-1 gap-4 space-x-5 md:space-x-0 pb-5 md:pb-0 imageSlider">
                 <?php foreach ($municipalities['clients'] as $index => $image): ?>
                     <?php if (!empty($image['image']['url'])): ?>
                         <div class="w-auto flex items-center justify-center flex-shrink-0 sm:flex-shrink">

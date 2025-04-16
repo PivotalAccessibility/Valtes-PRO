@@ -152,6 +152,8 @@ function valtes_enqueue_scripts()
     wp_enqueue_style('slick-style-cdn', 'https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css', array(), valtes_get_version(), 'all');
     wp_enqueue_script('jquery');
     wp_enqueue_script('slick-js-cdn', 'https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js', array('jquery'), null, true);
+    
+    wp_enqueue_script('brandSlider', valtes_assets('js/brandSlider.js'), array('jquery', 'slick-js-cdn'), valtes_get_version(), true);
 
     wp_enqueue_script('only-mobile-slider', valtes_assets('js/OnlyMobileSlider.js'), array('jquery', 'slick-js-cdn'), valtes_get_version(), true);
 
