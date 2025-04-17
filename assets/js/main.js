@@ -640,3 +640,15 @@ document.addEventListener("DOMContentLoaded", function () {
     counters.forEach(counter => observer.observe(counter));
 });
 
+document.getElementById('copyLinkButton').addEventListener('click', (event) => {
+    event.preventDefault(); // Prevent page from jumping due to href="#"
+    const url = window.location.href;
+
+    navigator.clipboard.writeText(url)
+      .then(() => {
+        console.log('URL copied to clipboard:', url);
+      })
+      .catch(err => {
+        console.error('Failed to copy URL:', err);
+      });
+});

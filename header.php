@@ -13,6 +13,11 @@
     <meta charset="<?php bloginfo( 'charset' ); ?>" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
 
+    <meta property="og:title" content="<?php echo esc_attr($post_title); ?>" />
+    <meta property="og:description" content="<?php echo esc_attr(wp_trim_words($post_content, 30)); ?>" />
+    <meta property="og:url" content="<?php echo esc_url($post_link); ?>" />
+    <meta property="og:type" content="article" />
+
     <?php wp_head(); ?>
 
     <link rel="preconnect" href="https://fonts.googleapis.com">

@@ -9,11 +9,14 @@ if (!empty($args) && $args) {
     extract($args);
 }
 
-// Query to fetch latest 3 posts
+$author_id = get_the_author_meta('ID');
+
 $args = array(
     'post_type' => 'post',
     'posts_per_page' => 3,
     'post_status' => 'publish',
+    'author' => $author_id,
+    'post__not_in' => array(get_the_ID()),
 );
 
 $query = new WP_Query($args);

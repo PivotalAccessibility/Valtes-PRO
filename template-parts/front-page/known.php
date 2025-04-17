@@ -11,13 +11,7 @@ if ($args) {
 $known = valtes_get_field('known', []);
 
 ?>
-<style>
-    .slick-track div{
-        display: flex!important;
-        justify-content: center;
-        align-items: center;
-    }
-</style>
+
 <section class="bg-primaryLight md:py-20 py-10 md:my-0 my-[3.75rem]">
     <div class="container flex flex-col items-center justify-center re-container">
         <?php if (!empty($known['title'])): ?>

@@ -23,7 +23,7 @@ $user_company_logo = get_field('user_organization_logo', 'user_' . $current_user
 $user_image_acf = get_field('user_image', 'user_' . $current_user_id);
 
 get_header(); ?>
-    
+
 <section class="pt-28 pb-10">
     <div class="container px-5 sm:px-5 xl:px-0">
         <?php if (have_posts()):
@@ -101,8 +101,7 @@ get_header(); ?>
                         </span>
                         <div class="flex flex-col items-start mt-5 space-y-4 ">
 
-                            <button class="flex items-center text-sm text-blue-700"
-                                x-on:click="$clipboard('<?php echo get_the_permalink(); ?>'); $store.toast.add('Gekopiëerd!', '<?php echo get_the_permalink(); ?>', 'success', 5000);">
+                            <button id="copyLinkButton" class="flex items-center text-sm text-blue-700">
                                 <span class="pr-3">
                                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
                                         fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
@@ -137,10 +136,16 @@ get_header(); ?>
                                             d="M9 10a.5 .5 0 0 0 1 0v-1a.5 .5 0 0 0 -1 0v1a5 5 0 0 0 5 5h1a.5 .5 0 0 0 0 -1h-1a.5 .5 0 0 0 0 1" />
                                     </svg>
                                 </span>
-                                Whatsaap
+                                WhatsApp
                             </a>
 
-                            <a href="https://www.facebook.com" target="_blank" rel="noopener noreferrer"
+                            <?php
+                            $post_title = get_the_title();
+                            $post_content = wp_strip_all_tags(get_the_content());
+                            $post_link = get_the_permalink();
+                            $facebook_share_url = "https://www.facebook.com/sharer/sharer.php?u=" . urlencode($post_link);
+                            ?>
+                            <a href="<?php echo $facebook_share_url; ?>" target="_blank" rel="noopener noreferrer"
                                 class="flex items-center text-sm text-blue-700">
                                 <span class="pr-3">
                                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
@@ -155,24 +160,14 @@ get_header(); ?>
                                 Facebook
                             </a>
 
-                            <a href="https://www.instagram.com" target="_blank" rel="noopener noreferrer"
-                                class="flex items-center text-sm text-pink-700">
-                                <span class="pr-3">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
-                                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                                        stroke-linejoin="round"
-                                        class="icon icon-tabler icons-tabler-outline icon-tabler-brand-instagram">
-                                        <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-                                        <path
-                                            d="M4 8a4 4 0 0 1 4 -4h8a4 4 0 0 1 4 4v8a4 4 0 0 1 -4 4h-8a4 4 0 0 1 -4 -4z" />
-                                        <path d="M9 12a3 3 0 1 0 6 0a3 3 0 0 0 -6 0" />
-                                        <path d="M16.5 7.5v.01" />
-                                    </svg>
-                                </span>
-                                Instagram
-                            </a>
 
-                            <a href="https://www.linkedin.com" target="_blank" rel="noopener noreferrer"
+                            <?php
+                            $post_title = get_the_title();
+                            $post_content = wp_strip_all_tags(get_the_content());
+                            $post_link = get_the_permalink();
+                            $linkedin_share_url = "https://www.linkedin.com/shareArticle?mini=true&url=" . urlencode($post_link);
+?>
+                            <a href="<?php echo $linkedin_share_url; ?>" target="_blank" rel="noopener noreferrer"
                                 class="flex items-center text-sm text-blue-700">
                                 <span class="pr-3">
                                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"

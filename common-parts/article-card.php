@@ -14,7 +14,7 @@
     <?php endif; ?>
 
     <div class="relative">
-      <img src="<?php echo get_the_post_thumbnail_url(get_the_ID(), 'full'); ?>" alt="<?php the_title(); ?>" class="object-cover w-full h-52 rounded-t-2xl">
+      <?php echo get_the_post_thumbnail( get_the_ID(), 'full', array( 'class' => 'object-cover w-full h-52 rounded-t-2xl' ) ); ?>
       <?php if ($category_icon): ?>
         <div class="absolute p-3 rounded-full bg-primary -bottom-5 left-4">
           <img src="<?php echo esc_url($category_icon['url']); ?>" class="w-5" alt="<?php echo esc_attr($category->name); ?>">
