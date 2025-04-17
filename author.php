@@ -42,16 +42,20 @@ $user_organization = get_field('user_organization', 'user_' . $current_user_id);
                 <div class="flex items-center justify-between text-center lg:ml-6 lg:text-left w-full">
                     <div class="mt-5 sm:mt-0">
                         <h1 class="text-3xl font-bold text-gray-800"><?php echo esc_html($author_name); ?></h1>
-                        <a href="<?php echo $user_social['url']; ?>" class="sm:mt-3 mt-5 font-medium text-primary flex items-center text-xs w-full sm:w-auto">
-                            <span class="mr-2">
-                                <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M14.8571 0H1.13929C0.510714 0 0 0.517857 0 1.15357V14.8464C0 15.4821 0.510714 16 1.13929 16H14.8571C15.4857 16 16 15.4821 16 14.8464V1.15357C16 0.517857 15.4857 0 14.8571 0ZM4.83571 13.7143H2.46429V6.07857H4.83929V13.7143H4.83571ZM3.65 5.03571C2.88929 5.03571 2.275 4.41786 2.275 3.66071C2.275 2.90357 2.88929 2.28571 3.65 2.28571C4.40714 2.28571 5.025 2.90357 5.025 3.66071C5.025 4.42143 4.41071 5.03571 3.65 5.03571ZM13.725 13.7143H11.3536V10C11.3536 9.11429 11.3357 7.975 10.1214 7.975C8.88571 7.975 8.69643 8.93929 8.69643 9.93571V13.7143H6.325V6.07857H8.6V7.12143H8.63214C8.95 6.52143 9.725 5.88929 10.8786 5.88929C13.2786 5.88929 13.725 7.47143 13.725 9.52857V13.7143Z" fill="#2B37DC" />
-                                </svg>
-                            </span>
-                            <span class="">
-                                <?php echo $user_social['title']; ?>
-                            </span>
-                        </a>
+                        <?php if (isset($user_social['url'])) {
+                            ?>
+                            <a href="<?php echo $user_social['url']; ?>" class="sm:mt-3 mt-5 font-medium text-primary flex items-center text-xs w-full sm:w-auto">
+                                <span class="mr-2">
+                                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M14.8571 0H1.13929C0.510714 0 0 0.517857 0 1.15357V14.8464C0 15.4821 0.510714 16 1.13929 16H14.8571C15.4857 16 16 15.4821 16 14.8464V1.15357C16 0.517857 15.4857 0 14.8571 0ZM4.83571 13.7143H2.46429V6.07857H4.83929V13.7143H4.83571ZM3.65 5.03571C2.88929 5.03571 2.275 4.41786 2.275 3.66071C2.275 2.90357 2.88929 2.28571 3.65 2.28571C4.40714 2.28571 5.025 2.90357 5.025 3.66071C5.025 4.42143 4.41071 5.03571 3.65 5.03571ZM13.725 13.7143H11.3536V10C11.3536 9.11429 11.3357 7.975 10.1214 7.975C8.88571 7.975 8.69643 8.93929 8.69643 9.93571V13.7143H6.325V6.07857H8.6V7.12143H8.63214C8.95 6.52143 9.725 5.88929 10.8786 5.88929C13.2786 5.88929 13.725 7.47143 13.725 9.52857V13.7143Z" fill="#2B37DC" />
+                                    </svg>
+                                </span>
+                                <span class="">
+                                    <?php echo $user_social['title']; ?>
+                                </span>
+                            </a>
+                            <?php
+                        } ?>
                         <!-- <p class="mt-3 text-gray-600"><?php echo esc_html($author_bio); ?></p> -->
                     </div>
                     <?php if (!empty($user_company_logo['url'])): ?>
@@ -95,7 +99,7 @@ $user_organization = get_field('user_organization', 'user_' . $current_user_id);
                         <?php while ($query->have_posts()):
                             $query->the_post(); ?>
                             <div>
-                            <?php get_template_part('common-parts/article-card'); ?>
+                                <?php get_template_part('template-parts/article', 'card'); ?>
                             </div>
                         <?php endwhile; ?>
                         <?php wp_reset_postdata(); ?>

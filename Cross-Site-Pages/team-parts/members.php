@@ -30,8 +30,8 @@ $team_members = $args['team_members'];
             <?php foreach ($allTopMembers as $singleTopmember): ?>
                 <?php if (!empty($singleTopmember['title'])): ?>
                     <div class="flex flex-row flex-wrap sm:flex-nowrap items-center justify-center gap-6">
-                        <div class="">
-                            <img src="<?= $singleTopmember['thumbnail'] ?>" alt="" class="!w-[209px] !h-[209px] !rounded-full !object-cover">
+                        <div class="size-52">
+                            <img src="<?= $singleTopmember['thumbnail'] ?>" alt="" class="size-52 max-w-none !rounded-full !object-cover">
                         </div>
                         <div class="flex md:flex-col flex-row gap-3 items-start max-md:w-full justify-between md:justify-start">
                             <h2 class="md:text-2xl text-xl font-bold text-left">
