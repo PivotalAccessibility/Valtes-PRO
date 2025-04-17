@@ -102,7 +102,7 @@ $user_organization = get_field('user_organization', 'user_' . $current_user_id);
                         <?php while ($query->have_posts()):
                             $query->the_post(); ?>
                             <div>
-                                <?php get_template_part('template-parts/article', 'card'); ?>
+                                <?php get_template_part('common-parts/article-card'); ?>
                             </div>
                         <?php endwhile; ?>
                         <?php wp_reset_postdata(); ?>
