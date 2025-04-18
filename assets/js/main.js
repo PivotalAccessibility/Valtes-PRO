@@ -106,6 +106,7 @@ jQuery(document).ready(() => {
     $('.forminator-file-upload span').text('Er is geen bestand geselecteerd');
 
     $('.forminator-file-upload button.forminator-button-upload').text('Selecteer een bestand');
+    
     function handleForminatorField(i, input) {
         const placeholder = $(input).attr('placeholder');
         const label = $(input).prev('label');
