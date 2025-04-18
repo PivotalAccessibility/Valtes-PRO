@@ -647,8 +647,16 @@ document.getElementById('copyLinkButton').addEventListener('click', (event) => {
     navigator.clipboard.writeText(url)
       .then(() => {
         console.log('URL copied to clipboard:', url);
+        showCustomToast(url);
       })
       .catch(err => {
         console.error('Failed to copy URL:', err);
       });
-});
+  });
+
+  function showCustomToast(url) {
+    const toast = document.getElementById('customToast');
+    toast.innerHTML = `Copied!<br><span>${url}</span>`;
+    toast.classList.add('show');
+    setTimeout(() => toast.classList.remove('show'), 4000); 
+  }

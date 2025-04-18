@@ -127,7 +127,7 @@
     }
 
     .card-image {
-        @apply h-36 w-full md:h-80 md:w-auto;
+        @apply w-full h-36 md:h-80 md:w-auto;
     }
 
     .card-image img {
@@ -424,3 +424,26 @@ li.menu-item-has-children.active .dropdown-menu {
 #wpadminbar+#page #header {
     top: 32px;
 }
+#customToast {
+    visibility: hidden;
+    min-width: 300px;
+    background-color: white;
+    border: 2px solid #1c233e;
+    color: #1c233e;
+    border-radius: 8px;
+    padding: 15px;
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+    display: none;
+    z-index: 9999;  
+    opacity: 0;
+    transition: opacity 0.4s ease, visibility 0.4s;
+  }
+  
+  #customToast.show {
+    visibility: visible;
+    display: block;
+    opacity: 1;
+  }
+  

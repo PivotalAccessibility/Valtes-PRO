@@ -23,8 +23,7 @@ $user_company_logo = get_field('user_organization_logo', 'user_' . $current_user
 $user_image_acf = get_field('user_image', 'user_' . $current_user_id);
 
 get_header(); ?>
-
-<section class="pt-28 pb-10">
+<section class="pb-10 pt-28">
     <div class="container px-5 sm:px-5 xl:px-0">
         <?php if (have_posts()):
             while (have_posts()):
@@ -39,7 +38,7 @@ get_header(); ?>
                 <div class="md:h-32 md:w-32 h-20 w-20 rounded-full bg-[#e1eaff] absolute bottom-0 left-0"></div>
             </div>
             <?php endif; ?>
-            <div class="flex flex-wrap md:flex-nowrap items-start sm:mt-20 mt-5 md:gap-32 gap-16">
+            <div class="flex flex-wrap items-start gap-16 mt-5 md:flex-nowrap sm:mt-20 md:gap-32">
                 <div class="sm:w-[70%] w-full h-auto">
                     <p class="inline-block mb-4 text-base font-semibold text-primary">
                         <?php $category = get_the_category(); ?>
@@ -50,7 +49,7 @@ get_header(); ?>
                         <?php the_title(); ?>
                     </h1>
 
-                    <div class="text-base text-black prose">
+                    <div class="text-base prose text-black">
                         <?php the_content(); ?>
                     </div>
                 </div>
@@ -59,10 +58,10 @@ get_header(); ?>
                     <div class="flex mt-5 ">
                         <div>
                             <img src="<?php echo $user_image_acf['url'] ?>" alt="<?php echo $user_image_acf['alt'] ?>"
-                                class="rounded-full h-20 w-20 object-cover">
+                                class="object-cover w-20 h-20 rounded-full">
                         </div>
                         <div class="ml-3 ">
-                            <span class="font-bold text-black text-xl">
+                            <span class="text-xl font-bold text-black">
                                 <?php the_author(); ?>
                             </span>
                             <?php if (!empty($user_company_logo['url'])): ?>
@@ -80,7 +79,7 @@ get_header(); ?>
                                 $author_url = get_author_posts_url($author_id);
                                 ?>
                         <a href="<?php echo esc_url($author_url); ?>"
-                            class="flex items-center justify-center px-3 py-2 mt-5 sm:text-xs text-sm sm:font-normal font-bold text-blue-700 bg-white border-2 border-blue-700 rounded-full">
+                            class="flex items-center justify-center px-3 py-2 mt-5 text-sm font-bold text-blue-700 bg-white border-2 border-blue-700 rounded-full sm:text-xs sm:font-normal">
                             <span>
                                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
                                     stroke="currentColor" stroke-width="2" stroke-linecap="round"
@@ -190,5 +189,8 @@ get_header(); ?>
 
     </div>
 </section>
+<div  aria-live="polite">
+<div id="customToast" >Copied!</div>
+</div>
 
 <?php get_footer(); ?>
