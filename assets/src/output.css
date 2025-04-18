@@ -1135,9 +1135,6 @@
     width: 100%;
     height: 100%;
   }
-  .\!h-\[209px\] {
-    height: 209px !important;
-  }
   .h-0\.5 {
     height: calc(var(--spacing) * 0.5);
   }
@@ -1221,9 +1218,6 @@
   }
   .min-h-\[var\(--hero-height\)\] {
     min-height: var(--hero-height);
-  }
-  .\!w-\[209px\] {
-    width: 209px !important;
   }
   .\!w-full {
     width: 100% !important;
@@ -2035,9 +2029,6 @@
   }
   .text-green-700 {
     color: var(--color-green-700);
-  }
-  .text-pink-700 {
-    color: var(--color-pink-700);
   }
   .text-primary {
     color: var(--color-primary);

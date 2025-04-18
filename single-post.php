@@ -97,7 +97,7 @@ get_header(); ?>
                     </div>
                     <div class="mt-5 ">
                         <span class="text-lg font-bold ">
-                            Daze pagina delen via
+                            Deze pagina delen via
                         </span>
                         <div class="flex flex-col items-start mt-5 space-y-4 ">
 
