@@ -4215,6 +4215,9 @@ li.menu-item-has-children.active .dropdown-menu {
   display: block;
   opacity: 1;
 }
+.forminator-file-upload button.forminator-button-upload {
+  width: max-content !important;
+}
 @property --tw-translate-x {
   syntax: "*";
   inherits: false;

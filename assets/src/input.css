@@ -448,3 +448,6 @@ li.menu-item-has-children.active .dropdown-menu {
     opacity: 1;
 }
   
+.forminator-file-upload button.forminator-button-upload{
+    width: max-content !important;
+}
