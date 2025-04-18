@@ -656,7 +656,7 @@ document.getElementById('copyLinkButton').addEventListener('click', (event) => {
 
   function showCustomToast(url) {
     const toast = document.getElementById('customToast');
-    toast.innerHTML = `Copied!<br><span>${url}</span>`;
+    toast.innerHTML = `Link gekopieerd!!<br><span>${url}</span>`;
     toast.classList.add('show');
     setTimeout(() => toast.classList.remove('show'), 4000); 
   }
