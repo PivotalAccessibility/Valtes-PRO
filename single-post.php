@@ -23,7 +23,9 @@ $user_company_logo = get_field('user_organization_logo', 'user_' . $current_user
 $user_image_acf = get_field('user_image', 'user_' . $current_user_id);
 
 get_header(); ?>
-<section class="pb-10 pt-28">
+
+<section class="pt-20 pb-10">
+    <div class="container px-5 sm:px-5 xl:px-0"><?php custom_breadcrumbs(); ?></div>
     <div class="container px-5 sm:px-5 xl:px-0">
         <?php if (have_posts()):
             while (have_posts()):
@@ -189,8 +191,9 @@ get_header(); ?>
 
     </div>
 </section>
-<div  aria-live="polite">
-<div id="customToast" >Copied!</div>
+
+<div aria-live="polite">
+    <div id="customToast">Copied!</div>
 </div>
 
 <?php get_footer(); ?>

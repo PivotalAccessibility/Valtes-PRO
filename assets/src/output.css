@@ -40,7 +40,6 @@
     --color-blue-700: oklch(48.8% 0.243 264.376);
     --color-blue-800: oklch(42.4% 0.199 265.638);
     --color-purple-400: oklch(71.4% 0.203 305.504);
-    --color-pink-700: oklch(52.5% 0.223 3.958);
     --color-gray-100: oklch(96.7% 0.003 264.542);
     --color-gray-200: oklch(92.8% 0.006 264.531);
     --color-gray-300: oklch(87.2% 0.01 258.338);
@@ -1840,9 +1839,6 @@
   }
   .pt-20 {
     padding-top: calc(var(--spacing) * 20);
-  }
-  .pt-28 {
-    padding-top: calc(var(--spacing) * 28);
   }
   .pt-\[3\.75rem\] {
     padding-top: 3.75rem;
@@ -4197,6 +4193,27 @@ li.menu-item-has-children.active .dropdown-menu {
 }
 #wpadminbar+#page #header {
   top: 32px;
+}
+#customToast {
+  visibility: hidden;
+  min-width: 300px;
+  background-color: white;
+  border: 2px solid #1c233e;
+  color: #1c233e;
+  border-radius: 8px;
+  padding: 15px;
+  position: fixed;
+  bottom: 20px;
+  left: 20px;
+  display: none;
+  z-index: 9999;
+  opacity: 0;
+  transition: opacity 0.4s ease, visibility 0.4s;
+}
+#customToast.show {
+  visibility: visible;
+  display: block;
+  opacity: 1;
 }
 @property --tw-translate-x {
   syntax: "*";

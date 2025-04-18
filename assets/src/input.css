@@ -424,6 +424,7 @@ li.menu-item-has-children.active .dropdown-menu {
 #wpadminbar+#page #header {
     top: 32px;
 }
+
 #customToast {
     visibility: hidden;
     min-width: 300px;
@@ -439,11 +440,11 @@ li.menu-item-has-children.active .dropdown-menu {
     z-index: 9999;  
     opacity: 0;
     transition: opacity 0.4s ease, visibility 0.4s;
-  }
+}
   
-  #customToast.show {
+#customToast.show {
     visibility: visible;
     display: block;
     opacity: 1;
-  }
+}
   
