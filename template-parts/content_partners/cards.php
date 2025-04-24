@@ -63,7 +63,7 @@ $card = valtes_get_field('card', []);
                                     <?php if (!empty($item['image']['url'])): ?>
                                         <img src="<?php echo $item['image']['url']; ?>" alt="<?php echo $item['image']['alt']; ?>" class="">
                                     <?php endif; ?>
-                                        <div class="absolute h-[8.75rem] w-[8.75rem] rounded-full hidden lg:block bg-[#E0E3ED] bottom-1 right-1">
+                                        <div class="absolute h-[8.75rem] w-[8.75rem] rounded-full hidden lg:block bg-[#E0E3ED] bottom-1 right-1 -z-20">
                                         </div>
                                 </div>
                             </div>
