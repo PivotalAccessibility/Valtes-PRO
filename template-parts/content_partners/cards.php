@@ -23,11 +23,11 @@ $card = valtes_get_field('card', []);
                     <?php if ($index % 2 == 0): ?>
                         <div class="flex flex-col md:gap-32 gap-[1.88rem] px-3 lg:flex-row lg:px-0">
                             <div class="flex flex-row justify-center w-full md:w-1/2 md:justify-start">
-                                <div class="relative <?php echo (isset($item['image_type']) && $item['image_type'] == "Rounded") ? 'card-image' : 'card-image-full'; ?> w-full">
+                                <div class="relative w-full">
                                     <?php if (!empty($item['image']['url'])): ?>
-                                        <img src="<?php echo $item['image']['url']; ?>" alt="<?php echo $item['image']['alt']; ?>" class="w-full">
+                                        <img src="<?php echo $item['image']['url']; ?>" alt="<?php echo $item['image']['alt']; ?>" class="w-full z-10">
                                     <?php endif; ?>
-                                    <div class="absolute h-[7.43425rem] w-[7.43425rem] rounded-full hidden lg:block bg-jobborder top-1 right-1">
+                                    <div class="absolute h-[7.43425rem] w-[7.43425rem] rounded-full hidden lg:block bg-jobborder top-1 right-1 -z-20">
                                     </div>
                                 </div>
                             </div>
@@ -40,7 +40,6 @@ $card = valtes_get_field('card', []);
                                 <?php if (!empty($item['description'])): ?>
                                     <p class="section-sec-description">
                                         <?php echo $item['description']; ?>
-                                        <?php echo $item['image_type']; ?>
                                     </p>
                                 <?php endif; ?>
                             </div>
@@ -56,19 +55,16 @@ $card = valtes_get_field('card', []);
                                 <?php if (!empty($item['description'])): ?>
                                     <p class="section-sec-description">
                                         <?php echo $item['description']; ?>
-                                        <?php echo $item['image_type']; ?>
                                     </p>
                                 <?php endif; ?>
                             </div>
                             <div class="flex flex-row justify-center w-full lg:w-1/2 lg:justify-end lg:items-end">
-                                <div class="relative <?php echo (isset($item['image_type']) && $item['image_type'] == "Rounded") ? 'card-image' : 'card-image-full'; ?>">
+                                <div class="relative">
                                     <?php if (!empty($item['image']['url'])): ?>
                                         <img src="<?php echo $item['image']['url']; ?>" alt="<?php echo $item['image']['alt']; ?>" class="">
                                     <?php endif; ?>
-                                    <?php if ($item['image_type'] == "Rounded"): ?>
                                         <div class="absolute h-[8.75rem] w-[8.75rem] rounded-full hidden lg:block bg-[#E0E3ED] bottom-1 right-1">
                                         </div>
-                                    <?php endif; ?>
                                 </div>
                             </div>
                         </div>

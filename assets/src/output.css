@@ -434,6 +434,9 @@
   .-z-9 {
     z-index: calc(9 * -1);
   }
+  .-z-20 {
+    z-index: calc(20 * -1);
+  }
   .-z-50 {
     z-index: calc(50 * -1);
   }
