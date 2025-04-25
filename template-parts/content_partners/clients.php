@@ -9,7 +9,7 @@ $logo = valtes_get_field('logo', []);
 ?>
 
 
-<section class="lg:pt-[7.5rem] pt-[3.75rem]">
+<section class="lg:pt-[7.5rem] pt-[3.75rem]" id="clientSlider">
     <div class="flex flex-col items-center lg:px-[1.8rem] gap-7.5 justify-center">
         <?php if (!empty($logo['title'])): ?>
             <h2 class="text-center section-sec-heading">
@@ -23,7 +23,7 @@ $logo = valtes_get_field('logo', []);
                     <?php if (!empty($image['image']['url'])): ?>
                         <div class="flex items-center justify-center flex-shrink-0 w-auto sm:flex-shrink">
                             <img src="<?php echo $image['image']['url']; ?>" alt="<?php echo $image['image']['alt']; ?>"
-                                class="w-auto h-20">
+                                class="object-contain w-auto h-20">
                         </div>
                     <?php endif; ?>
                 <?php endforeach; ?>

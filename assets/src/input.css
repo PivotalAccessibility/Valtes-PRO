@@ -451,3 +451,10 @@ li.menu-item-has-children.active .dropdown-menu {
 .forminator-file-upload button.forminator-button-upload{
     width: max-content !important;
 }
+#clientSlider .slick-initialized .slick-slide{
+    @apply !flex !justify-center !items-center;
+}
+
+#clientSlider .slick-track{
+    @apply !gap-10;
+}
