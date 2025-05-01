@@ -34,7 +34,7 @@ $milestones = $args['milestones'];
                         </div>
                         <div
                             class="relative <?php echo $inner['image']['url'] == null ? "hidden" : "block"; ?> before:content-[''] lg:w-full w-[90%] lg:h-full before:absolute before:w-[2.5rem] before:h-[2.5rem] before:bg-[#6997ff] before:rounded-full before:-translate-y-1/2 <?php echo (isset($milestone['first_image']) && $milestone['first_image'] == "left") ? 'lg:mb-0 mb-2 before:-left-1 before:-bottom-3' : 'mb-0 before:-right-1 before:top-6'; ?>">
-                            <?php $focusPoint = get_post_meta($inner['image']['ID'], 'bg_pos_desktop', true );?>
+                            <?php $focusPoint = $inner['image']['focusPoint']; ?>
                             <img src="<?php echo $inner['image']['url']; ?>" alt=""
                                 style="object-fit: cover; object-position: <?php echo $focusPoint; ?>;"
                                 class="relative z-10 rounded-full md:h-44 h-24 w-full md:min-w-[400px] object-cover object-center">
