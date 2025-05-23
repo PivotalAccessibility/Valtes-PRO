@@ -458,3 +458,8 @@ li.menu-item-has-children.active .dropdown-menu {
 #clientSlider .slick-track{
     @apply !gap-10;
 }
+
+.slick-track{
+    justify-content: center !important;
+    align-items: center !important;
+}
