@@ -4121,6 +4121,9 @@ div.forminator-file-upload span, .Uploadbtn span.forminator-description {
 }
 .slick-slide {
   margin: 3px 6px;
+  display: flex !important;
+  justify-content: center;
+  align-items: center;
 }
 .slick-slider {
   display: flex !important;
